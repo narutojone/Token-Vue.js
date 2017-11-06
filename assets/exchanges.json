@@ -1,0 +1,605 @@
+[
+   {
+      "name": "ViaBTC",
+      "url": "/exchanges/viabtc/overview",
+      "logo_url": "/media/352008/viabtc.png",
+      "affiliate_url": "https://www.viabtc.cn/",
+      "country": "China",
+      "type": "BTC and LTC/ETH",
+      "desc": "Founded in May 2016, ViaBTC is a cryptocurrency technology company that operates a mining pool, mining contracts and the ViaBTC exchange. The ViaBTC exchange is a China-based website, allowing users to trade BTC and ETH for CNY. The ViaBTC exchange features advanced Trading View charts and easy and convenient API"
+   },
+   {
+      "name": "Gemini",
+      "url": "/exchanges/gemini/overview",
+      "logo_url": "/media/20736/gemini.png",
+      "affiliate_url": "https://gemini.com/",
+      "country": "US",
+      "type": "BTC Only",
+      "desc": "Gemini Exchange is aptly named after its two founders the Winklevoss twins. The exchange is based in New York. In all perhaps one of the most considered and well positioned exchanges to capitalise on the bridge between main financial markets and the present ecosystem. A breath of fresh air in bringing a touch of wall street class & security to the innovative 7 nascent Bitcoin arena."
+   },
+   {
+      "name": "CCEDK",
+      "url": "/exchanges/ccedk/overview",
+      "logo_url": "/media/350563/ccedk.png",
+      "affiliate_url": "https://www.ccedk.com/",
+      "country": "DK",
+      "type": "Multiple Cryptos",
+      "desc": "CCEDK was founded in Denmark in 2014. The Company allows for a wide variety of markets to be traded from crypto to crypto as well as fiat to Bitcoin pairs. Although a relatively new arrival on the scene - the Company has generated a decent following and has been continuously striving to upgrade the website and its security features."
+   },
+   {
+      "name": "Cryptopia",
+      "url": "/exchanges/cryptopia/overview",
+      "logo_url": "/media/350578/cryptopia.png",
+      "affiliate_url": "https://www.cryptopia.co.nz/Exchange",
+      "country": "NZ",
+      "type": "Multiple Cryptos",
+      "desc": "Cryptopia\"s focus is on a better user experience for crypto-currencies. In order to make cryptocurrencies more accessible to everyone we provide mining pools, marketplace, exchange services and a support framework for each coin listed."
+   },
+   {
+      "name": "NovaExchange",
+      "url": "/exchanges/novaexchange/overview",
+      "logo_url": "/media/1383660/novatext04.png",
+      "affiliate_url": "https://novaexchange.com/",
+      "country": "Tanzania",
+      "type": "Multiple Cryptos",
+      "desc": "They support deposits in 469 Altcoins and no fiat currencies. You can trade a lot of low market cap cryptocurrency pairs but, trade with care."
+   },
+   {
+      "name": "Exmo",
+      "url": "/exchanges/exmo/overview",
+      "logo_url": "/media/350785/exmo.png",
+      "affiliate_url": "https://exmo.com/?ref=233490",
+      "country": "ES",
+      "type": "Multiple Cryptos",
+      "desc": "2 years old exchange with a big team. They trade BTC, LTC, DOGE, DASH, ETH they claim to have the lowest fees on the market. The company is registered in the UK but based in Spain."
+   },
+   {
+      "name": "Yobit",
+      "url": "/exchanges/yobit/overview",
+      "logo_url": "/media/350844/yobit.png",
+      "affiliate_url": "https://yobit.io/?bonus=kXseB",
+      "country": "N/A",
+      "type": "Multiple Cryptos",
+      "desc": "We could not find a lot of information about this exchange - be careful when dealing with them. You can trade a lot of cryptocurrency pairs but, trade with care."
+   },
+   {
+      "name": "BitBay",
+      "url": "/exchanges/bitbay/overview",
+      "logo_url": "/media/350845/bitbay.png",
+      "affiliate_url": "https://affiliate.bitbay.net/11543",
+      "country": "Poland",
+      "type": "Multiple Cryptos",
+      "desc": "BitBay is the biggest BTC, LTC, ETH and LSK exchange in Poland. They provide a safe platform to trade and exchange BTC to PLN and have multiple withdrawal and deposit methods. The more you trade on their platform the lower their fees are."
+   },
+   {
+      "name": "Korbit",
+      "url": "/exchanges/korbit/overview",
+      "logo_url": "/media/350847/korbit.png",
+      "affiliate_url": "https://www.korbit.co.kr/",
+      "country": "South Korea",
+      "type": "BTC and LTC/ETH",
+      "desc": "Korbit is the biggest BTCand ETH exchange in South Korea. They provide a safe platform to trade and exchange BTC to KRW and have multiple withdrawal and deposit methods. Their trading fee is 1%."
+   },
+   {
+      "name": "BTCMarkets",
+      "url": "/exchanges/btcmarkets/overview",
+      "logo_url": "/media/350877/btcmarkets.png",
+      "affiliate_url": "https://www.btcmarkets.net/",
+      "country": "Australia",
+      "type": "Multiple Cryptos",
+      "desc": "BTCMarkets is one of the largest BTC and ETH exchange in Australia. They provide a safe platform to trade and exchange BTC to AUD and have multiple withdrawal and deposit methods."
+   },
+   {
+      "name": "Coincheck",
+      "url": "/exchanges/coincheck/overview",
+      "logo_url": "/media/12318070/coincheck.png",
+      "affiliate_url": "https://coincheck.com",
+      "country": "Japan",
+      "type": "Multiple Cryptos",
+      "desc": "Coincheck is one of the largest BTC exchanges in Japan. They provide a safe platform to trade and exchange BTC to JPY and have multiple withdrawal and deposit methods."
+   },
+   {
+      "name": "WavesDEX",
+      "url": "/exchanges/wavesdex/overview",
+      "logo_url": "/media/350884/waves_1.png",
+      "affiliate_url": "https://wavesplatform.com",
+      "country": "Decentralized Exchange",
+      "type": "Multiple Cryptos",
+      "desc": "The Waves Decentralized Exchange is a decentralized market where users can trade waves-based assets, including Waves, Waves Assets, fiat tokens and cryptocurrency tokens like wBTC and wETH. On the WavesDEX, users can trade with no counterparty risk as all operations take place on the Waves blockchain itself ensuring that no trust is required. \n\nIn order to access the exchange, users must download the Waves wallet."
+   },
+   {
+      "name": "Bitstamp",
+      "url": "/exchanges/bitstamp/overview",
+      "logo_url": "/media/9350794/bitstamp1.png",
+      "affiliate_url": "https://www.bitstamp.net/",
+      "country": "UK",
+      "type": "Multiple Cryptos",
+      "desc": "Bitstamp is run from the United Kingdom and is one of the most popular fiat to Bitcoin exchanges. Bitstamp only allows for one exchange pair of USD to Bitcoin but does use conversion of other fiat currencies via its Slovenian banking partner which will incur higher fees."
+   },
+   {
+      "name": "BTCC",
+      "url": "/exchanges/btcc/overview",
+      "logo_url": "/media/19561/btcchina-rebrand-btcc.png",
+      "affiliate_url": "https://vip.btcchina.com/",
+      "country": "China",
+      "type": "BTC and LTC/ETH",
+      "desc": "BTCC is one of the dominant players for CNY (Chinese Yuan) trades into Bitcoin. They also offer a Litecoin pair too. With high volume and healthy liquidity there are no issues with using this exchange to find the best price available."
+   },
+   {
+      "name": "Bittrex",
+      "url": "/exchanges/bittrex/overview",
+      "logo_url": "/media/19557/bittrex.png",
+      "affiliate_url": "https://bittrex.com",
+      "country": "US",
+      "type": "Multiple Cryptos",
+      "desc": "Bittrex is one of the larger crypto to crypto exchanges offering a large number of trading pairs into bitcoin. The exchange does have a very high turnover crypto currencies - leading some to accuse it of allowing pump and dump schemes that erode confidence in the crypto currency ecosystem as a whole."
+   },
+   {
+      "name": "BTCE",
+      "url": "/exchanges/btce/overview",
+      "logo_url": "/media/19560/btce.png",
+      "affiliate_url": "https://btc-e.com",
+      "country": "Unknown",
+      "type": "Multiple Cryptos",
+      "desc": "BTCe is a decent all round exchange focusing on its core base in Eastern Europe. Pairs include fiat to fiat, fiat to crypto, and crypto to crypto - although limited to the major volume currencies. The exchange allows both E-currency and wire transfers for depositing funds."
+   },
+   {
+      "name": "OKCoin",
+      "url": "/exchanges/okcoin/overview",
+      "logo_url": "/media/19576/okcoin.png",
+      "affiliate_url": "https://www.okcoin.com",
+      "country": "China",
+      "type": "BTC and LTC/ETH",
+      "desc": "OKCoin is another top Bitcoin exchange. Even though it is based in China - it has offshoot offices around the world. With some of the largest volumes and good liquidity - best pricing is easy to achieve. OkCoin offers both LTC and BTC trading pairs into USD as well as futures on LTC and BTC with leverage up to 20 X."
+   },
+   {
+      "name": "BTER",
+      "url": "/exchanges/bter/overview",
+      "logo_url": "/media/19564/bter.png",
+      "affiliate_url": "https://bter.com",
+      "country": "British Virgin Islands",
+      "type": "Multiple Cryptos",
+      "desc": "BTER is another of the hybrid fiat to crypto and crypto to crypto exchanges. Although they had a rocky start to 2015 with a severe security breach, they have gradually reopened markets and have dealt with the situation in a professional manner."
+   },
+   {
+      "name": "Poloniex",
+      "url": "/exchanges/poloniex/overview",
+      "logo_url": "/media/19577/poloniex.png",
+      "affiliate_url": "https://poloniex.com",
+      "country": "US",
+      "type": "Multiple Cryptos",
+      "desc": "Poloniex is a pure crypto to crypto exchange based in the United States. With a grand redesign in early 2015 the site has added a wealth of features to provide a fully immersive trading experience. Technical analysis charts and live chat mean it is easy to stay abreast of news flow and analyse price trends before taking a position."
+   },
+   {
+      "name": "Bitfinex",
+      "url": "/exchanges/bitfinex/overview",
+      "logo_url": "/media/1383638/bitfinex.png",
+      "affiliate_url": "https://www.bitfinex.com",
+      "country": "British Virgin Islands",
+      "type": "Multiple Cryptos",
+      "desc": "BitFinex offers three main functions - it is a bitcoin, litecoin and dashcoin to fiat exchange, a margin trading exchange and a liquidity provider. Although the company is said to be in Beta phase there are a number of features available that expand the financial positions you can take - for example the ability to short Bitcoin via margin trading."
+   },
+   {
+      "name": "Cex.io",
+      "url": "/exchanges/cexio/overview",
+      "logo_url": "/media/19565/cexio.png",
+      "affiliate_url": "https://cex.io/r/0/cryptocompare/0/",
+      "country": "UK",
+      "type": "Multiple Cryptos",
+      "desc": "As BTCchina is to Asia - so CEX.io is to Europe and America. CEX.io combines a mining pool, crypto to crypto exchanges and fiat to Bitcoin exchange. They also offer the ability to trade mining contracts - or the rights to bitcoin mining equipment for a specific period of time. The exchange also offers USD and EUR to BTC pairs alongside a number of crypto to crypto pairs"
+   },
+   {
+      "name": "Yacuna",
+      "url": "/exchanges/yacuna/overview",
+      "logo_url": "/media/19549/yacuna.png",
+      "affiliate_url": "https://yacuna.com/",
+      "country": "UK",
+      "type": "Multiple Cryptos",
+      "desc": "Yacuna is a small UK exchange offering a slect but popular set of bitcoin to fiat and crypto to crypto trading pairs. As a relative new comer volume and liquidity is not as good as some of the more established exchanges - although this has nothing to do with the well designed interface, its ease of use and the level of security on the site."
+   },
+   {
+      "name": "Coinbase",
+      "url": "/exchanges/coinbase/overview",
+      "logo_url": "/media/19566/coinbase.png",
+      "affiliate_url": "https://www.coinbase.com/join/54c8bbd2c9ae8ac64500005d",
+      "country": "US",
+      "type": "BTC and LTC/ETH",
+      "desc": "Coinbase offer USD to BTC trading and have publicly stated their plans to add other pairs as and when banking arrangements in other jurisdictions are secured. With the seamless integration of wallet and exchange features coinbase has rapidly increased its trading volume and provides decent liquidity on low spreads."
+   },
+   {
+      "name": "LocalBitcoins",
+      "url": "/exchanges/localbitcoins/overview",
+      "logo_url": "/media/20012/localbitcoins-logo.png",
+      "affiliate_url": "https://localbitcoins.com/?ch=9hcc",
+      "country": "Finland",
+      "type": "BTC Only",
+      "desc": "Local Bitcoins is a different sort of exchange that allows anyone anywhere to trade. It therefore has the largest amount of markets - although some without much liquidity - for example in Venezuela and other emerging markets. LocalBitcoins works like an open outcry with people in the same location as you - if you want to trade you can place a buy or a sell for a price and wait to be contacted by someone who is wants to execute that trade."
+   },
+   {
+      "name": "QuadrigaCX",
+      "url": "/exchanges/quadrigacx/overview",
+      "logo_url": "/media/351385/quadrigacx.png",
+      "affiliate_url": "https://www.quadrigacx.com/?ref=qsrlh4x93054eylsfsd6ectj",
+      "country": "Canada",
+      "type": "BTC and LTC/ETH",
+      "desc": "QuadrigaCX is one of the largest BTC and ETH exchanges in Canada. They provide a safe platform to trade and exchange BTC and ETH to CAD and have multiple withdrawal and deposit methods."
+   },
+   {
+      "name": "itBit",
+      "url": "/exchanges/itbit/overview",
+      "logo_url": "/media/19572/itbit.png",
+      "affiliate_url": "https://www.itbit.com",
+      "country": "US",
+      "type": "BTC Only",
+      "desc": "ItBit is fiat to crypto exchange - and offers EUR, USD & SGD to Bitcoin. The exchange is based in the US and in Singapore. Security is strong with two factor authentication and cold storage and the interface of the exchange is easy to use and well designed."
+   },
+   {
+      "name": "HitBTC",
+      "url": "/exchanges/hitbtc/overview",
+      "logo_url": "/media/19571/hitbtc.png",
+      "affiliate_url": "https://hitbtc.com?ref_id=58a5f6fac08fe",
+      "country": "UK",
+      "type": "Multiple Cryptos",
+      "desc": "HitBTC registerd in the UK in early 2015. The exchange offers USD, EUR, GBP to BTC as well as a collection of the most common crypto to crypto trading pairs. The volume has been steadily rising providing decent liquidity and a narrowing bid ask spread. Security is good with its two factor authentication and with an unblemished track record."
+   },
+   {
+      "name": "BTC38",
+      "url": "/exchanges/btc38/overview",
+      "logo_url": "/media/19559/btc38.png",
+      "affiliate_url": "http://www.btc38.com/",
+      "country": "China",
+      "type": "Multiple Cryptos",
+      "desc": "A chinese based altcoin and CNY to crypto currency exchange. A large range of renminbi direct to crypto currency pairs. Volume and liquidity is relatively low.With low levels of information it is difficult to ascertain the exact nature of this exchange."
+   },
+   {
+      "name": "BitSquare",
+      "url": "/exchanges/bitsquare/overview",
+      "logo_url": "/media/351429/bitsquare.png",
+      "affiliate_url": "https://bitsquare.io/",
+      "country": "N/A",
+      "type": "Multiple Cryptos",
+      "desc": "BitSquare is one of the largest decentralized multi-crypto exchanges. They provide a safe, decentralized platform to trade and exchange fiat to crypto and crypto to fiat."
+   },
+   {
+      "name": "Vaultoro",
+      "url": "/exchanges/vaultoro/overview",
+      "logo_url": "/media/351517/vaultoro.png",
+      "affiliate_url": "https://www.vaultoro.com/?a=101294",
+      "country": "UK",
+      "type": "BTC Only",
+      "desc": "Vaultoro is a UK-based exchange and the first trading platform where you can trade Bitcoin for physical gold without the need to use a fiat currency or a bank account."
+   },
+   {
+      "name": "Binance",
+      "url": "/exchanges/binance/overview",
+      "logo_url": "/media/9350818/binance.png",
+      "affiliate_url": "https://www.binance.com/",
+      "country": "China",
+      "type": "Multiple Cryptos",
+      "desc": "Binance is a cryptocurrency exchange with a focus on the Chinese market and other Chinese coins. Currently, it supports English and Chinese users. The Binance token (BNB) was created during the ICO event to fund the development of the Binance exchange."
+   },
+   {
+      "name": "Mercado Bitcoin",
+      "url": "/exchanges/mercado-bitcoin/overview",
+      "logo_url": "/media/351999/mercadobitcoin.png",
+      "affiliate_url": "https://www.mercadobitcoin.com.br",
+      "country": "Brazil",
+      "type": "BTC and LTC/ETH",
+      "desc": "Mercado Bitcoin is the biggest exchange in Brasil and South America. It allows users to trade Bitcoin, Litecoin and Brazilian Reais. Users are required to provide a CPF or CNPJ number in order to register and login. Mercado Bitcoin has no limits for VIP accounts and higher, which requires document verification.\n\nMercado Bitcoin has a solid reputation within the crypto community and over 100 thousand clients that use their service."
+   },
+   {
+      "name": "Unocoin",
+      "url": "/exchanges/unocoin/overview",
+      "logo_url": "/media/352001/unocoin.png",
+      "affiliate_url": "https://www.unocoin.com",
+      "country": "India",
+      "type": "BTC Only",
+      "desc": "Unocoin is India\"s most popular Bitcoin wallet. It has a built in exchange that allows users to exchange Bitcoin for Indian Rupees (INR). Unocoin charges a 1% fee to buy or sell bitcoins. Over an extended period of usage (minimum 60 days) and a significant transaction volume on your account, there will be an upgrade to “Gold Membership” and the trading fee will drop to 0.7% and the transaction limit per day will increase."
+   },
+   {
+      "name": "Bitso",
+      "url": "/exchanges/bitso/overview",
+      "logo_url": "/media/352003/bitso1.png",
+      "affiliate_url": "https://bitso.com/?ref=7gcs966djgr5h5qq8jd5j9ig",
+      "country": "Mexico",
+      "type": "BTC and LTC/ETH",
+      "desc": "Bitso is a Mexican cryptocurrency exchange founded in 2014. It allows users to exchange Bitcoin and Ether for Mexican Pesos. Users can deposit and withdraw MXN through the Ripple Gateway among others. Bitso is committed to developing efficient financial services in Mexico."
+   },
+   {
+      "name": "BTCXIndia",
+      "url": "/exchanges/btcxindia/overview",
+      "logo_url": "/media/352017/btcxindia.png",
+      "affiliate_url": "https://btcxindia.com/",
+      "country": "India",
+      "type": "BTC Only",
+      "desc": "BTCXIndia is one of the leading Bitcoin exchanges in India. It offers real time trading between rupees and bitcoins for the Indian community."
+   },
+   {
+      "name": "Paymium",
+      "url": "/exchanges/paymium/overview",
+      "logo_url": "/media/352125/paymium.png",
+      "affiliate_url": "https://paymium.com/",
+      "country": "France",
+      "type": "BTC Only",
+      "desc": "Paymium is the first European exchange founded in 2011. They provide EUR/BTC exchange service as well as send and receive Bitcoins by mail.\n\nThey comply with European Regulations and accept SEPA Wire Transfer and Credit Card Bitcoin purchase (arriving December 15th, 2016)."
+   },
+   {
+      "name": "The Rock Trading",
+      "url": "/exchanges/the-rock-trading/overview",
+      "logo_url": "/media/19546/therocktrading.png",
+      "affiliate_url": "https://www.therocktrading.com/",
+      "country": "Malta",
+      "type": "Multiple Cryptos",
+      "desc": "The Rock Trading is one of the leading Bitcoin exchanges in Europe. It offers real time trading between euro, usd and bitcoin/altcoins It\"s one of the oldest European exchanges."
+   },
+   {
+      "name": "bitFlyer",
+      "url": "/exchanges/bitflyer/overview",
+      "logo_url": "/media/1381995/bitflyer.png",
+      "affiliate_url": "https://bitflyer.jp/",
+      "country": "Japane",
+      "type": "BTC and LTC/ETH",
+      "desc": "bitFlyer is the leading Japanese exchange in trade volume. It allows users to exchange Bitcoin for JPY and to trade with margin. The exchange allows users send and receive Bitcoins in just 1 second, storing said BTC using next generation encryption by DigiCert."
+   },
+   {
+      "name": "Quoine",
+      "url": "/exchanges/quoine/overview",
+      "logo_url": "/media/1381996/quoine.png",
+      "affiliate_url": "https://www.quoine.com/",
+      "country": "Japan",
+      "type": "BTC and LTC/ETH",
+      "desc": "Quoine exchange is a Japanese Bitcoin and Ether exchange. It allows users to exchange BTC and ETH for multiple national currencies. Quoine currently offers 0% fees on all pairs except ETHBTC and margin trading with leverage starting at 2X and up to 25X. Quoine has other special features like futures trading, algo trading, and even lending to earn interest on your deposits."
+   },
+   {
+      "name": "Liqui",
+      "url": "/exchanges/liqui/overview",
+      "logo_url": "/media/1382126/liqui.png",
+      "affiliate_url": "https://liqui.io",
+      "country": "Ukraine",
+      "type": "Multiple Cryptos",
+      "desc": "Liqui is a Ukraine-based cryptocurrency exchange. It allows users to buy and sell Bitcoin and altcoins, although not national currencies. Liqui offers IOU markets that allow users to buy and sell coins from Initial Coin Offerings that are not trading yet."
+   },
+   {
+      "name": "Coinfloor",
+      "url": "/exchanges/coinfloor/overview",
+      "logo_url": "/media/20013/coinfloor-logo.png",
+      "affiliate_url": "https://coinfloor.co.uk/",
+      "country": "UK",
+      "type": "Multiple Cryptos",
+      "desc": "Coinfloor is one of the UK\"s top exchanges. Coinfloor uses 100% multisignature cold storage. Coinfloor has a number of fiat to crypto trading pairs - GBP, Euro, Polish Zloty and USD. In all Coinfloor is a solid exchange to use specifically because of its high levels of security."
+   },
+   {
+      "name": "Luno",
+      "url": "/exchanges/luno/overview",
+      "logo_url": "/media/1382215/luno.png",
+      "affiliate_url": "https://www.luno.com/invite/7Y7R9",
+      "country": "United Kingdom",
+      "type": "BTC Only",
+      "desc": "Luno is a UK-based Bitcoin exchange that offers wallet and exhcange services  to multiple countries. Luno was formerly known as BitX."
+   },
+   {
+      "name": "CryptoX",
+      "url": "/exchanges/cryptox/overview",
+      "logo_url": "/media/1382230/cryptox.png",
+      "affiliate_url": "https://cryptox.pl",
+      "country": "United Kingdom",
+      "type": "Multiple Cryptos",
+      "desc": "CryptoX is a multi cryptocurrency exchange that offers trading services for Bitcoin, Litecoin, Dash, Monero and Byteball. The exchange does not offer FIAT trading pairs."
+   },
+   {
+      "name": "EtherDelta",
+      "url": "/exchanges/etherdelta/overview",
+      "logo_url": "/media/1382342/ethdelta.png",
+      "affiliate_url": "https://etherdelta.github.io/",
+      "country": "Etherboost",
+      "type": "Multiple Cryptos",
+      "desc": "EtherDelta is a decentralized Ethereum token exchange, brought to you by Etherboost. Here, users can trade any most Ethereum-based tokens such as Iconomi, Augur, 1ST, and others. The exchange currenly has only one fee, which is the 0.3% taker fee. Deposit, withdraw, and maker transactions are all free."
+   },
+   {
+      "name": "TuxExchange",
+      "url": "/exchanges/tuxexchange/overview",
+      "logo_url": "/media/1382343/tux.jpg",
+      "affiliate_url": "https://tuxexchange.com/",
+      "country": "Canada",
+      "type": "Multiple Cryptos",
+      "desc": "Tux Exchange is a Canadian cryptocurrency exchange that offers trading on multiple cryptocurrencies, including Bitcoin, Ether, Litecoin, Zcash, DASH, Dogecoin, Monero, Peercoin, Potcoin, Blackcoin, Namecoin, Emercoin, Syscoin, Counterparty and Pepecash. The Tux Echange only charges a 0.3% taker fee (maker, deposits, and withdraws have no fees). Tux does not support fiat currencies, however. The Tux Exchange is named after the Tuxedo cat."
+   },
+   {
+      "name": "CHBTC",
+      "url": "/exchanges/chbtc/overview",
+      "logo_url": "/media/1382345/chbtc_logo.png",
+      "affiliate_url": "https://www.chbtc.com/",
+      "country": "China",
+      "type": "BTC and LTC/ETH",
+      "desc": "Founded in 2013 CHBTC is a popular cryptocurrency exchange from China that serves a global customer base. It offers cryptocurrency and fiat trading and supports BTC, LTC, ETH, ETC and the Chinese Yuan (CNY). The 0.05% trading fee applies only to the ETC/CNY pair. Half of the trading fees gathered from this pair are donated to the Ethereum Classic project.\n\n7*24 hours online customer service, provides customers with real-time, fast and efficient service."
+   },
+   {
+      "name": "bitFlyerFX",
+      "url": "/exchanges/bitflyerfx/overview",
+      "logo_url": "/media/1382386/bitflyerln.png",
+      "affiliate_url": "https://lightning.bitflyer.jp",
+      "country": "Japan",
+      "type": "BTC Only",
+      "desc": "bitFlyer Lightning is an exchange (trading platform) where users can trade bitcoins. The exchange rates are determined based on the balance between the supply and demand. Users can sell JPY and obtain bitcoins in exchange, or they can sell bitcoins in exchange for JPY. The practice is similar to retail foreign exchange (FX) trading."
+   },
+   {
+      "name": "Livecoin",
+      "url": "/exchanges/livecoin/overview",
+      "logo_url": "/media/1382398/livecoin.png",
+      "affiliate_url": "https://livecoin.net/?from=Livecoin-9JJkf5XU",
+      "country": "Livecoin",
+      "type": "Multiple Cryptos",
+      "desc": "Livecoin is multi-cryptocurrency trading platform, suitable for both beginners and experienced traders. Livecoin offers services both for regular users and for coin developers. These include ICOs, swaps and others. Users can also play dice on the exchange."
+   },
+   {
+      "name": "Tidex",
+      "url": "/exchanges/tidex/overview",
+      "logo_url": "/media/1382440/tidex.png",
+      "affiliate_url": "https://tidex.com",
+      "country": "U.K",
+      "type": "Multiple Cryptos",
+      "desc": "Tidex is a new bitcoin and altcoin exchange that trades popular digital currencies, including several Waves assets. based in the UK and officially endorsed by the Waves Platform. It trades WAVES, Waves tokens and other popular cryptocurrencies including LTC, ETH, DOGE, DASH and BTS, although no fiat currencies. It launched with zero-fee model for traders and liquidity guaranteed."
+   },
+   {
+      "name": "Huobi",
+      "url": "/exchanges/huobi/overview",
+      "logo_url": "/media/20010/huobi-logo.jpeg",
+      "affiliate_url": "https://www.huobi.com/",
+      "country": "China",
+      "type": "BTC and LTC/ETH",
+      "desc": "HuoBi is one of the world\"s leading trading platform, committed to provide investors with a professional, safe and honest transaction services. March 4, 2014, fire currency net daily trading volume of more than 260,000, the transaction amounted to 1 billion yuan, creating a global trading platform where Bitcoin record, is one of the world\"s largest trading volume of Bitcoin trading platform ."
+   },
+   {
+      "name": "LakeBTC",
+      "url": "/exchanges/lakebtc/overview",
+      "logo_url": "/media/20006/lakebtclogo.png",
+      "affiliate_url": "https://www.lakebtc.com/?ref=qsvodu",
+      "country": "China",
+      "type": "BTC Only",
+      "desc": "LakeBTC project was started in early 2013 as a virtual Bitcoin exchange initially for traders and other financial professionals. Later that year, the exchange was incorporated and operated under the current domain name. LakeBTC is currently owned by Lake Investments Limited (BVI), with Shanghai Trading IT, Inc. providing technical and customer support."
+   },
+   {
+      "name": "Bit2C",
+      "url": "/exchanges/bit2c/overview",
+      "logo_url": "/media/20014/bit2c-logo.jpeg",
+      "affiliate_url": "https://www.bit2c.co.il/",
+      "country": "Israel",
+      "type": "BTC and LTC/ETH",
+      "desc": "Bit2C is an Israeli based Bitcoin exchange. The exchange allows for trading in Shekel and BTC."
+   },
+   {
+      "name": "BitMarket",
+      "url": "/exchanges/bitmarket/overview",
+      "logo_url": "/media/1382621/bitmarket.png",
+      "affiliate_url": "https://www.bitmarket.net/",
+      "country": "Poland",
+      "type": "Multiple Cryptos",
+      "desc": "BitMarket is a Polish cryptocurrency exchange that offers trading in BTC, LTC, ETH, and DOGE. The market offers both margin trading services and investment opportunities for users. BitMarket accepts PLN and ERU via regular and instant transfers."
+   },
+   {
+      "name": "Coinone",
+      "url": "/exchanges/coinone/overview",
+      "logo_url": "/media/1382708/coinone.png",
+      "affiliate_url": "https://coinone.co.kr/",
+      "country": "South Korea",
+      "type": "BTC and LTC/ETH",
+      "desc": "Coinone is a South Korea-based exchange platform that allows users to buy, sell and store Bitcoin, Ether and Ether Classic. The market allows users to exchange these cryptocurrencies for South Korean Won (KRW) and offers margin trading services."
+   },
+   {
+      "name": "CCEX",
+      "url": "/exchanges/ccex/overview",
+      "logo_url": "/media/20008/ccex-logo.png",
+      "affiliate_url": "https://c-cex.com/?rf=3954F7D2961E0D59",
+      "country": "Germany",
+      "type": "Multiple Cryptos",
+      "desc": "C-CEX.com is a crypto to crypto exchange and a fiat to crypto exchange and offers a good alternative to the mainstays of Cryptsy and Bittrex. With decent liquidity on a few of the trading pairs CCEX is a good exchange to use. Security has not been compromised as of the time of writing."
+   },
+   {
+      "name": "Coinse",
+      "url": "/exchanges/coinse/overview",
+      "logo_url": "/media/20009/coinse-logo.png",
+      "affiliate_url": "https://www.coins-e.com",
+      "country": "Canada",
+      "type": "Multiple Cryptos",
+      "desc": "Coinse is based in Toronto, Canada. The exchange has a large range of coins with crypto to crypto pairs. The exchange doesn\"t have great liquidity though."
+   },
+   {
+      "name": "Bleutrade",
+      "url": "/exchanges/bleutrade/overview",
+      "logo_url": "/media/1383237/bleutrade.png",
+      "affiliate_url": "https://bleutrade.com",
+      "country": "Unknown",
+      "type": "Multiple Cryptos",
+      "desc": "Bleutrade is an alternative cryptocurrency exchange that offers trading on multiple cryptocurrencies, including Bitcoin, Ether, Litecoin, DASH, and many others. The Bluetrade Echange only charges a 0.25% taker and maker fee for all currencies, although they reserve the right to charge a Fee which can range from 0.2% to 0.5% per trade, as well as fixed fees for withdrawals. Bleutrade does not support fiat currencies."
+   },
+   {
+      "name": "ETHEXIndia",
+      "url": "/exchanges/ethexindia/overview",
+      "logo_url": "/media/1383238/ethexindia.jpg",
+      "affiliate_url": "https://ethexindia.com",
+      "country": "India",
+      "type": "BTC and LTC/ETH",
+      "desc": "ETHEXIndia is India’s first market place for Ethereum Tokens. It offers real-time trading for ETH/INR, allowing users to buy and sell Ether for INR with a tight spread."
+   },
+   {
+      "name": "Gatecoin",
+      "url": "/exchanges/gatecoin/overview",
+      "logo_url": "/media/20650/gatecoin.png",
+      "affiliate_url": "https://gatecoin.com",
+      "country": "China",
+      "type": "Multiple Cryptos",
+      "desc": "Gatecoin is a regulated digital currency exchange focused on security, reliability and cost-efficient transfers. They also provide other related services such as prepaid debit cards, merchant and remittance solutions."
+   },
+   {
+      "name": "Bithumb",
+      "url": "/exchanges/bithumb/overview",
+      "logo_url": "/media/1383284/bithump.png",
+      "affiliate_url": "https://www.bithumb.com/EN/",
+      "country": "South Korea",
+      "type": "BTC and LTC/ETH",
+      "desc": "Bithumb is one of the largest exchanges in South Korea, allowing users to buy/sell/store Bitcoin and Ethereum. Bithump offers additional services like remittances and gift vouchers."
+   },
+   {
+      "name": "Zaif",
+      "url": "/exchanges/zaif/overview",
+      "logo_url": "/media/1383329/zaif.png",
+      "affiliate_url": "https://zaif.jp/",
+      "country": "Tech Bureau Co., Ltd. ",
+      "type": "Multiple Cryptos",
+      "desc": "Zaif is a Japanese exchange that allows users to buy and sell various coins like Bitcoin and NEM for JPY. The Zaif exchange also allows for margin trading and offers an affiliate program."
+   },
+   {
+      "name": "Yunbi",
+      "url": "/exchanges/yunbi/overview",
+      "logo_url": "/media/20690/yunbi.png",
+      "affiliate_url": "https://yunbi.com",
+      "country": "China",
+      "type": "Multiple Cryptos",
+      "desc": "Built with the code released by Peatio Open Source Project, YUNBI adheres to the principle of integrity, transparency and being open­-sourced, offering customers a highly­-safe and easily­-operating platform to trade digital currencies."
+   },
+   {
+      "name": "Jubi",
+      "url": "/exchanges/jubi/overview",
+      "logo_url": "/media/1383358/junbi.png",
+      "affiliate_url": "https://www.jubi.com/",
+      "country": "Japan",
+      "type": "Multiple Cryptos",
+      "desc": "Jubi is a Chinese exchange, allowing users to exchange a wide variety of cryptocurrencies for CNY. The exchange was founded in January 2014 by Beijing Zigong Technology Co., Ltd., and was officially launched in March 2014. Its core team is composed of many technical staff who have been concerned with virtual currency for many years. The company is committed to providing a safe, stable and quality trading experience for the second generation of cryptocurrencies or altcoins."
+   },
+   {
+      "name": "Lykke",
+      "url": "/exchanges/lykke/overview",
+      "logo_url": "/media/9350777/lkk.png",
+      "affiliate_url": "https://www.lykke.com/",
+      "country": "Switzerland",
+      "type": "Multiple Cryptos",
+      "desc": "The Lykke exchange is a semi-decentralized exchange for cryptocurrencies and fiat. The company’s subsidiaries, which are licensed as financial companies, provide broker and trading services for clients. All possible asset pair types are tradable: fiat fx to fiat fx, fiat fx to crypto, and crypto to crypto. Lykke, as a company, provides liquidity, issuance services, and consulting. The commissions and fees for Lykke are essentially zero."
+   },
+   {
+      "name": "Remitano",
+      "url": "/exchanges/remitano/overview",
+      "logo_url": "/media/12318193/remitano.png",
+      "affiliate_url": "https://remitano.com",
+      "country": "Seychelles",
+      "type": "Multiple Cryptos",
+      "desc": "Remitano is a Peer-to-peer exchanged based in Seychelles. It allows users to buy or sell Bitcoin and Ethereum directly to other users with alternative payment methods such as PayPal, Cash in hand or bank deposits. Remitano charger a 1% fee to the taker and 0% to the maker, with the fee being included in the order price."
+   },
+   {
+      "name": "Coinroom",
+      "url": "/exchanges/coinroom/overview",
+      "logo_url": "/media/12318277/coinroom.png",
+      "affiliate_url": "https://coinroom.com",
+      "country": "Poland",
+      "type": "Multiple Cryptos",
+      "desc": "1"
+   },
+   {
+      "name": "Kraken",
+      "url": "/exchanges/kraken/overview",
+      "logo_url": "/media/19574/kraken.png",
+      "affiliate_url": "https://www.kraken.com",
+      "country": "US",
+      "type": "Multiple Cryptos",
+      "desc": "Kraken is a top European based exchange and offers a variety of fiat to bitcoin pairs such as JPY, EUR, GBP and USD. Volume is decent especially on the JPY BTC pair after MT Gox\"s collapse - with Kraken assuming the mantle in that region. The exchange also has a smattering if popular crypto to crypto pairs including litecoin and dogecoin."
+   }
+]

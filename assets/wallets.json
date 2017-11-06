@@ -1,0 +1,2700 @@
+[
+   {
+      "name": "Parity",
+      "logo_url": "/media/1383440/parity.png",
+      "security": "Personal",
+      "anonymity": "High",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Open Source"
+      ],
+      "coins": [
+         "ETH"
+      ],
+      "platforms": [
+         "Mac OS",
+         "Windows",
+         "Linux"
+      ],
+      "sourceCodeUrl": "https://github.com/paritytech/parity",
+      "validationType": "Full Node",
+      "afilliate_url": "https://parity.io"
+   },
+   {
+      "name": "Digibyte Core",
+      "logo_url": "/media/19673/dgb.png",
+      "security": "Personal",
+      "anonymity": "High",
+      "easeOfUse": "Average",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Open Source",
+         "Multi-Signature"
+      ],
+      "coins": [
+         "DGB"
+      ],
+      "platforms": [
+         "Mac OS",
+         "Windows",
+         "Linux"
+      ],
+      "sourceCodeUrl": "https://github.com/digibyte/digibyte",
+      "validationType": "Full Node",
+      "afilliate_url": "https://www.digibyte.co/digibyte-wallets"
+   },
+   {
+      "name": "Digibyte Gaming Wallet",
+      "logo_url": "/media/19673/dgb.png",
+      "security": "Personal",
+      "anonymity": "High",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Hierarchical Deterministic",
+         "Open Source",
+         "Multi-Signature"
+      ],
+      "coins": [
+         "DGB"
+      ],
+      "platforms": [
+         "iOS",
+         "Android",
+         "Windows Phone",
+         "Chrome Extension",
+         "Linux",
+         "Windows",
+         "Mac OS"
+      ],
+      "sourceCodeUrl": "https://github.com/dgbholdings/digibyte-gaming-wallet",
+      "validationType": "Centralized",
+      "afilliate_url": "https://www.digibyte.co/digibyte-wallets"
+   },
+   {
+      "name": "BTC Wallet",
+      "logo_url": "/media/1383048/btccom.png",
+      "security": "Third Party Encrypted",
+      "anonymity": "Medium",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Hierarchical Deterministic",
+         "2 Factor Authentication",
+         "Multi-Signature",
+         "Open Source"
+      ],
+      "coins": [
+         "BTC",
+         "BCH"
+      ],
+      "platforms": [
+         "Android",
+         "iOS",
+         "Web"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "https://wallet.btc.com/#/setup/login"
+   },
+   {
+      "name": "Ethereum Mist Wallet ÐApp",
+      "logo_url": "/media/20713/etehreum_wallet.png",
+      "security": "Personal",
+      "anonymity": "Medium",
+      "easeOfUse": "Average",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Multi-Signature",
+         "Open Source"
+      ],
+      "coins": [
+         "ETH"
+      ],
+      "platforms": [
+         "Linux",
+         "Windows",
+         "Mac OS"
+      ],
+      "sourceCodeUrl": "https://github.com/ethereum/meteor-dapp-wallet",
+      "validationType": "Full Node",
+      "afilliate_url": "https://github.com/ethereum/mist/releases"
+   },
+   {
+      "name": "KeepKey Wallet",
+      "logo_url": "/media/20716/keep-key-wallet.png",
+      "security": "Personal",
+      "anonymity": "Medium",
+      "easeOfUse": "Difficult",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Hierarchical Deterministic"
+      ],
+      "coins": [
+         "BTC",
+         "LTC",
+         "NMC",
+         "DOGE",
+         "DASH"
+      ],
+      "platforms": [
+         "Hardware"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "SPV",
+      "afilliate_url": "http://keepkey.go2cloud.org/aff_c?offer_id=1&aff_id=1585"
+   },
+   {
+      "name": "Bonpay",
+      "logo_url": "/media/1383541/bonpay.png",
+      "security": "Third Party",
+      "anonymity": "Low",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "2 Factor Authentication"
+      ],
+      "coins": [
+         "BTC"
+      ],
+      "platforms": [
+         "Web"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "https://bonpay.com/wallet/"
+   },
+   {
+      "name": "SpectroCoin",
+      "logo_url": "/media/350564/spectrocoin.png",
+      "security": "Third Party Encrypted",
+      "anonymity": "Low",
+      "easeOfUse": "Average",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": true,
+      "walletFeatures": [],
+      "coins": [
+         "BTC"
+      ],
+      "platforms": [
+         "Android",
+         "Web",
+         "Windows",
+         "iOS"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "http://bit.ly/2tsSQfe"
+   },
+   {
+      "name": "Coin.Space HD",
+      "logo_url": "/media/350566/coinspace.png",
+      "security": "Third Party Encrypted",
+      "anonymity": "Medium",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Hierarchical Deterministic",
+         "Open Source"
+      ],
+      "coins": [
+         "BTC",
+         "LTC"
+      ],
+      "platforms": [
+         "Android",
+         "Windows",
+         "iOS"
+      ],
+      "sourceCodeUrl": "https://github.com/orgs/CoinSpace/",
+      "validationType": "SPV",
+      "afilliate_url": "https://www.coin.space"
+   },
+   {
+      "name": "Cryptonator multi-cryptocurrency wallet",
+      "logo_url": "/media/350567/cryptonator.png",
+      "security": "Third Party",
+      "anonymity": "Low",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "2 Factor Authentication"
+      ],
+      "coins": [
+         "LTC",
+         "BTC",
+         "BLK",
+         "DOGE",
+         "XPY",
+         "PPC",
+         "RDD",
+         "VTC",
+         "DASH",
+         "XPM",
+         "EMC",
+         "ZEC"
+      ],
+      "platforms": [
+         "Android",
+         "Web",
+         "iOS",
+         "Chrome Extension"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "https://www.cryptonator.com"
+   },
+   {
+      "name": "CoolWallet - The Ultimate Bitcoin Safe",
+      "logo_url": "/media/350570/coolwallet.jpeg",
+      "security": "Personal",
+      "anonymity": "Medium",
+      "easeOfUse": "Average",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Hierarchical Deterministic",
+         "2 Factor Authentication",
+         "Open Source"
+      ],
+      "coins": [
+         "BTC"
+      ],
+      "platforms": [
+         "Hardware"
+      ],
+      "sourceCodeUrl": "https://github.com/CoolBitX-Technology/coolwallet-ios",
+      "validationType": "SPV",
+      "afilliate_url": "https://coolbitx.com/coolwallet/"
+   },
+   {
+      "name": "WageCan Wallet",
+      "logo_url": "/media/350717/wagecan.png",
+      "security": "Third Party Encrypted",
+      "anonymity": "Medium",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [],
+      "coins": [
+         "BTC"
+      ],
+      "platforms": [
+         "Web",
+         "Android",
+         "iOS"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "SPV",
+      "afilliate_url": "https://www.wagecan.com/"
+   },
+   {
+      "name": "MyMonero Wallet",
+      "logo_url": "/media/350728/mymonero.png",
+      "security": "Third Party Encrypted",
+      "anonymity": "Medium",
+      "easeOfUse": "Average",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [],
+      "coins": [
+         "XMR"
+      ],
+      "platforms": [
+         "Web"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "SPV",
+      "afilliate_url": "https://mymonero.com"
+   },
+   {
+      "name": "Jaxx Wallet",
+      "logo_url": "/media/350743/jaxx.png",
+      "security": "Personal",
+      "anonymity": "High",
+      "easeOfUse": "Average",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Hierarchical Deterministic"
+      ],
+      "coins": [
+         "BTC",
+         "ETH",
+         "ETC",
+         "DASH",
+         "DAO",
+         "LTC",
+         "REP",
+         "ZEC"
+      ],
+      "platforms": [
+         "Android",
+         "iOS",
+         "Chrome Extension",
+         "Windows",
+         "Mac OS",
+         "Linux"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "http://jaxx.io/"
+   },
+   {
+      "name": "Samourai Wallet",
+      "logo_url": "/media/350744/samourai.png",
+      "security": "Personal",
+      "anonymity": "Medium",
+      "easeOfUse": "Average",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Hierarchical Deterministic",
+         "Open Source"
+      ],
+      "coins": [
+         "BTC"
+      ],
+      "platforms": [
+         "Android"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "http://samouraiwallet.com/"
+   },
+   {
+      "name": "ZebPay",
+      "logo_url": "/media/350768/zebpay.png",
+      "security": "Third Party Encrypted",
+      "anonymity": "Medium",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": true,
+      "walletFeatures": [
+         "2 Factor Authentication"
+      ],
+      "coins": [
+         "BTC"
+      ],
+      "platforms": [
+         "iOS",
+         "Android"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "http://app.zebpay.com/wallet-website"
+   },
+   {
+      "name": "Bitlox Wallet",
+      "logo_url": "/media/350772/bitlox.png",
+      "security": "Personal",
+      "anonymity": "High",
+      "easeOfUse": "Difficult",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Hierarchical Deterministic"
+      ],
+      "coins": [
+         "BTC"
+      ],
+      "platforms": [
+         "Hardware"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Full Node",
+      "afilliate_url": "https://www.bitlox.com/"
+   },
+   {
+      "name": "UberPay Wallet",
+      "logo_url": "/media/350784/uberpay1.png",
+      "security": "Personal",
+      "anonymity": "Medium",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Hierarchical Deterministic"
+      ],
+      "coins": [
+         "DASH",
+         "BTC",
+         "LTC",
+         "NBT",
+         "PPC",
+         "DOGE",
+         "AC",
+         "CRBIT",
+         "STEPS",
+         "DOGED",
+         "MZC",
+         "DGB",
+         "DGC",
+         "CCN",
+         "MYR",
+         "UNO",
+         "RDD",
+         "FTC",
+         "VTC",
+         "MONA",
+         "BTA",
+         "GCR",
+         "VIA",
+         "CESC",
+         "NEOS",
+         "EFL"
+      ],
+      "platforms": [
+         "Android"
+      ],
+      "sourceCodeUrl": "https://github.com/Uberpay",
+      "validationType": "SPV",
+      "afilliate_url": "https://play.google.com/store/apps/details?id=com.mygeopay.wallet"
+   },
+   {
+      "name": "CoinCorner",
+      "logo_url": "/media/350808/coincorner.png",
+      "security": "Third Party",
+      "anonymity": "Low",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "2 Factor Authentication"
+      ],
+      "coins": [
+         "BTC"
+      ],
+      "platforms": [
+         "Android",
+         "Windows Phone",
+         "iOS",
+         "Web"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "https://www.coincorner.com?AffiliateId=552"
+   },
+   {
+      "name": "EtherLi Wallet",
+      "logo_url": "/media/350814/etherli_wallet.png",
+      "security": "Personal",
+      "anonymity": "Medium",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "2 Factor Authentication",
+         "Multi-Signature"
+      ],
+      "coins": [
+         "ETH"
+      ],
+      "platforms": [
+         "Web"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "SPV",
+      "afilliate_url": "https://www.ether.li/signup"
+   },
+   {
+      "name": "Electrum Stratis Wallet",
+      "logo_url": "/media/351303/stratis-logo.png",
+      "security": "Personal",
+      "anonymity": "Medium",
+      "easeOfUse": "Average",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Open Source",
+         "Multi-Signature",
+         "Hierarchical Deterministic"
+      ],
+      "coins": [
+         "STRAT"
+      ],
+      "platforms": [
+         "Windows",
+         "Linux",
+         "Mac OS"
+      ],
+      "sourceCodeUrl": "https://github.com/stratisproject/electrum-stratis",
+      "validationType": "SPV",
+      "afilliate_url": "https://github.com/stratisproject/electrum-stratis"
+   },
+   {
+      "name": "MyEtherWallet",
+      "logo_url": "/media/350883/myetherwallet.png",
+      "security": "Personal",
+      "anonymity": "High",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Open Source"
+      ],
+      "coins": [
+         "ETH"
+      ],
+      "platforms": [
+         "Web"
+      ],
+      "sourceCodeUrl": "https://github.com/kvhnuke/etherwallet",
+      "validationType": "Centralized",
+      "afilliate_url": "https://www.myetherwallet.com/"
+   },
+   {
+      "name": "Bitcoin Cash Freewallet",
+      "logo_url": "/media/1383942/bccfreewallet.png",
+      "security": "Third Party",
+      "anonymity": "Medium",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [],
+      "coins": [
+         "BCH"
+      ],
+      "platforms": [
+         "Android"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "https://freewallet.org/"
+   },
+   {
+      "name": "Electrum Cash Wallet",
+      "logo_url": "/media/1383943/electroncash.png",
+      "security": "Personal",
+      "anonymity": "Medium",
+      "easeOfUse": "Average",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Open Source"
+      ],
+      "coins": [
+         "BCH"
+      ],
+      "platforms": [
+         "Windows",
+         "Mac OS",
+         "Linux"
+      ],
+      "sourceCodeUrl": "https://github.com/fyookball/electrum",
+      "validationType": "SPV",
+      "afilliate_url": "http://www.electroncash.org/"
+   },
+   {
+      "name": "Ethereum Freewallet",
+      "logo_url": "/media/1383091/freewallet-eth.png",
+      "security": "Third Party",
+      "anonymity": "Medium",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [],
+      "coins": [
+         "ETH"
+      ],
+      "platforms": [
+         "Android",
+         "iOS"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "https://go.onelink.me/AKL2?pid=cryptocompare"
+   },
+   {
+      "name": "Bitcoin Freewallet",
+      "logo_url": "/media/1383105/btc.png",
+      "security": "Third Party",
+      "anonymity": "Medium",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [],
+      "coins": [
+         "BTC"
+      ],
+      "platforms": [
+         "Android",
+         "iOS"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "https://go.onelink.me/7EWA?pid=cc"
+   },
+   {
+      "name": "Monero Freewallet",
+      "logo_url": "/media/1383105/xmr.png",
+      "security": "Third Party",
+      "anonymity": "Medium",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [],
+      "coins": [
+         "XMR"
+      ],
+      "platforms": [
+         "Android",
+         "iOS"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "https://go.onelink.me/bZ00?pid=cc"
+   },
+   {
+      "name": "FantomCoin Freewallet",
+      "logo_url": "/media/1383107/fcn.png",
+      "security": "Third Party",
+      "anonymity": "Medium",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [],
+      "coins": [
+         "FCN"
+      ],
+      "platforms": [
+         "Android"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "https://go.onelink.me/lIff?pid=cc"
+   },
+   {
+      "name": "CoinVault",
+      "logo_url": "/media/351159/coinvault.png",
+      "security": "Personal",
+      "anonymity": "Low",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Hierarchical Deterministic"
+      ],
+      "coins": [
+         "BTC",
+         "LTC",
+         "DASH",
+         "DOGE",
+         "GRC",
+         "NMC",
+         "PPC",
+         "QRK",
+         "RDD",
+         "TRC",
+         "XPM",
+         "CRX",
+         "STRAT",
+         "ARG",
+         "DLC",
+         "MTR",
+         "GB",
+         "SH",
+         "UBIQ",
+         "ZYD"
+      ],
+      "platforms": [
+         "Web"
+      ],
+      "sourceCodeUrl": "https://github.com/CoinVault/",
+      "validationType": "Centralized",
+      "afilliate_url": "https://www.coinvault.io/"
+   },
+   {
+      "name": "XETH Ether Wallet",
+      "logo_url": "/media/351249/xeth_300.png",
+      "security": "Personal",
+      "anonymity": "High",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Open Source"
+      ],
+      "coins": [
+         "ETH"
+      ],
+      "platforms": [
+         "Windows",
+         "Mac OS",
+         "Linux"
+      ],
+      "sourceCodeUrl": "https://github.com/BitProfile/Xeth",
+      "validationType": "Full Node",
+      "afilliate_url": "http://xeth.org/"
+   },
+   {
+      "name": "Exodus",
+      "logo_url": "/media/351280/exodus.png",
+      "security": "Personal",
+      "anonymity": "High",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Hierarchical Deterministic"
+      ],
+      "coins": [
+         "BTC",
+         "ETH",
+         "LTC",
+         "DASH",
+         "GNT",
+         "REP",
+         "EOS",
+         "ANT",
+         "DCR",
+         "OMG",
+         "GNO"
+      ],
+      "platforms": [
+         "Windows",
+         "Linux",
+         "Mac OS"
+      ],
+      "sourceCodeUrl": "https://github.com/ExodusMovement",
+      "validationType": "SPV",
+      "afilliate_url": "http://www.exodus.io/"
+   },
+   {
+      "name": "Schildbach BTC Wallet",
+      "logo_url": "/media/19463/bitcoin-wallet.png",
+      "security": "Personal",
+      "anonymity": "Medium",
+      "easeOfUse": "Average",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Open Source"
+      ],
+      "coins": [
+         "BTC"
+      ],
+      "platforms": [
+         "Android"
+      ],
+      "sourceCodeUrl": "https://github.com/schildbach/bitcoin-wallet",
+      "validationType": "SPV",
+      "afilliate_url": "https://play.google.com/store/apps/details?id=de.schildbach.wallet"
+   },
+   {
+      "name": "Bitcoin Core Client",
+      "logo_url": "/media/19461/bitcoin-core.png",
+      "security": "Personal",
+      "anonymity": "High",
+      "easeOfUse": "Difficult",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Open Source"
+      ],
+      "coins": [
+         "BTC"
+      ],
+      "platforms": [
+         "Windows",
+         "Linux",
+         "Mac OS"
+      ],
+      "sourceCodeUrl": "https://github.com/bitcoin/bitcoin",
+      "validationType": "Full Node",
+      "afilliate_url": "https://bitcoin.org/en/download"
+   },
+   {
+      "name": "Blockchain Wallet",
+      "logo_url": "/media/19467/blockchain.png",
+      "security": "Third Party Encrypted",
+      "anonymity": "Low",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Multi-Signature",
+         "Open Source",
+         "Hierarchical Deterministic",
+         "2 Factor Authentication"
+      ],
+      "coins": [
+         "BTC"
+      ],
+      "platforms": [
+         "Android",
+         "iOS",
+         "Web"
+      ],
+      "sourceCodeUrl": "https://github.com/blockchain/My-Wallet-V3-Android",
+      "validationType": "Centralized",
+      "afilliate_url": "https://blockchain.info/wallet"
+   },
+   {
+      "name": "Green Address",
+      "logo_url": "/media/19449/green-address.png",
+      "security": "Third Party Encrypted",
+      "anonymity": "Medium",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Hierarchical Deterministic",
+         "Open Source",
+         "2 Factor Authentication",
+         "Multi-Signature"
+      ],
+      "coins": [
+         "BTC"
+      ],
+      "platforms": [
+         "Web",
+         "Android",
+         "iOS",
+         "Chrome Extension"
+      ],
+      "sourceCodeUrl": "https://github.com/greenaddress/GreenBits",
+      "validationType": "SPV",
+      "afilliate_url": "https://greenaddress.it/en/"
+   },
+   {
+      "name": "Bread Wallet",
+      "logo_url": "/media/350696/breadwallet.png",
+      "security": "Third Party Encrypted",
+      "anonymity": "Medium",
+      "easeOfUse": "Average",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Open Source",
+         "Hierarchical Deterministic"
+      ],
+      "coins": [
+         "BTC"
+      ],
+      "platforms": [
+         "Android",
+         "iOS"
+      ],
+      "sourceCodeUrl": "https://github.com/voisine/breadwallet",
+      "validationType": "SPV",
+      "afilliate_url": "https://itunes.apple.com/gb/app/breadwallet-bitcoin-wallet/id885251393?mt=8"
+   },
+   {
+      "name": "Mycelium Wallet",
+      "logo_url": "/media/19453/mycelium.png",
+      "security": "Third Party Encrypted",
+      "anonymity": "Medium",
+      "easeOfUse": "Average",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Open Source"
+      ],
+      "coins": [
+         "BTC"
+      ],
+      "platforms": [
+         "Android"
+      ],
+      "sourceCodeUrl": "https://github.com/mycelium-com/wallet",
+      "validationType": "Centralized",
+      "afilliate_url": "https://mycelium.com/mycelium-wallet.html"
+   },
+   {
+      "name": "Armory Wallet",
+      "logo_url": "/media/19460/armory.png",
+      "security": "Personal",
+      "anonymity": "Medium",
+      "easeOfUse": "Difficult",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Hierarchical Deterministic",
+         "Open Source",
+         "Multi-Signature"
+      ],
+      "coins": [
+         "BTC"
+      ],
+      "platforms": [
+         "Windows",
+         "Linux",
+         "Mac OS"
+      ],
+      "sourceCodeUrl": "https://github.com/etotheipi/BitcoinArmory",
+      "validationType": "Full Node",
+      "afilliate_url": "https://bitcoinarmory.com/"
+   },
+   {
+      "name": "Electrum Wallet",
+      "logo_url": "/media/19446/electrum.png",
+      "security": "Personal",
+      "anonymity": "Medium",
+      "easeOfUse": "Average",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Open Source",
+         "Multi-Signature"
+      ],
+      "coins": [
+         "BTC"
+      ],
+      "platforms": [
+         "Windows",
+         "Linux",
+         "Mac OS"
+      ],
+      "sourceCodeUrl": "https://github.com/spesmilo/electrum",
+      "validationType": "SPV",
+      "afilliate_url": "https://electrum.org/"
+   },
+   {
+      "name": "MSigna Wallet",
+      "logo_url": "/media/350697/msigna.png",
+      "security": "Personal",
+      "anonymity": "High",
+      "easeOfUse": "Average",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Multi-Signature",
+         "Open Source",
+         "Hierarchical Deterministic"
+      ],
+      "coins": [
+         "BTC"
+      ],
+      "platforms": [
+         "Windows",
+         "Linux",
+         "Mac OS"
+      ],
+      "sourceCodeUrl": "https://github.com/ciphrex/mSIGNA",
+      "validationType": "Full Node",
+      "afilliate_url": "https://ciphrex.com/products/"
+   },
+   {
+      "name": "Trezor Wallet",
+      "logo_url": "/media/19457/trezor.png",
+      "security": "Personal",
+      "anonymity": "Medium",
+      "easeOfUse": "Difficult",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Open Source"
+      ],
+      "coins": [
+         "BTC",
+         "LTC",
+         "NMC",
+         "DOGE",
+         "DASH",
+         "BCH"
+      ],
+      "platforms": [
+         "Hardware"
+      ],
+      "sourceCodeUrl": "https://github.com/trezor",
+      "validationType": "Full Node",
+      "afilliate_url": "https://www.buytrezor.com/"
+   },
+   {
+      "name": "HW1 Ledger Wallet",
+      "logo_url": "/media/19448/ledger-hw1.png",
+      "security": "Personal",
+      "anonymity": "Medium",
+      "easeOfUse": "Difficult",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Multi-Signature"
+      ],
+      "coins": [
+         "BTC"
+      ],
+      "platforms": [
+         "Hardware",
+         "Windows",
+         "Mac OS",
+         "Linux"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "https://www.ledgerwallet.com/r/08d8?path=/products/ledger-hw-1"
+   },
+   {
+      "name": "Xapo Wallet",
+      "logo_url": "/media/19459/xapo.png",
+      "security": "Third Party Encrypted",
+      "anonymity": "Medium",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [],
+      "coins": [
+         "BTC"
+      ],
+      "platforms": [
+         "Web",
+         "Android",
+         "iOS"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "https://xapo.com/"
+   },
+   {
+      "name": "Coinbase Wallet",
+      "logo_url": "/media/19465/coinbase.png",
+      "security": "Third Party Encrypted",
+      "anonymity": "Low",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Multi-Signature",
+         "2 Factor Authentication"
+      ],
+      "coins": [
+         "BTC",
+         "ETH"
+      ],
+      "platforms": [
+         "Web",
+         "Android",
+         "iOS"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "https://www.coinbase.com/join/54c8bbd2c9ae8ac64500005d"
+   },
+   {
+      "name": "BitAddress Paper Wallet",
+      "logo_url": "/media/19461/bitcoin-core.png",
+      "security": "Personal",
+      "anonymity": "Medium",
+      "easeOfUse": "Average",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [],
+      "coins": [
+         "BTC"
+      ],
+      "platforms": [
+         "Hardware"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "https://www.bitaddress.org"
+   },
+   {
+      "name": "Electrum LTC Wallet ",
+      "logo_url": "/media/19446/electrum.png",
+      "security": "Third Party",
+      "anonymity": "Medium",
+      "easeOfUse": "Average",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Open Source"
+      ],
+      "coins": [
+         "LTC"
+      ],
+      "platforms": [
+         "Windows",
+         "Linux",
+         "Mac OS"
+      ],
+      "sourceCodeUrl": "https://github.com/pooler/electrum-ltc/",
+      "validationType": "SPV",
+      "afilliate_url": "https://electrum-ltc.org/"
+   },
+   {
+      "name": "Dark Wallet BTC",
+      "logo_url": "/media/19470/darkwallet.png",
+      "security": "Personal",
+      "anonymity": "High",
+      "easeOfUse": "Average",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Multi-Signature",
+         "Open Source"
+      ],
+      "coins": [
+         "BTC"
+      ],
+      "platforms": [
+         "Chrome Extension"
+      ],
+      "sourceCodeUrl": "https://github.com/darkwallet/darkwallet",
+      "validationType": "Centralized",
+      "afilliate_url": "https://www.darkwallet.is/"
+   },
+   {
+      "name": "MultiDoge Wallet",
+      "logo_url": "/media/19472/multidoge.png",
+      "security": "Personal",
+      "anonymity": "Medium",
+      "easeOfUse": "Average",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Open Source"
+      ],
+      "coins": [
+         "DOGE"
+      ],
+      "platforms": [
+         "Windows",
+         "Linux",
+         "Mac OS"
+      ],
+      "sourceCodeUrl": "https://github.com/langerhans/multidoge",
+      "validationType": "Full Node",
+      "afilliate_url": "http://multidoge.org/?dl=win"
+   },
+   {
+      "name": "Doge Android Wallet",
+      "logo_url": "/media/19472/multidoge.png",
+      "security": "Personal",
+      "anonymity": "Medium",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Open Source"
+      ],
+      "coins": [
+         "DOGE"
+      ],
+      "platforms": [
+         "Android"
+      ],
+      "sourceCodeUrl": "https://github.com/langerhans/dogecoin-wallet-new",
+      "validationType": "SPV",
+      "afilliate_url": "https://play.google.com/store/apps/details?id=de.langerhans.wallet"
+   },
+   {
+      "name": "Block.io Wallet",
+      "logo_url": "/media/19464/block.png",
+      "security": "Third Party",
+      "anonymity": "Low",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "2 Factor Authentication",
+         "Hierarchical Deterministic",
+         "Multi-Signature"
+      ],
+      "coins": [
+         "BTC",
+         "LTC",
+         "DOGE"
+      ],
+      "platforms": [
+         "Web"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "https://block.io/users/sign_up"
+   },
+   {
+      "name": "Coinjar Wallet",
+      "logo_url": "/media/19466/coinjar.png",
+      "security": "Third Party",
+      "anonymity": "Low",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": true,
+      "walletFeatures": [
+         "2 Factor Authentication"
+      ],
+      "coins": [
+         "BTC"
+      ],
+      "platforms": [
+         "Android",
+         "iOS"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "https://www.coinjar.com/"
+   },
+   {
+      "name": "Holy Transaction",
+      "logo_url": "/media/19447/holytransaction.png",
+      "security": "Third Party",
+      "anonymity": "Low",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "2 Factor Authentication"
+      ],
+      "coins": [
+         "BTC",
+         "LTC",
+         "DOGE",
+         "PPC",
+         "DASH",
+         "ETH",
+         "BC",
+         "OMNI",
+         "GRC"
+      ],
+      "platforms": [
+         "Web"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "https://holytransaction.com/"
+   },
+   {
+      "name": "Copay Bitcoin Wallet",
+      "logo_url": "/media/350712/copay.jpg",
+      "security": "Personal",
+      "anonymity": "Medium",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Hierarchical Deterministic",
+         "Open Source",
+         "Multi-Signature"
+      ],
+      "coins": [
+         "BTC"
+      ],
+      "platforms": [
+         "Windows",
+         "Android",
+         "Mac OS",
+         "Windows Phone",
+         "Linux",
+         "Chrome Extension",
+         "iOS"
+      ],
+      "sourceCodeUrl": "https://github.com/bitpay/copay",
+      "validationType": "SPV",
+      "afilliate_url": "https://copay.io/"
+   },
+   {
+      "name": "Ledger Wallet",
+      "logo_url": "/media/350747/ledger-nano-bitcoin-hardware-wallet.png",
+      "security": "Personal",
+      "anonymity": "Medium",
+      "easeOfUse": "Difficult",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [],
+      "coins": [
+         "BTC",
+         "ETH",
+         "LTC",
+         "DOGE",
+         "ZEC",
+         "STRAT",
+         "XRP",
+         "BCH"
+      ],
+      "platforms": [
+         "Hardware"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "SPV",
+      "afilliate_url": "https://www.ledgerwallet.com/r/8a98"
+   },
+   {
+      "name": "OmniWallet",
+      "logo_url": "/media/351384/omni.png",
+      "security": "Third Party Encrypted",
+      "anonymity": "Medium",
+      "easeOfUse": "Average",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [],
+      "coins": [
+         "BTC",
+         "OMNI"
+      ],
+      "platforms": [
+         "Web"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "SPV",
+      "afilliate_url": "https://www.omniwallet.org/"
+   },
+   {
+      "name": "Bitx Wallet",
+      "logo_url": "/media/19461/bitcoin-core.png",
+      "security": "Third Party",
+      "anonymity": "Low",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "2 Factor Authentication"
+      ],
+      "coins": [
+         "BTC"
+      ],
+      "platforms": [
+         "Android",
+         "iOS",
+         "Web"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "https://bitx.co/"
+   },
+   {
+      "name": "Bitgo Wallet",
+      "logo_url": "/media/19462/bitgo.png",
+      "security": "Third Party Encrypted",
+      "anonymity": "Medium",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "2 Factor Authentication",
+         "Hierarchical Deterministic",
+         "Multi-Signature"
+      ],
+      "coins": [
+         "BTC"
+      ],
+      "platforms": [
+         "Web",
+         "iOS",
+         "Android"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "https://www.bitgo.com/"
+   },
+   {
+      "name": "VirtaCoinWallet",
+      "logo_url": "/media/350945/vta.png",
+      "security": "Third Party",
+      "anonymity": "Low",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [],
+      "coins": [
+         "VTA"
+      ],
+      "platforms": [
+         "Web"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "https://virtacoinwallet.eu/"
+   },
+   {
+      "name": "SingularDTV Light Wallet",
+      "logo_url": "/media/351368/sngls.png",
+      "security": "Personal",
+      "anonymity": "High",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Hierarchical Deterministic"
+      ],
+      "coins": [
+         "ETH",
+         "SNGLS"
+      ],
+      "platforms": [
+         "Web"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "https://singulardtv.com/lightwallet#"
+   },
+   {
+      "name": "Etherwall",
+      "logo_url": "/media/351418/etherwall.png",
+      "security": "Personal",
+      "anonymity": "High",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Open Source"
+      ],
+      "coins": [
+         "ETH"
+      ],
+      "platforms": [
+         "Mac OS",
+         "Windows",
+         "Linux"
+      ],
+      "sourceCodeUrl": "https://github.com/almindor/etherwall",
+      "validationType": "Centralized",
+      "afilliate_url": "http://www.etherwall.com/"
+   },
+   {
+      "name": "MetaMask",
+      "logo_url": "/media/351686/metamask1.png",
+      "security": "Personal",
+      "anonymity": "High",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Hierarchical Deterministic",
+         "Open Source"
+      ],
+      "coins": [
+         "ETH"
+      ],
+      "platforms": [
+         "Chrome Extension"
+      ],
+      "sourceCodeUrl": "https://github.com/MetaMask/metamask-plugin",
+      "validationType": "Centralized",
+      "afilliate_url": "https://metamask.io"
+   },
+   {
+      "name": "Counterwallet",
+      "logo_url": "/media/19960/xcp.png",
+      "security": "Personal",
+      "anonymity": "High",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Hierarchical Deterministic"
+      ],
+      "coins": [
+         "BTC",
+         "XCP",
+         "BCY",
+         "FLDC"
+      ],
+      "platforms": [
+         "Web"
+      ],
+      "sourceCodeUrl": "https://github.com/CounterpartyXCP/counterwallet",
+      "validationType": "Centralized",
+      "afilliate_url": "https://counterwallet.io/"
+   },
+   {
+      "name": "Tokenly Pockets",
+      "logo_url": "/media/351692/tokenlypockets.png",
+      "security": "Personal",
+      "anonymity": "High",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Hierarchical Deterministic",
+         "Open Source"
+      ],
+      "coins": [
+         "BTC",
+         "XCP",
+         "BCY",
+         "FLDC"
+      ],
+      "platforms": [
+         "Chrome Extension"
+      ],
+      "sourceCodeUrl": "https://github.com/loon3/Tokenly-Pockets",
+      "validationType": "Centralized",
+      "afilliate_url": "https://chrome.google.com/webstore/detail/tokenly-pockets/pdkmidhbflcbhddoagiikmafccadidhh?hl=en"
+   },
+   {
+      "name": "ClassicEtherWallet CX",
+      "logo_url": "/media/20275/etc2.png",
+      "security": "Personal",
+      "anonymity": "High",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Open Source"
+      ],
+      "coins": [
+         "ETC"
+      ],
+      "platforms": [
+         "Chrome Extension"
+      ],
+      "sourceCodeUrl": "www.github.com/ethereumproject/etherwallet",
+      "validationType": "Centralized",
+      "afilliate_url": "https://chrome.google.com/webstore/detail/classicetherwallet-cx/opggclcfcbfbchcienjdaohghcamjfhf"
+   },
+   {
+      "name": "ClassicEtherWallet",
+      "logo_url": "/media/20275/etc2.png",
+      "security": "Personal",
+      "anonymity": "High",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Open Source"
+      ],
+      "coins": [
+         "ETC"
+      ],
+      "platforms": [
+         "Web"
+      ],
+      "sourceCodeUrl": "https://github.com/ethereumproject/etherwallet/tree/gh-pages",
+      "validationType": "Centralized",
+      "afilliate_url": "https://classicetherwallet.com/"
+   },
+   {
+      "name": "IndieSquare",
+      "logo_url": "/media/351693/indiesquare.png",
+      "security": "Personal",
+      "anonymity": "High",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Open Souce"
+      ],
+      "coins": [
+         "BTC",
+         "XCP",
+         "BCY",
+         "FLDC"
+      ],
+      "platforms": [
+         "Android",
+         "iOS"
+      ],
+      "sourceCodeUrl": "https://github.com/IndieSquare/counterwallet",
+      "validationType": "Centralized",
+      "afilliate_url": "https://wallet.indiesquare.me/"
+   },
+   {
+      "name": "OpenLedger",
+      "logo_url": "/media/351694/openledger-blue.png",
+      "security": "Personal",
+      "anonymity": "High",
+      "easeOfUse": "Average",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Open Source"
+      ],
+      "coins": [
+         "BTS"
+      ],
+      "platforms": [
+         "Web"
+      ],
+      "sourceCodeUrl": "https://github.com/openledger/openledger.github.io",
+      "validationType": "Centralized",
+      "afilliate_url": "https://bitshares.openledger.info"
+   },
+   {
+      "name": "Lisk Nano",
+      "logo_url": "/media/350882/lisk.png",
+      "security": "Personal",
+      "anonymity": "High",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Hierarchical Deterministic",
+         "Open Source"
+      ],
+      "coins": [
+         "LSK"
+      ],
+      "platforms": [
+         "Windows",
+         "Mac OS",
+         "Linux"
+      ],
+      "sourceCodeUrl": "https://github.com/LiskHQ/lisk-nano",
+      "validationType": "SPV",
+      "afilliate_url": "https://lisk.io/download"
+   },
+   {
+      "name": "Gatehub",
+      "logo_url": "/media/351703/gatehub.png",
+      "security": "Third Party Encrypted",
+      "anonymity": "Low",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "2 Factor Authentication",
+         "Open Source"
+      ],
+      "coins": [
+         "BTC",
+         "XRP",
+         "ETH",
+         "ETC",
+         "REP"
+      ],
+      "platforms": [
+         "Web"
+      ],
+      "sourceCodeUrl": "https://github.com/GateHubNet",
+      "validationType": "Centralized",
+      "afilliate_url": "https://gatehub.net/"
+   },
+   {
+      "name": "Unocoin",
+      "logo_url": "/media/351707/unocoin.png",
+      "security": "Third Party",
+      "anonymity": "Low",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "2 Factor Authentication"
+      ],
+      "coins": [
+         "BTC"
+      ],
+      "platforms": [
+         "Web"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "https://www.unocoin.com/?referrerid=97733"
+   },
+   {
+      "name": "BitPanda",
+      "logo_url": "/media/351741/bitpanda.jpg",
+      "security": "Third Party",
+      "anonymity": "Low",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": true,
+      "walletFeatures": [
+         "2 Factor Authentication"
+      ],
+      "coins": [
+         "BTC",
+         "ETH",
+         "NXT"
+      ],
+      "platforms": [
+         "Web"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "https://www.bitpanda.com/?ref=6067544900284737884"
+   },
+   {
+      "name": "ZCash Swing GUI Wallet",
+      "logo_url": "/media/351360/zec.png",
+      "security": "Personal",
+      "anonymity": "High",
+      "easeOfUse": "Average",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Open Source"
+      ],
+      "coins": [
+         "ZEC"
+      ],
+      "platforms": [
+         "Linux"
+      ],
+      "sourceCodeUrl": "https://github.com/vaklinov/zcash-swing-wallet-ui",
+      "validationType": "Full Node",
+      "afilliate_url": "https://github.com/vaklinov/zcash-swing-wallet-ui"
+   },
+   {
+      "name": "ZCash Cockpit UI Wallet",
+      "logo_url": "/media/351360/zec.png",
+      "security": "Personal",
+      "anonymity": "High",
+      "easeOfUse": "Average",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Open Source"
+      ],
+      "coins": [
+         "ZEC"
+      ],
+      "platforms": [
+         "Web"
+      ],
+      "sourceCodeUrl": "https://github.com/hellcatz/zcash-cli-cockpit",
+      "validationType": "Full Node",
+      "afilliate_url": "https://github.com/hellcatz/zcash-cli-cockpit"
+   },
+   {
+      "name": "Lisk Desktop",
+      "logo_url": "/media/350882/lisk.png",
+      "security": "Personal",
+      "anonymity": "High",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Hierarchical Deterministic",
+         "Open Source"
+      ],
+      "coins": [
+         "LSK"
+      ],
+      "platforms": [
+         "Windows",
+         "Linux",
+         "Mac OS"
+      ],
+      "sourceCodeUrl": "https://github.com/fix",
+      "validationType": "Centralized",
+      "afilliate_url": "http://desktop.lisk-wallet.com/"
+   },
+   {
+      "name": "Zcash Freewallet",
+      "logo_url": "/media/1383106/zcash.png",
+      "security": "Third Party",
+      "anonymity": "Medium",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [],
+      "coins": [
+         "ZEC"
+      ],
+      "platforms": [
+         "Android",
+         "iOS"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "https://go.onelink.me/ffG8?pid=cc"
+   },
+   {
+      "name": "Bitinka",
+      "logo_url": "/media/352005/bitinka.jpg",
+      "security": "Third Party",
+      "anonymity": "Medium",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "2 Factor Authentication"
+      ],
+      "coins": [
+         "BTC"
+      ],
+      "platforms": [
+         "Web"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "https://bitinka.pe"
+   },
+   {
+      "name": "Waves Lite Client",
+      "logo_url": "/media/350884/waves_1.png",
+      "security": "Personal",
+      "anonymity": "High",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Hierarchical Deterministic",
+         "Open Source"
+      ],
+      "coins": [
+         "WAVES"
+      ],
+      "platforms": [
+         "Chrome Extension"
+      ],
+      "sourceCodeUrl": "https://github.com/wavesplatform/WavesGUI/releases",
+      "validationType": "SPV",
+      "afilliate_url": "https://chrome.google.com/webstore/detail/wavesliteapp/kfmcaklajknfekomaflnhkjjkcjabogm"
+   },
+   {
+      "name": "MyNXT",
+      "logo_url": "/media/352010/mynxt1.png",
+      "security": "Personal",
+      "anonymity": "Medium",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Hierarchical Deterministic",
+         "Open Source",
+         "2 Factor Authentication"
+      ],
+      "coins": [
+         "NXT"
+      ],
+      "platforms": [
+         "Web",
+         "Android",
+         "iOS"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "https://wallet.mynxt.info/"
+   },
+   {
+      "name": "NXT Client",
+      "logo_url": "/media/20627/nxt.png",
+      "security": "Personal",
+      "anonymity": "High",
+      "easeOfUse": "Average",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Hierarchical Deterministic",
+         "Open Source",
+         "Multi-Signature"
+      ],
+      "coins": [
+         "NXT",
+         "ARDR"
+      ],
+      "platforms": [
+         "Linux",
+         "Windows",
+         "Mac OS"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Full Node",
+      "afilliate_url": "https://nxt.org"
+   },
+   {
+      "name": "Vcash Client",
+      "logo_url": "/media/350813/xvc.png",
+      "security": "Personal",
+      "anonymity": "High",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Hierarchical Deterministic",
+         "Open Source",
+         "Multi-Signature"
+      ],
+      "coins": [
+         "XVC"
+      ],
+      "platforms": [
+         "Windows",
+         "Linux",
+         "Mac OS"
+      ],
+      "sourceCodeUrl": "https://v.cash/wallet.php?platform=github",
+      "validationType": "Full Node",
+      "afilliate_url": "https://v.cash/wallets.php"
+   },
+   {
+      "name": "iPayYou",
+      "logo_url": "/media/352060/ipayyou.png",
+      "security": "Third Party Encrypted",
+      "anonymity": "Low",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": true,
+      "walletFeatures": [],
+      "coins": [
+         "BTC"
+      ],
+      "platforms": [
+         "Web"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "https://www.ipayyou.io/"
+   },
+   {
+      "name": "CoinSpot",
+      "logo_url": "/media/352063/coinspot.png",
+      "security": "Third Party",
+      "anonymity": "Medium",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "2 Factor Authentication"
+      ],
+      "coins": [
+         "BTC",
+         "LTC",
+         "DOGE",
+         "DASH",
+         "LOT",
+         "PPC",
+         "WDC",
+         "FTC",
+         "MOON",
+         "XPM",
+         "QRK",
+         "MAX"
+      ],
+      "platforms": [
+         "Web"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "https://www.coinspot.com.au/multicoinwallets"
+   },
+   {
+      "name": "Carbon Wallet",
+      "logo_url": "/media/352231/coolwallet.png",
+      "security": "Third Party Encrypted",
+      "anonymity": "Medium",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "2 Factor Authentication",
+         "Hierarchical Deterministic",
+         "Multi-Signature"
+      ],
+      "coins": [
+         "BTC"
+      ],
+      "platforms": [
+         "iOS",
+         "Android"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "https://carbonwallet.com/"
+   },
+   {
+      "name": "vSlice Web Wallet",
+      "logo_url": "/media/352113/d5a4e4f0366d3ae8cdbc45ad097f664c2557a55f0c237c1710-pimgpsh_fullsize_distr.jpg",
+      "security": "Personal",
+      "anonymity": "High",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Open Source"
+      ],
+      "coins": [
+         "VSL",
+         "ETH",
+         "ETC"
+      ],
+      "platforms": [
+         "Web"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "https://token.vdice.io/"
+   },
+   {
+      "name": "Litecoin Core Client",
+      "logo_url": "/media/19782/litecoin-logo.png",
+      "security": "Personal",
+      "anonymity": "Medium",
+      "easeOfUse": "Difficult",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Open Source"
+      ],
+      "coins": [
+         "LTC"
+      ],
+      "platforms": [
+         "Windows",
+         "Linux",
+         "Mac OS"
+      ],
+      "sourceCodeUrl": "https://github.com/litecoin-project/litecoin",
+      "validationType": "Full Node",
+      "afilliate_url": "https://litecoin.org/"
+   },
+   {
+      "name": "LiteVault",
+      "logo_url": "/media/1382056/litevault.png",
+      "security": "Third Party Encrypted",
+      "anonymity": "Medium",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Open Source",
+         "2 Factor Authentication"
+      ],
+      "coins": [
+         "LTC"
+      ],
+      "platforms": [
+         "Web"
+      ],
+      "sourceCodeUrl": "https://github.com/someguy123/litevault",
+      "validationType": "Centralized",
+      "afilliate_url": "https://www.litevault.net/"
+   },
+   {
+      "name": "DogeChain",
+      "logo_url": "/media/19684/doge.png",
+      "security": "Third Party Encrypted",
+      "anonymity": "Medium",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [],
+      "coins": [
+         "DOGE"
+      ],
+      "platforms": [
+         "Web"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "https://my.dogechain.info/#/overview"
+   },
+   {
+      "name": "Dogecoin Core",
+      "logo_url": "/media/19681/dog.png",
+      "security": "Personal",
+      "anonymity": "High",
+      "easeOfUse": "Difficult",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Open Source"
+      ],
+      "coins": [
+         "DOGE"
+      ],
+      "platforms": [
+         "Windows",
+         "Linux",
+         "Mac OS"
+      ],
+      "sourceCodeUrl": "https://github.com/dogecoin/dogecoin",
+      "validationType": "Full Node",
+      "afilliate_url": "http://dogecoin.com/"
+   },
+   {
+      "name": "Mobi",
+      "logo_url": "/media/1382752/mobi.png",
+      "security": "Third Party",
+      "anonymity": "Low",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "2 Factor Authentication"
+      ],
+      "coins": [
+         "BTC"
+      ],
+      "platforms": [
+         "Android",
+         "iOS"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "http://mobi.me/"
+   },
+   {
+      "name": "Agama",
+      "logo_url": "/media/1382760/agama-logo-square.png",
+      "security": "Personal",
+      "anonymity": "High",
+      "easeOfUse": "Average",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Hierarchical Deterministic",
+         "Open Source"
+      ],
+      "coins": [
+         "BTC",
+         "KMD",
+         "ZEC",
+         "ANC",
+         "BTCD",
+         "BTM",
+         "CARB",
+         "DGB",
+         "DOGE",
+         "FRK",
+         "GMC",
+         "LTC",
+         "MZC",
+         "SYS",
+         "UNO",
+         "ZET"
+      ],
+      "platforms": [
+         "Mac OS",
+         "Windows",
+         "Linux"
+      ],
+      "sourceCodeUrl": "https://github.com/SuperNETorg/iguana",
+      "validationType": "Full Node",
+      "afilliate_url": "https://supernet.org/en"
+   },
+   {
+      "name": "Monero Core Client",
+      "logo_url": "/media/19969/xmr.png",
+      "security": "Personal",
+      "anonymity": "High",
+      "easeOfUse": "Difficult",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Open Source",
+         "Hierarchical Deterministic"
+      ],
+      "coins": [
+         "XMR"
+      ],
+      "platforms": [
+         "Windows",
+         "Linux",
+         "Mac OS"
+      ],
+      "sourceCodeUrl": "https://github.com/monero-project/bitmonero",
+      "validationType": "Full Node",
+      "afilliate_url": "https://getmonero.org/downloads/"
+   },
+   {
+      "name": "Monero GUI",
+      "logo_url": "/media/19969/xmr.png",
+      "security": "Personal",
+      "anonymity": "High",
+      "easeOfUse": "Average",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Hierarchical Deterministic",
+         "Open Source"
+      ],
+      "coins": [
+         "XMR"
+      ],
+      "platforms": [
+         "Mac OS",
+         "Windows",
+         "Linux"
+      ],
+      "sourceCodeUrl": "https://github.com/monero-project/monero-core",
+      "validationType": "Full Node",
+      "afilliate_url": "https://getmonero.org"
+   },
+   {
+      "name": "Bitwala",
+      "logo_url": "/media/1383047/bitwala.png",
+      "security": "Personal",
+      "anonymity": "Medium",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "2 Factor Authentication",
+         "Multi-Signature",
+         "Hierarchical Deterministic"
+      ],
+      "coins": [
+         "BTC"
+      ],
+      "platforms": [
+         "Web"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "https://www.bitwala.io/"
+   },
+   {
+      "name": "Airbitz Bitcoin Wallet",
+      "logo_url": "/media/20582/airbitz.png",
+      "security": "Third Party Encrypted",
+      "anonymity": "Medium",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": true,
+      "walletFeatures": [
+         "Hierarchical Deterministic",
+         "Open Source",
+         "2 Factor Authentication"
+      ],
+      "coins": [
+         "BTC"
+      ],
+      "platforms": [
+         "Android",
+         "iOS"
+      ],
+      "sourceCodeUrl": "https://github.com/Airbitz",
+      "validationType": "SPV",
+      "afilliate_url": "https://airbitz.co"
+   },
+   {
+      "name": "Circle Bitcoin Wallet",
+      "logo_url": "/media/20589/circle-bitcoin-wallet.png",
+      "security": "Third Party",
+      "anonymity": "Low",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": true,
+      "walletFeatures": [],
+      "coins": [
+         "BTC"
+      ],
+      "platforms": [
+         "Android",
+         "iOS",
+         "Web"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "https://www.circle.com/en"
+   },
+   {
+      "name": "Bither Wallet",
+      "logo_url": "/media/20590/bither-bitcoin-wallet.png",
+      "security": "Personal",
+      "anonymity": "Medium",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Open Source"
+      ],
+      "coins": [
+         "BTC"
+      ],
+      "platforms": [
+         "Linux",
+         "Windows",
+         "Android",
+         "Mac OS",
+         "iOS"
+      ],
+      "sourceCodeUrl": "https://github.com/bither",
+      "validationType": "SPV",
+      "afilliate_url": "https://bither.net/"
+   },
+   {
+      "name": "Coinapult Wallet",
+      "logo_url": "/media/20591/coinapult-bitcoin-wallet.png",
+      "security": "Third Party Encrypted",
+      "anonymity": "Low",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [],
+      "coins": [
+         "BTC"
+      ],
+      "platforms": [
+         "Web"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "https://coinapult.com"
+   },
+   {
+      "name": "Coinomi",
+      "logo_url": "/media/20592/coinomi-multi-crypto-wallet.png",
+      "security": "Personal",
+      "anonymity": "Medium",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Hierarchical Deterministic",
+         "Open Source"
+      ],
+      "coins": [
+         "BTC",
+         "DOGE",
+         "LTC",
+         "NBT",
+         "PPC",
+         "DASH",
+         "RDD",
+         "MONA",
+         "DGB",
+         "DGC",
+         "NEOS",
+         "BLK",
+         "AC",
+         "BTA",
+         "AUR",
+         "CANN",
+         "CDN",
+         "CLAM",
+         "CLUB",
+         "GCR",
+         "NLG",
+         "FTC",
+         "EFL",
+         "IXC",
+         "JBS",
+         "NMC",
+         "NSR",
+         "PKB",
+         "BCH"
+      ],
+      "platforms": [
+         "Android"
+      ],
+      "sourceCodeUrl": "https://github.com/coinomi/",
+      "validationType": "SPV",
+      "afilliate_url": "https://coinomi.com/"
+   },
+   {
+      "name": "Dash Freewallet",
+      "logo_url": "/media/1383100/dash.png",
+      "security": "Third Party",
+      "anonymity": "Medium",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [],
+      "coins": [
+         "DASH"
+      ],
+      "platforms": [
+         "Android"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "https://go.onelink.me/WLNT?pid=cc"
+   },
+   {
+      "name": "Doge Freewallet",
+      "logo_url": "/media/1383101/doge.png",
+      "security": "Third Party",
+      "anonymity": "Medium",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [],
+      "coins": [
+         "DOGE"
+      ],
+      "platforms": [
+         "Android",
+         "iOS"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "https://go.onelink.me/HWfC?pid=cc"
+   },
+   {
+      "name": "Lisk Freewallet",
+      "logo_url": "/media/1383102/lsk.png",
+      "security": "Third Party",
+      "anonymity": "Medium",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [],
+      "coins": [
+         "LSK"
+      ],
+      "platforms": [
+         "Android",
+         "iOS"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "https://go.onelink.me/W5M3?pid=cc"
+   },
+   {
+      "name": "Steem Freewallet",
+      "logo_url": "/media/1383103/steem.png",
+      "security": "Third Party",
+      "anonymity": "Medium",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [],
+      "coins": [
+         "STEEM"
+      ],
+      "platforms": [
+         "Android",
+         "iOS"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "https://go.onelink.me/TbaT?pid=cc"
+   },
+   {
+      "name": "NXT Freewallet",
+      "logo_url": "/media/1383104/nxt.png",
+      "security": "Third Party",
+      "anonymity": "Medium",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [],
+      "coins": [
+         "NXT"
+      ],
+      "platforms": [
+         "Android"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "https://go.onelink.me/HYBd?pid=cc"
+   },
+   {
+      "name": "Ardor Freewallet",
+      "logo_url": "/media/1383104/adrd.png",
+      "security": "Third Party",
+      "anonymity": "Medium",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [],
+      "coins": [
+         "ARDR"
+      ],
+      "platforms": [
+         "Android"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "https://go.onelink.me/EmrT?pid=cc"
+   },
+   {
+      "name": "Blockchains.my",
+      "logo_url": "/media/1383160/blockchainsmy.png",
+      "security": "Third Party Encrypted",
+      "anonymity": "Medium",
+      "easeOfUse": "Average",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [],
+      "coins": [
+         "BTC",
+         "ETH",
+         "ZEC",
+         "DNC",
+         "GSC"
+      ],
+      "platforms": [
+         "iOS"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "http://www.blockchains.my/"
+   },
+   {
+      "name": "Ethereum Wallet",
+      "logo_url": "/media/1383159/ethereumwallet1.png",
+      "security": "Personal",
+      "anonymity": "High",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Open Source"
+      ],
+      "coins": [
+         "ETH"
+      ],
+      "platforms": [
+         "Web"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "https://ethereumwallet.com/"
+   },
+   {
+      "name": "NEM Nano Wallet",
+      "logo_url": "/media/1383164/nem-nano-wallet.png",
+      "security": "Personal",
+      "anonymity": "High",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Hierarchical Deterministic",
+         "Open Source",
+         "Multi-Signature"
+      ],
+      "coins": [
+         "XEM"
+      ],
+      "platforms": [
+         "Mac OS",
+         "Windows",
+         "Linux"
+      ],
+      "sourceCodeUrl": "https://github.com/NemProject/NanoWallet",
+      "validationType": "SPV",
+      "afilliate_url": "https://www.nem.io/install.html"
+   },
+   {
+      "name": "NEM Mobile Wallet",
+      "logo_url": "/media/20490/xem.png",
+      "security": "Personal",
+      "anonymity": "Medium",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Hierarchical Deterministic",
+         "Open Source",
+         "Multi-Signature"
+      ],
+      "coins": [
+         "XEM"
+      ],
+      "platforms": [
+         "Android",
+         "iOS"
+      ],
+      "sourceCodeUrl": "https://github.com/NemProject/NEMAndroidApp",
+      "validationType": "Centralized",
+      "afilliate_url": "https://www.nem.io/install.html"
+   },
+   {
+      "name": "BitConnect Client",
+      "logo_url": "/media/352218/bcc.png",
+      "security": "Personal",
+      "anonymity": "Medium",
+      "easeOfUse": "Average",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "2 Factor Authentication",
+         "Open Source"
+      ],
+      "coins": [
+         "BCC"
+      ],
+      "platforms": [
+         "Windows",
+         "Linux",
+         "Mac OS"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Full Node",
+      "afilliate_url": "https://bitconnect.co/"
+   },
+   {
+      "name": "Stellar Desktop",
+      "logo_url": "/media/20696/str.png",
+      "security": "Personal",
+      "anonymity": "High",
+      "easeOfUse": "Average",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Open Source"
+      ],
+      "coins": [
+         "STR"
+      ],
+      "platforms": [
+         "Windows",
+         "Linux"
+      ],
+      "sourceCodeUrl": "https://github.com/stellarchat/desktop-client",
+      "validationType": "Full Node",
+      "afilliate_url": "https://github.com/stellarchat/desktop-client/releases/tag/1.4"
+   },
+   {
+      "name": "CoinBank",
+      "logo_url": "/media/1383240/coinbank.png",
+      "security": "Third Party Encrypted",
+      "anonymity": "Medium",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": true,
+      "walletFeatures": [
+         "Hierarchical Deterministic"
+      ],
+      "coins": [
+         "BTC"
+      ],
+      "platforms": [
+         "Android",
+         "iOS"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "http://www.coinbank.info/"
+   },
+   {
+      "name": "ArcBit",
+      "logo_url": "/media/12318248/arcbit.png",
+      "security": "Personal",
+      "anonymity": "High",
+      "easeOfUse": "Average",
+      "hasTradingFacilities": false,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "Hierarchical Deterministic",
+         "Open Source"
+      ],
+      "coins": [
+         "BTC"
+      ],
+      "platforms": [
+         "iOS",
+         "Mac OS",
+         "Windows",
+         "Linux",
+         "Android",
+         "Web"
+      ],
+      "sourceCodeUrl": "https://github.com/arcbit",
+      "validationType": "Centralized",
+      "afilliate_url": "https://github.com/arcbit"
+   },
+   {
+      "name": "Eidoo",
+      "logo_url": "/media/12318082/eiboo.png",
+      "security": "Personal",
+      "anonymity": "High",
+      "easeOfUse": "Easy",
+      "hasTradingFacilities": true,
+      "hasVouchersAndOffers": false,
+      "walletFeatures": [
+         "2 Factor Authentication",
+         "Hierarchical Deterministic",
+         "Open Source"
+      ],
+      "coins": [
+         "BTC",
+         "ETH",
+         "ERC20"
+      ],
+      "platforms": [
+         "iOS",
+         "Android"
+      ],
+      "sourceCodeUrl": "",
+      "validationType": "Centralized",
+      "afilliate_url": "https://eidoo.io/"
+   }
+]
