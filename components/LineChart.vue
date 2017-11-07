@@ -10,6 +10,8 @@ import Vue from 'vue';
 import VueHighcharts from 'vue-highcharts';
 
 Vue.use(VueHighcharts);
+
+// console.log(123);
  
 const DEFAULT_OPTIONS = {
             chart: {

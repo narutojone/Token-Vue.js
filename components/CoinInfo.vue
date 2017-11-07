@@ -136,7 +136,8 @@
 							</div>
 				        </b-tab>
 
-				        <b-tab title="Social">
+				        <b-tab title="Advance">
+							<advance-chart :data="mappedChartData" :sym="info.symbol ? info.symbol : ''" />						
 				        </b-tab>
 				        
 				    </b-tabs>
@@ -215,6 +216,7 @@ import axios from 'axios';
 import StarRating from '~/components/StarRating.vue'
 
 import LineChart from '~/components/LineChart.vue'
+import AdvanceChart from '~/components/AdvanceChart.vue'
 import CandleVolumeChart from '~/components/CandleVolumeChart.vue'
 
 import VueTimeago from 'vue-timeago'
@@ -244,6 +246,7 @@ export default {
 	components: {
 		StarRating,
 		LineChart,
+		AdvanceChart,
 		CandleVolumeChart
 	},
 	data() {

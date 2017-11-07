@@ -3,16 +3,16 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-const _597c4f0b = () => import('..\\pages\\index.vue' /* webpackChunkName: "pages\\index" */).then(m => m.default || m)
-const _a86becda = () => import('..\\pages\\wallets.vue' /* webpackChunkName: "pages\\wallets" */).then(m => m.default || m)
-const _34215a81 = () => import('..\\pages\\privacy.vue' /* webpackChunkName: "pages\\privacy" */).then(m => m.default || m)
-const _7c4a72b2 = () => import('..\\pages\\disclaimer.vue' /* webpackChunkName: "pages\\disclaimer" */).then(m => m.default || m)
-const _7691ebe8 = () => import('..\\pages\\coin.vue' /* webpackChunkName: "pages\\coin" */).then(m => m.default || m)
-const _4ee7c79d = () => import('..\\pages\\advertising.vue' /* webpackChunkName: "pages\\advertising" */).then(m => m.default || m)
-const _5f57323b = () => import('..\\pages\\coins.vue' /* webpackChunkName: "pages\\coins" */).then(m => m.default || m)
-const _3b2bf52e = () => import('..\\pages\\exchanges.vue' /* webpackChunkName: "pages\\exchanges" */).then(m => m.default || m)
-const _65f5c801 = () => import('..\\pages\\portfolio.vue' /* webpackChunkName: "pages\\portfolio" */).then(m => m.default || m)
-const _037a0d40 = () => import('..\\pages\\terms.vue' /* webpackChunkName: "pages\\terms" */).then(m => m.default || m)
+const _a07d80e0 = () => import('..\\pages\\index.vue' /* webpackChunkName: "pages\\index" */).then(m => m.default || m)
+const _f6d62650 = () => import('..\\pages\\wallets.vue' /* webpackChunkName: "pages\\wallets" */).then(m => m.default || m)
+const _0cec3dc6 = () => import('..\\pages\\privacy.vue' /* webpackChunkName: "pages\\privacy" */).then(m => m.default || m)
+const _42dfe566 = () => import('..\\pages\\disclaimer.vue' /* webpackChunkName: "pages\\disclaimer" */).then(m => m.default || m)
+const _795a56c3 = () => import('..\\pages\\coin.vue' /* webpackChunkName: "pages\\coin" */).then(m => m.default || m)
+const _35558062 = () => import('..\\pages\\advertising.vue' /* webpackChunkName: "pages\\advertising" */).then(m => m.default || m)
+const _94c7ba80 = () => import('..\\pages\\coins.vue' /* webpackChunkName: "pages\\coins" */).then(m => m.default || m)
+const _97eda924 = () => import('..\\pages\\exchanges.vue' /* webpackChunkName: "pages\\exchanges" */).then(m => m.default || m)
+const _3794ee06 = () => import('..\\pages\\portfolio.vue' /* webpackChunkName: "pages\\portfolio" */).then(m => m.default || m)
+const _59befdc5 = () => import('..\\pages\\terms.vue' /* webpackChunkName: "pages\\terms" */).then(m => m.default || m)
 
 
 
@@ -50,52 +50,52 @@ export function createRouter () {
     routes: [
 		{
 			path: "/",
-			component: _597c4f0b,
+			component: _a07d80e0,
 			name: "index"
 		},
 		{
 			path: "/wallets",
-			component: _a86becda,
+			component: _f6d62650,
 			name: "wallets"
 		},
 		{
 			path: "/privacy",
-			component: _34215a81,
+			component: _0cec3dc6,
 			name: "privacy"
 		},
 		{
 			path: "/disclaimer",
-			component: _7c4a72b2,
+			component: _42dfe566,
 			name: "disclaimer"
 		},
 		{
 			path: "/coin",
-			component: _7691ebe8,
+			component: _795a56c3,
 			name: "coin"
 		},
 		{
 			path: "/advertising",
-			component: _4ee7c79d,
+			component: _35558062,
 			name: "advertising"
 		},
 		{
 			path: "/coins",
-			component: _5f57323b,
+			component: _94c7ba80,
 			name: "coins"
 		},
 		{
 			path: "/exchanges",
-			component: _3b2bf52e,
+			component: _97eda924,
 			name: "exchanges"
 		},
 		{
 			path: "/portfolio",
-			component: _65f5c801,
+			component: _3794ee06,
 			name: "portfolio"
 		},
 		{
 			path: "/terms",
-			component: _037a0d40,
+			component: _59befdc5,
 			name: "terms"
 		}
     ],
