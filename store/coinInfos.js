@@ -7,7 +7,7 @@ const image_map_raw1 = require('~/assets/new.json');
 let image_map = {};
 Object.keys(image_map_raw).forEach(key => {
   //image_map[key] = 'https://cryptocompare.com' + image_map_raw[key];
-  image_map[key] = 'https://tokenrecap.com/images/'+image_map_raw1[key];
+  image_map[key] = 'http://cryptosumup.com/images/'+image_map_raw1[key];
 });
 image_map['BitConnect'] = 'https://steemit-production-imageproxy-upload.s3.amazonaws.com/DQmVz9gbM91rS1Hzfng3vgQV4cUjxaDM9MWn2dof4LToADE'
 image_map['IOTA'] = 'https://lh3.googleusercontent.com/EAay5f1pkrwK8j9RiuavOJl74T45osxw-h_WkUpLQHyDw4zlMDzuiccGA_xxZGsHPsd1=w100'
