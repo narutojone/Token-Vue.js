@@ -353,6 +353,8 @@ export default {
 		mappedChartData() {
 			let chart = this.getChart(this.info.symbol, 'USD', 'hour');
 			
+			console.log("==== Chart ====", chart);
+
 			if(!chart) return [];
 
 			console.log("==== Chart ====", chart);

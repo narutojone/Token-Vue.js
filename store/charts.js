@@ -41,10 +41,11 @@ const actions = {
 
       console.log(`Loading chart ${fsym}/${tsym} interval ${interval}...`);
 
-      axios.get(`https://min-api.cryptocompare.com/data/histo${interval}?fsym=${fsym}&tsym=${tsym}&limit=2000&aggregate=1`)
+      axios.get(`https://min-api.cryptocompare.com/data/histoday?fsym=${fsym}&tsym=${tsym}&limit=10000&aggregate=1`)
       .then(response => {
         let chart = response.data.Data;
-
+        console.log(`https://min-api.cryptocompare.com/data/histo${interval}?fsym=${fsym}&tsym=${tsym}&limit=10000&aggregate=1`);
+        console.log("==== Chart Test ====", chart);
         commit(types.SET_CHART, { fsym, tsym, interval, chart });
       });
     },

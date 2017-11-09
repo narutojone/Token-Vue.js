@@ -85,7 +85,7 @@ export default {
 		    },
 		    currentPage: 1,
 		    perPage: 50,
-		    totalRows: 2000, //items.length
+		    totalRows: 5000, //items.length
 		    pageOptions: [{text:5,value:5},{text:10,value:10},{text:15,value:15}],
 		    sortBy: null,
 		    sortDesc: false,

@@ -1,6 +1,6 @@
 <template>
     <div class="advance-chart-container">
-        <iframe style="width:100%; height:520px" :srcdoc='            
+        <iframe style="width:100%; height:520px; border:none;" :srcdoc='            
             thClassValue(sym)
             '/>
     </div>    
@@ -51,7 +51,7 @@ export default {
             value += 'new TradingView.widget({"symbol":"';
             value += id; 
             value += "USD";
-            value += '","interval": "D","timezone": "Etc/UTC", "theme": "Black","style": "1","locale": "en","toolbar_bg": "rgba(0, 0, 0, 1)","hide_top_toolbar": true,"save_image": false,"hideideas": true, "hide_side_toolbar": false});';
+            value += '","interval": "D","timezone": "Etc/UTC", "theme": "Black","style": "1","locale": "en", "hide_top_toolbar": true,"save_image": false,"hideideas": true, "hide_side_toolbar": false});';
             value += '<'; value +='/script>';
           
             return value;
