@@ -38,6 +38,8 @@ const actions = {
 
    bindCoinInfos: firebaseAction(({ state, commit, bindFirebaseRef }, fb) => {
       console.log('binding coin infos');
+
+      console.log(state);
       // fb.database().ref('coinInfos').once('value')
       // .then(snap => {
       //   let coininfos = snap.val();
@@ -56,9 +58,6 @@ const actions = {
 
       // bindFirebaseRef('coinInfos', fb.database().ref(`coinInfos`));
     }),
-
-   
-
 }
 
 // mutations
