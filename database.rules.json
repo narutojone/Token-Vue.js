@@ -1,0 +1,24 @@
+{
+  "rules": {
+    ".read": "true",
+    ".write": "true",
+    "coinReviews": {
+      ".validate": "auth.uid !== null",
+      "$coin": {
+        "$uid": {
+//           ".validate": "(!newData.child('name').exists() && !newData.child('photoURL').exists() && !newData.child('rating').exists() && !newData.child('comments').exists()) || (!data.exists() && auth.uid === $uid)",
+        	"likes": {
+            ".validate": "data.parent().exists()"
+          },
+          "dislikes": {
+            ".validate": "data.parent().exists()"
+          },
+          "replies": {
+//             ".validate": "data.exists() && !data.child(auth.uid).exists()"
+          },
+        }
+      }
+    }
+  
+  }
+}

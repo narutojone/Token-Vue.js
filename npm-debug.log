@@ -1,0 +1,48 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Users\\SONY\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'run',
+1 verbose cli   'dev' ]
+2 info using npm@3.10.10
+3 info using node@v8.1.3
+4 verbose run-script [ 'predev', 'dev', 'postdev' ]
+5 info lifecycle tr-website-2@1.0.0~predev: tr-website-2@1.0.0
+6 silly lifecycle tr-website-2@1.0.0~predev: no script for predev, continuing
+7 info lifecycle tr-website-2@1.0.0~dev: tr-website-2@1.0.0
+8 verbose lifecycle tr-website-2@1.0.0~dev: unsafe-perm in lifecycle true
+9 verbose lifecycle tr-website-2@1.0.0~dev: PATH: C:\Users\SONY\AppData\Roaming\npm\node_modules\npm\bin\node-gyp-bin;D:\Projects\token-recap-final\token-recap\node_modules\.bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Sony\VAIO Improvement\;C:\Program Files (x86)\Sony\VAIO Startup Setting Tool;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files\Git\cmd;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\PuTTY\;C:\Program Files\nodejs\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\dotnet\;C:\wamp\bin\php\php5.3.4;C:\composer;C:\Program Files\Microsoft\Web Platform Installer\;C:\Users\SONY\AppData\Roaming\npm;C:\Users\SONY\AppData\Roaming\Composer\vendor\bin;%DASHLANE_DLL_DIR%
+10 verbose lifecycle tr-website-2@1.0.0~dev: CWD: D:\Projects\token-recap-final\token-recap
+11 silly lifecycle tr-website-2@1.0.0~dev: Args: [ '/d /s /c', 'nuxt' ]
+12 silly lifecycle tr-website-2@1.0.0~dev: Returned: code: 1  signal: null
+13 info lifecycle tr-website-2@1.0.0~dev: Failed to exec dev script
+14 verbose stack Error: tr-website-2@1.0.0 dev: `nuxt`
+14 verbose stack Exit status 1
+14 verbose stack     at EventEmitter.<anonymous> (C:\Users\SONY\AppData\Roaming\npm\node_modules\npm\lib\utils\lifecycle.js:255:16)
+14 verbose stack     at emitTwo (events.js:125:13)
+14 verbose stack     at EventEmitter.emit (events.js:213:7)
+14 verbose stack     at ChildProcess.<anonymous> (C:\Users\SONY\AppData\Roaming\npm\node_modules\npm\lib\utils\spawn.js:40:14)
+14 verbose stack     at emitTwo (events.js:125:13)
+14 verbose stack     at ChildProcess.emit (events.js:213:7)
+14 verbose stack     at maybeClose (internal/child_process.js:897:16)
+14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:208:5)
+15 verbose pkgid tr-website-2@1.0.0
+16 verbose cwd D:\Projects\token-recap-final\token-recap
+17 error Windows_NT 6.1.7601
+18 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Users\\SONY\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js" "run" "dev"
+19 error node v8.1.3
+20 error npm  v3.10.10
+21 error code ELIFECYCLE
+22 error tr-website-2@1.0.0 dev: `nuxt`
+22 error Exit status 1
+23 error Failed at the tr-website-2@1.0.0 dev script 'nuxt'.
+23 error Make sure you have the latest version of node.js and npm installed.
+23 error If you do, this is most likely a problem with the tr-website-2 package,
+23 error not with npm itself.
+23 error Tell the author that this fails on your system:
+23 error     nuxt
+23 error You can get information on how to open an issue for this project with:
+23 error     npm bugs tr-website-2
+23 error Or if that isn't available, you can get their info via:
+23 error     npm owner ls tr-website-2
+23 error There is likely additional logging output above.
+24 verbose exit [ 1, true ]
