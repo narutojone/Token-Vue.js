@@ -36,6 +36,14 @@
 		      <b-pagination :total-rows="totalRows" :per-page="perPage" v-model="currentPage" :hide-ellipsis="true" :limit="10" class="align-middle" />
 		    </div>
 		  </div>
+			<div>
+				<adsense
+						ad-client="ca-pub-3140280192160176"
+						ad-slot="7961337044"
+						ad-style="display: block"
+						ad-format="auto">
+				</adsense>
+			</div>
 
 	  </div>
 	</div>
@@ -45,6 +53,9 @@
 var numeral = require('numeral');
 
 import Vue from 'vue'
+import VueAdsense from '~/node_modules/vue-adsense/VueAdsense.vue'
+
+Vue.component('adsense', VueAdsense)
 
 import { mapGetters } from 'vuex'
 
