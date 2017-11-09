@@ -136,8 +136,8 @@
 							</div>
 				        </b-tab>
 
-				        <b-tab title="Advance">
-							<advance-chart :data="mappedChartData" :sym="info.symbol ? info.symbol : ''" />						
+				        <b-tab title="Advance">							
+							<advance-chart :data="mappedChartData" :sym="info.symbol ? info.symbol : ''" />							
 				        </b-tab>
 				        
 				    </b-tabs>

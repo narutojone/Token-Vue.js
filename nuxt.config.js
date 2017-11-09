@@ -13,7 +13,9 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ],
     script: [
-      { src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js' }
+      { src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js' },
+      { type: 'text/javascript', src: 'https://d33t3vvu2t2yu5.cloudfront.net/tv.js' , defer: 'defer'}
+    
     ]
   },
   /*
