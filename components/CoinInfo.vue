@@ -5,7 +5,6 @@
 			
 			<img class="coin-img" :src="info.image_url" />
 		
-
 			<h2 class="coin-name">{{name}} ({{info.symbol}})</h2>
 			<h4>
 				${{info.price_usd}} <span :class="change24hour >= 0 ? 'positive' : 'negative'">({{change24hour.toFixed(2)}}%)</span>
@@ -17,8 +16,6 @@
 			<div class="col-sm-12 col-md-9 main-col">
 				<b-card no-body class="main-card">
 				    <b-tabs ref="tabs" card>
-
-
 				    	<b-tab title="Charts" active>
 				            <line-chart :data="mappedChartData" :sym="info.symbol ? info.symbol : ''" />
 				            <candle-volume-chart :data="volumeChartData" :title="name + ' vs USD'" :sym="info.symbol ? info.symbol : ''" />
@@ -358,7 +355,9 @@ export default {
 			
 			if(!chart) return [];
 
+			console.log("==== Chart ====", chart);
 			return chart.map(candle => [candle.time*1000, candle.close]);
+			// return chart.map(candle => [candle.time*1000, candle.close]);
 		},
 		volumeChartData() {
 			let chart = this.getChart(this.info.symbol, 'USD', 'hour');

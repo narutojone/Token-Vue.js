@@ -51,7 +51,7 @@ export default {
             value += 'new TradingView.widget({"symbol":"';
             value += id; 
             value += "USD";
-            value += '","interval": "D","timezone": "Etc/UTC","theme": "Black","style": "1","locale": "en","toolbar_bg": "rgba(0, 0, 0, 1)","hide_top_toolbar": true,"save_image": false,"hideideas": true});';
+            value += '","interval": "D","timezone": "Etc/UTC", "theme": "Black","style": "1","locale": "en","hide_top_toolbar": true,"save_image": false,"hideideas": true, "hide_side_toolbar": false});';
             value += '<'; value +='/script>';
           
             return value;

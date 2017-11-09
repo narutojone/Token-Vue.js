@@ -48,7 +48,7 @@ const actions = {
         
       //   commit(types.SET_COIN_INFOS, Object.keys(coininfos).map(key => coininfos[key]));
       // });
-      axios.get('https://api.coinmarketcap.com/v1/ticker/?convert=ETH')
+      axios.get('https://api.coinmarketcap.com/v1/ticker/?convert=ETH&limit=2000')
       .then(response => {
         let mapped = response.data.filter(coinInfo => coinInfo.name in image_map).map(coinInfo => ({...coinInfo, image_url: image_map[coinInfo.name]}))
 
