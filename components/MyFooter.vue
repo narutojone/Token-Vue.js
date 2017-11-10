@@ -86,20 +86,32 @@
 				<div class="mdl-body text-dark contact-body">
 					<small>Thank you for taking the time to write to Token Recap. We really look forward to getting in touch.</small>
 					<br />
-					<span>Request Type</span>
-					<b-dropdown size="sm">
-						<b-dropdown-item>Listing</b-dropdown-item>
-						<b-dropdown-item>Advertising</b-dropdown-item>
-						<b-dropdown-item>Support</b-dropdown-item>
-						<b-dropdown-item>Feedback</b-dropdown-item>
-						<b-dropdown-item>Bug Report</b-dropdown-item>
-						<b-dropdown-item>Other</b-dropdown-item>
-					</b-dropdown>
+
+					<select v-model="selected">
+						<option disabled value="">Request Type</option>
+						<option>Listing</option>
+						<option>Advertising</option>
+						<option>Support</option>
+						<option>Feedback</option>
+						<option>Bug Report</option>
+						<option>Other</option>
+					</select>
+					<!--<span>Request Type</span>-->
+					<!--<b-dropdown size="sm">-->
+						<!--<b-dropdown-item>Listing</b-dropdown-item>-->
+						<!--<b-dropdown-item>Advertising</b-dropdown-item>-->
+						<!--<b-dropdown-item>Support</b-dropdown-item>-->
+						<!--<b-dropdown-item>Feedback</b-dropdown-item>-->
+						<!--<b-dropdown-item>Bug Report</b-dropdown-item>-->
+						<!--<b-dropdown-item>Other</b-dropdown-item>-->
+					<!--</b-dropdown>-->
 
 					<b-form-textarea v-model="contactMessage" placeholder="Please provide any relevant information about issue, request or suggestion." :rows="3" :max-rows="6"></b-form-textarea>
 				</div>
 				<div class="mdl-footer">
-					<b-btn variant="info"><i class="fa fa-envelope" aria-hidden="true" @click="sendContactMessage"></i> Send</b-btn>
+					<!--<b-btn variant="info"><i class="fa fa-envelope" aria-hidden="true" @click="sendContactMessage"></i> Send 123</b-btn>-->
+					<button @click.prevent="sendemail" class="btn btn-info"><i class="fa fa-envelope"></i> Send</button>
+					<button class="btn btn-danger" @click="$modal.hide('contact-us-modal')"><i class="fa fa-times"></i> Close</button>
 				</div>
 			</modal>
 
@@ -121,15 +133,40 @@ export default {
         {icon: '', url: 'https://www.facebook.com/groups/TokenRecapGroup'},
         {icon: '', url: 'https://discord.gg/zu2VRN'}
       ],
-      contactMessage: ''
+      contactMessage: '',
+	  contactType:'',
+	  selected: ''
     }
   },
   methods: {
   	sendContactMessage() {
-  		if(this.contactMessage && this.contactMessage.length) {
-  			//TODO: SEND THE MESSAGE
-  		}
-  	}
+  	   console.log("clicke");
+//  		if(this.contactMessage && this.contactMessage.length) {
+//
+//  		}
+  	},
+      sendemail(){
+  	    emailjs.init("user_keQvpKjn83sR4OyYUEHCz");
+
+          emailjs.send("mailgun","template_wlEinhb2",{
+              to_name: "Derek",
+              message_html: this.contactMessage,
+              category:this.selected
+          })
+              .then(
+                  function(response) {
+                      console.log("SUCCESS", response);
+                      alert('Mail Sent Successfully !!');
+                  },
+                  function(error) {
+                      alert('Mail not sent successfully. Please try again');
+                      console.log("FAILED", error);
+                  }
+              );
+          	this.selected='';
+          	this.contactMessage= '';
+         	this.$modal.hide('contact-us-modal');
+	  }
   }
 }
 </script>

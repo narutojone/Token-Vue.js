@@ -14,8 +14,9 @@ module.exports = {
     ],
     script: [
       { src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js' },
-      { type: 'text/javascript', src: 'https://d33t3vvu2t2yu5.cloudfront.net/tv.js' , defer: 'defer'}
-    
+      { type: 'text/javascript', src: 'https://d33t3vvu2t2yu5.cloudfront.net/tv.js' , defer: 'defer'},
+      { type: 'text/javascript', src: 'https://cdn.emailjs.com/dist/email.min.js'}
+
     ]
   },
   /*
