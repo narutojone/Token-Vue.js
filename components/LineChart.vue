@@ -20,20 +20,15 @@ const DEFAULT_OPTIONS = {
             title: {
                 text: ''
             },
-            credits: {
-                enabled: false
-            },
-            xAxis: {
-                type: 'datetime',
-                labels: {
-                    enabled: false
-                }
-            },
-            yAxis: {
-            },
+            rangeSelector: {
+                selected: 1
+            },            
             plotOptions: {
                 series: {
-                    animation: true,
+                    animation: true,                    
+                    tooltip: {
+                        valueDecimals: 2
+                    }
                 }
             }
         }
@@ -47,7 +42,9 @@ function filterOutliers(someArray, valueFunction) {
 
   let values, q1, q3, iqr, maxValue, minValue;
 
-  values = someArray.slice().sort( (a, b) => valueFunction(a) - valueFunction(b));//copy array fast and sort
+  values = someArray.slice().sort( (a, b) => valueFunction(a) - valueFunction(b)); //copy array fast and sort
+
+  console.log("==== Value ====", values);
 
   if((values.length / 4) % 1 === 0){//find quartiles
     q1 = 1/2 * (valueFunction(values[(values.length / 4)]) + valueFunction(values[(values.length / 4) + 1]));
@@ -61,10 +58,13 @@ function filterOutliers(someArray, valueFunction) {
   maxValue = q3 + iqr * iqrMultiplier;
   minValue = q1 - iqr * iqrMultiplier;
 
-  console.log(`iqr ${iqr}, max ${maxValue}, min ${minValue}`)
+//   console.log(`iqr ${iqr}, max ${maxValue}, min ${minValue}`)
 
   let result = values.filter((x) => (valueFunction(x) >= minValue) && (valueFunction(x) <= maxValue));
 
+  console.log("==== MinValue ====", minValue);
+  console.log("==== MaxValue ====", maxValue);
+  console.log("==== Result =====", result);
   return result;
 }
 
@@ -83,13 +83,15 @@ export default {
 	},
 	computed: {
 		options() {
-			let opts = {...DEFAULT_OPTIONS, plotOptions: {...DEFAULT_OPTIONS.plotOptions, area: {...DEFAULT_OPTIONS.area}}};
+			let opts = {...DEFAULT_OPTIONS, plotOptions: {...DEFAULT_OPTIONS.plotOptions}};
 
             let filteredData = filterOutliers(this.data.filter(point => point && point[1]), (point) => point[1]);
 
             filteredData.sort((a, b) => a[0] - b[0]);
 
-			opts.series = [{name: this.sym, data: filteredData}];
+            opts.series = [{name: this.sym, data: filteredData}];
+            
+            console.log("==== opts ====", opts);
 
 			return opts;
 		}
