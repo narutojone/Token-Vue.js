@@ -36,7 +36,7 @@
 		      <b-pagination :total-rows="totalRows" :per-page="perPage" v-model="currentPage" :hide-ellipsis="true" :limit="10" class="align-middle" />
 		    </div>
 		  </div>
-			<div>
+			<div style="align-content: center !important;">
 				<adsense
 						ad-client="ca-pub-3140280192160176"
 						ad-slot="7961337044"
