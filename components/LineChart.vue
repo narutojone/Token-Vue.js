@@ -30,7 +30,10 @@ const DEFAULT_OPTIONS = {
                         valueDecimals: 2
                     }
                 }
-            }
+            },
+			xAxis: {
+                max: new Date().getTime()
+			}
         }
 
 const iqrMultiplier = 5; //original 1.5
@@ -85,7 +88,7 @@ export default {
 		options() {
 			let opts = {...DEFAULT_OPTIONS, plotOptions: {...DEFAULT_OPTIONS.plotOptions}};
 
-            let filteredData = filterOutliers(this.data.filter(point => point && point[1]), (point) => point[1]);
+            let filteredData = filterOutliers(this.data.filter(point => point && point[0]), (point) => point[0]);
 
             filteredData.sort((a, b) => a[0] - b[0]);
 
