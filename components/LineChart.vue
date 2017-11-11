@@ -20,7 +20,11 @@ const DEFAULT_OPTIONS = {
             title: {
                 text: ''
             },
-            rangeSelector: {
+            xAxis: {
+                // min: new Date().getDate() - 1000, //previous day  at 16.00
+                max: new Date().getTime() //get actual time
+            },
+            rangeSelector: {                
                 selected: 1
             },            
             plotOptions: {
