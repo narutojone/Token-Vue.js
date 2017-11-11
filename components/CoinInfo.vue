@@ -358,8 +358,8 @@ export default {
 			if(!chart) return [];
 
 			console.log("==== Chart ====", chart);
+			// return chart.map(candle => ({...candle, time: candle.time*1000}));
 			return chart.map(candle => [candle.time*1000, candle.close]);
-			// return chart.map(candle => [candle.time*1000, candle.close]);
 		},
 		volumeChartData() {
 			let chart = this.getChart(this.info.symbol, 'USD', 'hour');
