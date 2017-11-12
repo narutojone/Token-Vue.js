@@ -38,7 +38,7 @@
                     <img class="news-source-image" :src="newsSource.source_info.img">
                     </img>
                     <h3>
-                      <a :href="newsSource.items.length ? newsSource.items[0].guid : ''">
+                      <a :href="newsSource.items.length ? newsSource.items[0].guid : ''" target="_blank">
                         {{newsSource.source_info.name}}
                       </a>
                     </h3>
