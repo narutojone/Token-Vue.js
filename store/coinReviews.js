@@ -74,11 +74,16 @@ const actions = {
         commit(types.SET_REVIEW_SUBMISSION_STATE, { coinName, submissionState: {id: 'PENDING'} })
         this.$firebase.database().ref('coinReviews/' + coinName + '/' + rootState.user.user.uid).set(review)
         .then(() => {
-          commit(types.SET_REVIEW_SUBMISSION_STATE, { coinName, submissionState: {id: 'SUCCESS'} });
+           const data = {
+              uid = rootState.user.user.uid;
+           };
+           commit(types.SET_REVIEW_SUBMISSION_STATE, { coinName, submissionState: {id: 'SUCCESS'} });
         })
         .catch(err => {
           commit(types.SET_REVIEW_SUBMISSION_STATE, { coinName, submissionState: {id: 'ERROR', err} })
         });
+
+      
 
       
     },
