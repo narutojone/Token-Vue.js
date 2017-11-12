@@ -475,8 +475,7 @@ export default {
 		this.$store.dispatch('exchanges/loadExchangePairs')
 		if(this.info && this.info.symbol) {
 				this.$store.dispatch('charts/loadChart', { fsym: this.info.symbol, tsym: 'USD', interval: 'hour' })
-			}
-
+		}
 
 		if(!this.pairSymbols || !this.pairSymbols.length) return;
 

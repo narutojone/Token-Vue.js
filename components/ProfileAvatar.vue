@@ -11,6 +11,8 @@
 <script>
 
 import Vue from 'vue';
+import { firebaseAction } from 'vuexfire'
+import { mapGetters } from 'vuex'
 
 export default {
     name: 'profile-avatar',
@@ -20,9 +22,13 @@ export default {
     data() {
         return {
             user_credentials: {
-                avatar: 'https://images.cryptocompare.com/301942/d100fe20-b892-4867-b437-e97ea3b0fa11.jpg'
+                avatar: 'https://images.cryptocompare.com/378439/bf92105c-1ee9-4355-91a2-c2b3836e4f70.jpg'
             }
         }
+    },
+
+    computed: {
+        
     },
 
     methods: {

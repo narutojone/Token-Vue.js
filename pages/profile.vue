@@ -60,7 +60,7 @@
         <div class="right-sidebar">
             <div class="main">
                 <div class="user-info">
-                    <div class="desktop-name"><h1>Sergey</h1></div>
+                    <div class="desktop-name"><h1>{{mappedUserData.email}}</h1></div>
 
                     <div class="profile-comment">
                         <span style="padding-left:20px;">Token Recap Profile Page</span>
@@ -89,7 +89,6 @@ import Vue from 'vue'
 
 import ProfileAvatar from '~/components/ProfileAvatar.vue'
 var Avatar = require('vue-avatar')
-// import VueAvatarScale from './components/VueAvatarScale.vue'
 
 import { mapGetters } from 'vuex'
 
@@ -116,7 +115,29 @@ export default {
           this.$refs.vueavatarscale.setScale(scale);
        }        		
 	},
-	computed: {		
+	computed: {
+        mappedUserData() {
+            console.log("==== User Data ====", this.getUser);
+            return this.getUser;
+        },
+
+        mappedUserEmail() {
+            
+            console.log("==== User Email ====", this.getUserEmail);
+            return this.getUserEmail;
+        },
+
+        mappedUserPassword() {
+            return this.getUserPassword;
+        },
+
+        ...mapGetters(
+			{				
+                getUser: 'user/getUser',
+                getUserEmail: 'user/getUserEmail',
+                getUserPassword: 'user/getUserPassword'
+			}
+		)
 	}
 }
 </script>

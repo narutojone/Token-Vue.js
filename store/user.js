@@ -22,6 +22,8 @@ const state = () => ({
   user: {},
   signInError: null,
   registerError: null,
+  email: String,
+  password: String,
 
   serverTimeOffset: 0,
 });
@@ -33,7 +35,9 @@ const getters = {
   getSignInError: state => state.signInError,
   getRegisterError: state => state.registerError,
   hasCurrentUser: state => Object.keys(state.user).length !== 0,
-  getServerTimeOffset: state => state.serverTimeOffset
+  getServerTimeOffset: state => state.serverTimeOffset,
+  getUserEmail: state => state.email,
+  getUserPassword: state => state.password
 }
 // actions
 const actions = {
@@ -52,7 +56,7 @@ const actions = {
     console.log('Auth state changed', user);
 
     if(user) {
-      commit(types.SIGNED_IN_USER, {uid: user.uid, name: user.displayName, photoURL: user.photoURL});
+      commit(types.SIGNED_IN_USER, {uid: user.uid, name: user.displayName, photoURL: user.photoURL, email: user.email, password: state.password});
     }
     else {
       commit(types.SIGNED_OUT);
@@ -70,6 +74,9 @@ const actions = {
   },
 
   register({ commit, state, dispatch }, registerDetails) {
+    state.email = registerDetails.email;
+    state.password = registerDetails.password;
+
     this.$firebase.auth().createUserWithEmailAndPassword(registerDetails.email, registerDetails.password)
     .catch(err => {
       commit(types.REGISTER_FAIL, err);
@@ -77,6 +84,14 @@ const actions = {
   },
 
   logIn ({ commit, state, dispatch }, loginDetails) {
+    
+    console.log("==== LoginDetails ====", loginDetails.email);
+
+    state.email = loginDetails.email;
+    state.password = loginDetails.password;
+
+    console.log("==== Login State ====", state);
+
     if(loginDetails.method === 'email') {
       this.$firebase.auth().signInWithEmailAndPassword(loginDetails.email, loginDetails.password)
       .catch(err => {

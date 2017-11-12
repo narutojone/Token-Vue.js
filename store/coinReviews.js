@@ -23,7 +23,6 @@ const getters = {
       if(state.currentBoundCoin == coinName) {
         return state.boundCoinReviews;
       }
-
       return state.coinReviews[coinName];
     }
   },
@@ -38,14 +37,14 @@ const getters = {
 // actions
 const actions = {
   
-  bindCoinReviews: firebaseAction(({ state, commit, bindFirebaseRef }, { fb, coinName }) => {
-      console.log('binding coin reviews', coinName);
-      if(state.currentBoundCoin != coinName) {
-        console.log('Bind')
-        commit(types.SET_CURRENT_BOUND_COIN, coinName);
-        bindFirebaseRef('boundCoinReviews', fb.database().ref(`coinReviews/${coinName}`));
-      }
-  }),
+   bindCoinReviews: firebaseAction(({ state, commit, bindFirebaseRef }, { fb, coinName }) => {
+        console.log('binding coin reviews', coinName);
+        if(state.currentBoundCoin != coinName) {
+          console.log('Bind')
+          commit(types.SET_CURRENT_BOUND_COIN, coinName);
+          bindFirebaseRef('boundCoinReviews', fb.database().ref(`coinReviews/${coinName}`));
+        }
+   }),
 
    loadCoinReviews({ store, commit }, coinName) {
       console.log('loading coin reviews', coinName);
@@ -111,8 +110,8 @@ const actions = {
         [uid]: { ".sv": "timestamp" }
       });
     },
-   
 
+    
 }
 
 // mutations
