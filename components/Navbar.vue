@@ -40,7 +40,8 @@
 							<em><img class="profile-img" :src="user.photoURL"></img></em>
 							<em>{{user.name}}</em>
 						</template>
-						<b-dropdown-item href="/profile">Profile</b-dropdown-item>
+						<b-dropdown-item href="/profile">View Profile</b-dropdown-item>
+						<b-dropdown-item href="#">Edit Profile</b-dropdown-item>
 						<b-dropdown-item href="#" @click="logOut">Signout</b-dropdown-item>
 					</b-nav-item-dropdown>
 				</div>

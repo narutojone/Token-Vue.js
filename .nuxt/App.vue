@@ -25,7 +25,7 @@ let layouts = {
 let resolvedLayouts = {}
 
 export default {
-  head: {"title":"Token Recap","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Token Recap is the best crypto website!"}],"link":[{"rel":"icon","type":"image/x-icon","href":"/favicon.ico"}],"script":[{"src":"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"},{"type":"text/javascript","src":"https://d33t3vvu2t2yu5.cloudfront.net/tv.js","defer":"defer"}],"style":[]},
+  head: {"title":"Token Recap","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Token Recap is the best crypto website!"}],"link":[{"rel":"icon","type":"image/x-icon","href":"/favicon.ico"}],"script":[{"src":"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"},{"type":"text/javascript","src":"https://d33t3vvu2t2yu5.cloudfront.net/tv.js","defer":"defer"},{"type":"text/javascript","src":"https://cdn.emailjs.com/dist/email.min.js"}],"style":[]},
   data: () => ({
     layout: null,
     layoutName: ''
