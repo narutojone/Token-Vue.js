@@ -3,7 +3,7 @@
         <link href='https://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
  
         <div class="avatar">
-            <img style="width:100%;height:250px;" :src=user_credentials.avatar @click="changeAvatar()"/>     
+            <img style="width:100%;" :src=user_credentials.avatar @click="changeAvatar()"/>     
         </div>
     </div>
 </template>
