@@ -69,6 +69,9 @@
                 <div class="card">
                     <b-tabs ref="tabs" card>
                         <b-tab title="Activity" active>
+                               
+                           <fade-loader v-show="loading" class="spinner"></fade-loader>                                                                                     
+                              {{getUserReviews(mappedUserData.uid)}} 
                         </b-tab>
                         <b-tab title="Reviews">
                         </b-tab>
@@ -86,26 +89,27 @@
 <script>
 
 import Vue from 'vue'
-
-import ProfileAvatar from '~/components/ProfileAvatar.vue'
-var Avatar = require('vue-avatar')
-
 import { mapGetters } from 'vuex'
 
 
+import ProfileAvatar from '~/components/ProfileAvatar.vue'
+import FadeLoader from '~/components/fadeloader.vue'
 
-if (process.browser) {
-  Vue.use(require('vuetable-2'))
-}
+const Avatar = require('vue-avatar');
+     
 
 export default {
 	components: {
-        ProfileAvatar      
-	},
-	data() {
-		return {			
-		}
-	},
+        FadeLoader,
+        ProfileAvatar        
+    },
+
+    data: function() {
+        return {
+            loading: false
+        }
+    },
+    
 	mounted() {
 		
 	},
@@ -113,11 +117,30 @@ export default {
        onImageReady(scale){
           alert("clicked");
           this.$refs.vueavatarscale.setScale(scale);
-       }        		
-	},
+       },
+
+       getUserReviews(uid) {
+            this.loading = true;      
+            this.$firebase.database().ref('userCoinReviews/'+uid).once('value')
+                .then(snap => {
+                    console.log(' ==== Got User reviews: ====', snap.val().Bitcoin.coinName);
+                    this.loading = false;
+                    return snap.val().Bitcoin.coinName;
+                })
+                .catch(err => {
+                    this.loading = false;
+                });  
+            }
+    },
+    
+    mounted() {              
+    }, 
+
+    props: {        
+    },
+
 	computed: {
         mappedUserData() {
-            console.log("==== User Data ====", this.getUser);
             return this.getUser;
         },
 
@@ -135,10 +158,11 @@ export default {
 			{				
                 getUser: 'user/getUser',
                 getUserEmail: 'user/getUserEmail',
-                getUserPassword: 'user/getUserPassword'
+                getUserPassword: 'user/getUserPassword',
+                getUserReview: 'coinReview/getUserReview'
 			}
 		)
-	}
+    }
 }
 </script>
 
@@ -336,5 +360,47 @@ export default {
             padding-bottom: 10px; padding-top: 10px;
             color: rgb(73,78,88);
         }
+    }
+
+    .loader,
+    .loader:before,
+    .loader:after {
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation: load7 1.8s infinite ease-in-out;
+    animation: load7 1.8s infinite ease-in-out;
+    }
+    .loader {
+    color: #17a2b8;
+    font-size: 10px;
+    margin: 80px auto;
+    position: relative;
+    /* text-indent: -9999em; */
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+    }
+    .loader:before,
+    .loader:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    }
+    .loader:before {
+    left: -3.5em;
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+    }
+    .loader:after {
+    left: 3.5em;
+    }
+
+    .spinner {
+        margin: auto;
     }
 </style>
