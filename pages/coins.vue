@@ -101,7 +101,6 @@ export default {
 
 			let mapped = this.coinInfos.slice(); //.filter(coin => coin['24h_volume_usd'] && coin.image_url && coin.price_usd && coin['percent_change_24h'] && coin['percent_change_1h']);
 			
-			console.log(mapped);
 			mapped.sort((a,b) => numeral(b.market_cap_usd).value() - numeral(a.market_cap_usd).value());
 
 			for(var i = 0; i < mapped.length; i++) {

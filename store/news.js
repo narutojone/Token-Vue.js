@@ -69,7 +69,7 @@ const NEWS_ENDPOINT = 'https://min-api.cryptocompare.com/data/news/';
 
 function getNews() {
   return axios.get(NEWS_ENDPOINT).then( (response) => {
-    console.log('Got news resposne', response);
+  
     if(!response.data || !response.data.length) throw new Error('Not correct response');
     return response.data;
   });

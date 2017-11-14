@@ -20,11 +20,11 @@ const getters = {
 const actions = {
 
    bindPortfolio: firebaseAction(({ rootState, state, commit, bindFirebaseRef, unbindFirebaseRef }, fb) => {
-    console.log('binding portfolio...');
+
     let uid = null;
     if(!uid) {
       if(rootState.user && rootState.user.user.uid) {
-        console.log('setting to', rootState.user.user);
+     
         uid = rootState.user.user.uid;
       }
       else {
@@ -32,7 +32,7 @@ const actions = {
       }
     }
 
-      console.log('binding portfolio from ' + state.currentBindingUid + ' to ' + uid);
+    
 
       if(state.currentBindingUid != uid) {
         commit(types.SET_CURRENT_BINDING_UID, uid);
@@ -67,7 +67,7 @@ const actions = {
 
     let uid = rootState.user.user.uid;
 
-    console.log(`removing trade ${uid} - ${tradeId}`)
+   
 
     this.$firebase.database().ref(`portfolios/${uid}/trades/${tradeId}`).remove();
   }
@@ -76,7 +76,7 @@ const actions = {
 // mutations
 const mutations = {
   [types.SET_CURRENT_BINDING_UID](state, uid) {
-    console.log('SET BINDING UID', uid);
+
     state.currentBindingUid = uid;
   }
 }

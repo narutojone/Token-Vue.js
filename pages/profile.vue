@@ -158,7 +158,7 @@
                         </b-tab>
                         <b-tab title="Following">
                         </b-tab>
-                        <b-tab title="Followers">
+                        <b-tab title="FollowersF">
                         </b-tab>
                     </b-tabs>
                 </div>
@@ -198,7 +198,7 @@ export default {
 	},
 	methods: {
        getImageUrl(sym) {
-        //    console.log("http://cryptosumup.com/images/" + sym.toLowerCase());
+
            return "http://cryptosumup.com/images/" + sym.toLowerCase() + ".png";
        },
        
@@ -232,9 +232,8 @@ export default {
             return this.getUser;
         },
 
-        mappedUserEmail() {
+        mappedUserEmail() {            
             
-            console.log("==== User Email ====", this.getUserEmail);
             return this.getUserEmail;
         },
 

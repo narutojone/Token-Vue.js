@@ -140,7 +140,7 @@ export default {
   },
   methods: {
   	sendContactMessage() {
-  	   console.log("clicke");
+  	   
 //  		if(this.contactMessage && this.contactMessage.length) {
 //
 //  		}
@@ -155,12 +155,12 @@ export default {
           })
               .then(
                   function(response) {
-                      console.log("SUCCESS", response);
+                      
                       alert('Mail Sent Successfully !!');
                   },
                   function(error) {
                       alert('Mail not sent successfully. Please try again');
-                      console.log("FAILED", error);
+                  
                   }
               );
           	this.selected='';

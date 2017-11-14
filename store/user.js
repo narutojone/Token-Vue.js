@@ -53,7 +53,7 @@ const actions = {
     });
 
    this.$firebase.auth().onAuthStateChanged((user) => {
-    console.log('Auth state changed', user);
+    
 
     if(user) {
       commit(types.SIGNED_IN_USER, {uid: user.uid, name: user.displayName, photoURL: user.photoURL, email: user.email, password: state.password});
@@ -83,14 +83,12 @@ const actions = {
     });
   },
 
-  logIn ({ commit, state, dispatch }, loginDetails) {
-    
-    console.log("==== LoginDetails ====", loginDetails.email);
+  logIn ({ commit, state, dispatch }, loginDetails) {     
 
     state.email = loginDetails.email;
     state.password = loginDetails.password;
 
-    console.log("==== Login State ====", state);
+   
 
     if(loginDetails.method === 'email') {
       this.$firebase.auth().signInWithEmailAndPassword(loginDetails.email, loginDetails.password)
@@ -114,7 +112,7 @@ const actions = {
         throw new Error('You did not provide a provider for custom login');
        }
 
-       console.log('Logging in with provider', provider);
+     
               this.$firebase.auth().signInWithPopup(provider).then(result => {
                   var token = result.credential.accessToken;
                   var user = result.user;
@@ -136,29 +134,29 @@ const actions = {
    },
 
   setupNotifications({ commit, rootState, state }, uid) {
-    console.log('Setting up notifications...');
+    
     const messaging = this.$firebase.messaging();
     messaging.requestPermission()
     .then(() => {
-      console.log('Got messaging permission!');
+    
       return messaging.getToken();
     })
     .then(token => {
-      console.log('Token', token);
+   
     })
     .catch(err => {
-      console.log('Couldn\'t get messaging permissions with error', err);
+   
     });
 
     messaging.onMessage(payload => {
-      console.log('RECEIVED MESSAGE: ' + payload);
+    
     });
     
   },   
 
    syncTime({commit, dispatch}) {
     this.$firebase.database().ref('.info/serverTimeOffset').on("value", function(snap) {
-      console.log('SERVER TIME OFFSET: ' + snap.val());
+  
       commit(types.SET_SERVER_TIME_OFFSET, snap.val());
     });
    }

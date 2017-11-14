@@ -41,20 +41,20 @@ const getters = {
 const actions = {
   
     bindCoinReviews: firebaseAction(({ state, commit, bindFirebaseRef }, { fb, coinName }) => {
-        console.log('binding coin reviews', coinName);
+       
         if(state.currentBoundCoin != coinName) {
-          console.log('Bind')
+        
           commit(types.SET_CURRENT_BOUND_COIN, coinName);
           bindFirebaseRef('boundCoinReviews', fb.database().ref(`coinReviews/${coinName}`));
         }
     }),
 
    loadCoinReviews({ store, commit }, coinName) {
-      console.log('loading coin reviews', coinName);
+    
 
       this.$firebase.database().ref('coinReviews/' + coinName).once('value')
       .then(snap => {
-        console.log('Got coin reviews:', snap.val());
+     
         commit(types.SET_COIN_REVIEWS, { coinName, reviews: snap.val() });
       })
       .catch(err => {
@@ -64,7 +64,7 @@ const actions = {
     loadUserCoinReview({ store, commit}) { 
       this.$firebase.database().ref('userCoinReviews').once('value')
       .then(snap => {
-        console.log(' ==== Got User reviews: ====', snap.val());
+        
       
         commit(types.SET_USER_REVIEWS, { uid, data: snap.val() });
       })
@@ -80,7 +80,7 @@ const actions = {
 
       review = {...review, name: rootState.user.user.name, photoURL: rootState.user.user.photoURL, time: {".sv": "timestamp"}};
 
-        console.log('Writing to db...');
+      
 
         commit(types.SET_REVIEW_SUBMISSION_STATE, { coinName, submissionState: {id: 'PENDING'} })
         this.$firebase.database().ref('coinReviews/' + coinName + '/' + rootState.user.user.uid).set(review)

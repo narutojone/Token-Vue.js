@@ -328,17 +328,15 @@ export default {
 					text: coin.name + ' (' + coin.symbol + ')',
 				}
 			});
-			console.log('coin infos', this.coinInfos);
+			
 		},
 		exchangeOptions() {
 			if(!this.form_selectedCoin) return [];
-
-			console.log('SELECTED COIN: ', this.form_selectedCoin);
+			
 			let exchangeOptions = [];
 
 			let coinExchanges = this.getCoinExchangesForCoin(this.form_selectedCoin.symbol);
-
-			console.log('COOOIN EXCHANGES ', coinExchanges);
+		
 			Object.keys(coinExchanges).forEach(exchangeName => {
 				coinExchanges[exchangeName].forEach(tsym => {
 					exchangeOptions.push({
@@ -483,8 +481,7 @@ export default {
 						if(this.coinInfosBySymbol[holding.coin]) {
 							let { percent_change_1h, percent_change_24h, percent_change_7d, image_url } = this.coinInfosBySymbol[holding.coin];
 
-							console.log('percentage changes', percent_change_1h, percent_change_24h, percent_change_7d)
-
+						
 							mappedHolding.percent_change_1h = numeral(percent_change_1h).value();
 							mappedHolding.percent_change_24h = numeral(percent_change_24h).value();
 							mappedHolding.percent_change_7d = numeral(percent_change_7d).value();
@@ -506,7 +503,7 @@ export default {
 			}
 		},
 		form_date() {
-			console.log(this.form_date);
+			
 			this.updateConversions();
 		},
 		form_selectedCoin() {
@@ -532,7 +529,7 @@ export default {
 		}
 	},
 	mounted() {
-		console.log('DATE: ', this.form_date);
+		
 		this.$store.dispatch('portfolio/bindPortfolio', this.$firebase)
 	},
 	methods: {
@@ -552,7 +549,7 @@ export default {
 				let inputTypeSymbol;
 				let invert = false;
 				let total = false;
-				console.log('input type', this.form_coinPriceInputType);
+				
 				if(this.form_coinPriceInputType) {
 					if(this.form_coinPriceInputType.includes('Usd')) {
 						inputTypeSymbol = 'USD';
@@ -572,7 +569,7 @@ export default {
 
 				let conversionSymbol = inputTypeSymbol ? inputTypeSymbol : ( this.form_selectedExchange.symbol ? this.form_selectedExchange.symbol : null );
 
-				console.log('Conversion symbol', conversionSymbol);
+				
 				let suggestedPrice = this.localConversions[conversionSymbol];
 
 				if(suggestedPrice) {
@@ -580,19 +577,19 @@ export default {
 						suggestedPrice = 1 / suggestedPrice;
 					}
 
-					console.log('total', total);
-					console.log('form quantity', this.form_quantity);
+					
+					
 					if(total && this.form_quantity) {
 						suggestedPrice = suggestedPrice * this.form_quantity;
 					}
 				}
 
 
-				console.log('setting suggseted price', suggestedPrice);
+				
 				this.form_localPrice = suggestedPrice;
 		},
 		updateConversions() {
-			console.log('updating conversions')
+			
 			if(!this.form_selectedCoin || !this.form_date) return;
 
 			let tsyms = 'BTC,ETH,USD';
@@ -602,8 +599,7 @@ export default {
 
 			const fsym = this.form_selectedCoin.symbol;
 			const timestamp = moment(this.form_date).unix();
-			console.log('Updating conversions', fsym, timestamp, tsyms);
-
+			
 			axios.get(`https://min-api.cryptocompare.com/data/pricehistorical?fsym=${fsym}&tsyms=${tsyms}&ts=${timestamp}`).then(response => {
 				let conversions = response.data[fsym];
 
@@ -616,19 +612,19 @@ export default {
 			this.addTradePending = true;
 			
 			if(!this.form_selectedCoin.name || !this.form_selectedCoin.symbol || !this.form_selectedExchange.tsym || !this.form_tradeType || !this.form_localPrice || !this.form_quantity || !this.form_selectedExchange.exchangeName) {
-				console.log('Cannot add trade, not all details here');
+				
 				return;
 			}
 
 			if(!this.localConversions || !this.localConversions['USD'] || !this.localConversions['BTC'] || !this.localConversions['ETH'] || !this.localConversions[this.form_selectedExchange.tsym]) {
-				console.log('All required conversions are not present');
+				
 				return;
 			}
 
 				let inputTypeSymbol;
 				let invert = false;
 				let total = false;
-				console.log('input type', this.form_coinPriceInputType);
+				
 				if(this.form_coinPriceInputType) {
 					if(this.form_coinPriceInputType.includes('Usd')) {
 						inputTypeSymbol = 'USD';
@@ -649,11 +645,11 @@ export default {
 				let conversionSymbol = inputTypeSymbol ? inputTypeSymbol : ( this.form_selectedExchange.symbol ? this.form_selectedExchange.symbol : null );
 
 				if(!conversionSymbol) {
-					console.log('Could not establish conversion symbol');
+					
 					return;
 				}
 
-				console.log('Conversion symbol', conversionSymbol);
+				
 				console.log(`1/${this.form_localPrice} * ${this.localConversions[conversionSymbol]} / ${this.localConversions[this.form_selectedExchange.symbol]}`);
 				let exchangePrice = (1/this.form_localPrice) * this.localConversions[conversionSymbol] / this.localConversions[this.form_selectedExchange.tsym];
 				console.log('Resulting raw exchange price', exchangePrice);

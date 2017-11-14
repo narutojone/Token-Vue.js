@@ -38,7 +38,7 @@ const getters = {
 const actions = {
   
    bindCoinRatings: firebaseAction(({ state, commit, bindFirebaseRef }, fb) => {
-      console.log('binding coin ratings');
+    
 
       if(!Object.keys(state.coinRatings).length) {
         bindFirebaseRef('coinRatings', fb.database().ref('coinRatings'));
@@ -47,7 +47,7 @@ const actions = {
     }),
 
    bindExchangeRatings: firebaseAction(({ state, commit, bindFirebaseRef }, fb) => {
-      console.log('binding exchange ratings');
+     
 
       if(!Object.keys(state.exchangeRatings).length) {
         bindFirebaseRef('exchangeRatings', fb.database().ref('exchangeRatings'));
@@ -56,7 +56,7 @@ const actions = {
     }),
 
    bindWalletRatings: firebaseAction(({ state, commit, bindFirebaseRef }, fb) => {
-      console.log('binding exchange ratings');
+   
 
       if(!Object.keys(state.walletRatings).length) {
         bindFirebaseRef('walletRatings', fb.database().ref('walletRatings'));

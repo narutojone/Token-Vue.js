@@ -295,7 +295,7 @@ export default {
 			return {...foundInfo, image_url: imageUrl, rating: this.getCoinRatingForCoin(this.name)};
 		},
 		mappedReviews() {
-			console.log('reviws', this.reviews);
+			
 			return this.reviews ? this.reviews.map(review => ({...review, id: review['.key'], date: dateFormat(new Date(review.time), "mmm dS, yyyy h:MM:ss TT")})) : [];
 		},
 		reviews() {
@@ -303,7 +303,7 @@ export default {
 		},
 		exchangePairs() {
 			let exchangePairs = this.getCoinExchangesForCoin(this.info.symbol);
-			console.log('exchangepairs', exchangePairs);
+			
 
 			return exchangePairs;
 		},
@@ -351,13 +351,10 @@ export default {
 			return this.info && this.info.percent_change_24h ? parseFloat(this.info.percent_change_24h) : 0.0;
 		},
 		mappedChartData() {
-			let chart = this.getChart(this.info.symbol, 'USD', 'hour');
-			
-			console.log("==== Chart  123====", chart);
+			let chart = this.getChart(this.info.symbol, 'USD', 'hour');			
 
 			if(!chart) return [];
 
-			console.log("==== Chart ====", chart);
 			// return chart.map(candle => ({...candle, time: candle.time*1000}));
 			return chart.map(candle => [candle.time*1000, candle.close]);
 		},
@@ -414,9 +411,7 @@ export default {
 	},
 	watch: {
 		pairSymbols(val) {
-			if(!this.pairSymbols || !this.pairSymbols.length) return;
-
-			console.log('Pair symbols before loading exchanges', this.pairSymbols);
+			if(!this.pairSymbols || !this.pairSymbols.length) return;	
 
 			let i = 0;
 			let bigCoins = ['USD', 'EUR', 'JPY', 'KRW', 'GBP', 'AUD', 'BTC', 'ETH', 'LTC', 'BCH', 'NEO', 'WTC', 'BCC'].reduce((o, c) => ({...o, [c]: true}), {});
@@ -447,8 +442,6 @@ export default {
 	},
 	methods: {
 		submitReview() {
-			console.log('reviews', this.info.symbol);
-
 			let review = {
 				rating: this.formStarRating,
 				comments: this.formComments
@@ -470,7 +463,7 @@ export default {
 		}
 	},
 	mounted() {
-		console.log('MOUNTED!!!')
+	
 		this.$store.dispatch('coinReviews/bindCoinReviews', { coinName: this.name, fb: this.$firebase });
 		this.$store.dispatch('exchanges/loadExchangePairs')
 		if(this.info && this.info.symbol) {
@@ -478,9 +471,7 @@ export default {
 		}
 
 		if(!this.pairSymbols || !this.pairSymbols.length) return;
-
-			console.log('Pair symbols before loading exchanges', this.pairSymbols);
-
+		
 			let i = 0;
 			let bigCoins = ['USD', 'EUR', 'JPY', 'KRW', 'GBP', 'AUD', 'BTC', 'ETH', 'LTC', 'BCH', 'NEO', 'WTC', 'BCC'].reduce((o, c) => ({...o, [c]: true}), {});
 			let bigCoin = this.info.symbol == 'BTC' || this.info.symbol == 'ETH';
