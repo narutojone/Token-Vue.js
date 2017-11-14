@@ -72,7 +72,7 @@
                            <div class="div-tab">
                                 {{ getUserReviews(mappedUserData.uid) }}  
                                 <fade-loader v-show="loading" class="spinner"></fade-loader>
-                                <div  v-show="!loading" v-for="data in reviewData">
+                                <div style="padding-bottom:20px;" v-show="!loading" v-for="data in reviewData">
                                 <div class="div-activity">
                                     <div class="activity-node activity-node-following">
                                         <a href=""><span class="fa fa-star"></span></a>	
@@ -82,7 +82,7 @@
                                             <span class="entry-time">
                                                 <span class="fa fa-clock-o">                                                    
                                                 </span>
-                                                {{(Math.round(Number(new Date().getTime()-data.post_time)/3600000))}} Hours ago
+                                                <timeago style="margin-left:3px;" :since="data.post_time"></timeago>
                                             </span>
 
                                             <span class="user_name"><a href="#">{{mappedUserData.uid}}</a></span>
@@ -114,28 +114,45 @@
                                     </div>
                                 </div>
                                 <div class="reply-body">
-                                    <div class="reply" style="float:left">
-                                        <a class="btn btn-replies">
+                                   
+                                    <div class="reply" style="flex:1">
+                                        <a class="btn btn-replies" @click="toggleReplyVisibility(data.coinName, 'blah blah blah blah')">
                                             <i class="fa fa-reply"></i>
                                             You didn't reply anything.
                                         </a>
                                     </div>
 
-                                    <div class="reply btn-disagree">
-                                        <a class="btn btn-replies">
-                                            <i class="fa fa-thumbs-o-down"></i>
-                                            
-                                        </a>
-                                    </div>
-
-                                    <div class="reply" style="float:right;">
+                                     <div class="reply" style="justify-content:flex-end">
                                         <a class="btn btn-replies">
                                             <span class="btn-agree"><i class="fa fa-thumbs-o-up"></i></span>
                                             <span class="action-text">Agree</span>
                                         </a>
                                     </div>
-                                </div>
 
+                                    <div class="reply btn-disagree" style="justify-content:flex-end">
+                                        <a class="btn btn-replies">
+                                            <i class="fa fa-thumbs-o-down"></i>                                            
+                                        </a>
+                                    </div>
+
+                                    </div>
+
+                                    <div class="reply-body">
+                                
+                                    <div class="write-reply" v-if="visibleReplies[data.coinName]">
+                                        <div>
+                                            <b-form-textarea id="textarea2"
+                                                :placeholder="'Write your reply'"
+                                                :rows="3"
+                                                :max-rows="3" class="mt-3">
+                                            </b-form-textarea>
+                                        </div>
+                                        <div style="float:right;position:relative;top:-36px;">
+                                             <b-button variant="primary" class="submit-reply-btn mt-1">Submit</b-button>
+                                        </div>                                       
+                                    </div>
+                               </div>
+                               
                              </div>                                                   
                            </div>
                         </b-tab>
@@ -194,9 +211,19 @@ import { mapGetters } from 'vuex'
 import StarRating from '~/components/StarReview.vue'
 import ProfileAvatar from '~/components/ProfileAvatar.vue'
 import FadeLoader from '~/components/fadeloader.vue'
+import VueTimeago from 'vue-timeago'
 
 const Avatar = require('vue-avatar');
-     
+
+var dateFormat = require('dateformat');
+
+Vue.use(VueTimeago, {
+  name: 'timeago',
+  locale: 'en-US',
+  locales: {
+    'en-US': require('vue-timeago/locales/en-US.json')
+  }
+})
 
 export default {
 	components: {
@@ -208,7 +235,8 @@ export default {
     data: function() {
         return {
             loading: true,
-            reviewData: {}
+            reviewData: {},
+            visibleReplies: {}
         }
     },
     
@@ -237,7 +265,24 @@ export default {
                     this.loading = false;
                     return;
                 });  
-        }
+        },
+
+        checkReply() {
+            this.reply = !this.reply;
+        },
+        
+        replyReview(reviewId, replyBody) {
+			this.$store.dispatch('coinReviews/replyReview', { coinName: this.name, reviewId, replyBody })
+		},
+		toggleReplyVisibility(reviewId) {
+			Vue.set(this.visibleReplies, reviewId, !this.visibleReplies[reviewId]);
+		},
+		likeReview(reviewId) {
+			this.$store.dispatch('coinReviews/rateReview', { coinName: this.name, reviewId, like: true })
+		},
+		dislikeReview(reviewId) {
+			this.$store.dispatch('coinReviews/rateReview', { coinName: this.name, reviewId, like: false })
+		}
     },
     
     mounted() {              
@@ -341,6 +386,13 @@ export default {
         color: rgb(73,78,88);
         text-align: center;
         height: 65px;
+    }
+
+    .write-reply {
+        width: 100%;
+        position: relative;
+        top: 4px;
+        margin-top: 5px;
     }
 
     .card {
@@ -688,11 +740,9 @@ export default {
 
     .reply-body {
         margin-left: 48px;
-        margin-bottom: 30px;
-        height: 35px;
         border: 1px solid #ddd;
         background-color: #e0e9f5;
-        /* display: flex; */
+        display: flex;
     }
 
     .div-review {
