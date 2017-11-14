@@ -114,7 +114,26 @@
                                     </div>
                                 </div>
                                 <div class="reply-body">
-                                    
+                                    <div class="reply" style="float:left">
+                                        <a class="btn btn-replies">
+                                            <i class="fa fa-reply"></i>
+                                            You didn't reply anything.
+                                        </a>
+                                    </div>
+
+                                    <div class="reply btn-disagree">
+                                        <a class="btn btn-replies">
+                                            <i class="fa fa-thumbs-o-down"></i>
+                                            
+                                        </a>
+                                    </div>
+
+                                    <div class="reply" style="float:right;">
+                                        <a class="btn btn-replies">
+                                            <span class="btn-agree"><i class="fa fa-thumbs-o-up"></i></span>
+                                            <span class="action-text">Agree</span>
+                                        </a>
+                                    </div>
                                 </div>
 
                              </div>                                                   
@@ -335,6 +354,56 @@ export default {
 
     a {
         cursor: pointer;
+    }
+
+    .btn:active {
+        background-image: none;
+        outline: 0;
+        -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+        box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+    }
+
+    .btn {
+        font-size: 12px;
+        display: inline-block;
+        padding: 6px 12px;
+        margin-bottom: 0;
+        font-weight: 400;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        touch-action: manipulation;
+        cursor: pointer;
+        user-select: none;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+    }
+
+    .btn-replies {
+        background: #fff;
+        /* position: absolute; */
+        padding: 5px 12px;
+        border-color: #b3c9dc;
+        border-radius: 4px;
+        /* left: 10px; */
+        /* bottom: 5px; */
+    }
+
+    .btn-disagree {
+        float:right; margin-right: 10px; border-color: #d6dbe2; color: #ED402A;
+    }
+
+    .btn-agree {
+        color: #5cb85c;
+        width: 30px;
+    }
+
+    .action-text {
+        margin-left: 10px;
+        color: #337ab7;
+        font-size: 13px;
     }
 
     /*###Desktops, big landscape tablets and laptops(Large, Extra large)####*/
@@ -612,12 +681,18 @@ export default {
         margin-top: 10px;
     }
 
+    .reply {
+        margin-left: 15px;
+        padding-top: 2px;
+    }
+
     .reply-body {
         margin-left: 48px;
         margin-bottom: 30px;
         height: 35px;
         border: 1px solid #ddd;
         background-color: #e0e9f5;
+        /* display: flex; */
     }
 
     .div-review {
