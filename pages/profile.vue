@@ -80,9 +80,9 @@
                                     <div class="activity-content">
                                         <div class="activity-text">
                                             <span class="entry-time">
-                                                <span class="fa fa-clock-o">
-                                                    {{(Math.round(Number(new Date().getTime()-data.post_time)/3600000))}} Hours ago
+                                                <span class="fa fa-clock-o">                                                    
                                                 </span>
+                                                {{(Math.round(Number(new Date().getTime()-data.post_time)/3600000))}} Hours ago
                                             </span>
 
                                             <span class="user_name"><a href="#">{{mappedUserData.uid}}</a></span>
@@ -99,7 +99,7 @@
                                 </div>
                                 <div class="content-body">
                                     <div class="image-photo">
-                                        <a><img style="width:70px; height:70px;" :src="mappedGetCoinInfo[data.coinName].image_url" /></a>
+                                        <a><img style="width:60px; height:60px;" :src="mappedGetCoinInfo[data.coinName].image_url" /></a>
                                     </div>
                                     <div class="div-review">
                                         <div>
@@ -272,8 +272,8 @@ export default {
 
     .profile-comment {
         position: relative;
-        border: 1px solid #d1d3d6;
-        background: #ddd;
+        border: 1px solid #ddd;
+        background: #f5f5f5;
         font-size: 15px;        
     }
 
@@ -303,7 +303,7 @@ export default {
     }
 
     .profile-fields .label-profile {
-        background: #d1d3d6;   
+        background: #F0F3F7;   
         padding-left: 5px;
         text-transform: uppercase;
         color: #444;
@@ -363,7 +363,7 @@ export default {
             position: absolute;
             border-style: solid;
             border-width: 6px 12px 5px 0;
-            border-color:  transparent #DDD;
+            border-color:  transparent #f5f5f5;           
             display: block;
             width: 0;
             z-index: 0;
@@ -542,7 +542,7 @@ export default {
     }
 
     .activity-text {
-        background: #ddd;
+        background: #F0F3F7;
         border: 1px solid #DDD;
         border-radius: 4px 4px 0 0;
         line-height: 35px;
@@ -556,13 +556,13 @@ export default {
         content: '';
         position: absolute;
         border-style: solid;
-        border-width: 8px 8px 10px 0;
-        border-color: transparent #ddd;
+        border-width: 6px 12px 5px 0;
+        border-color:  transparent #F0F3F7;           
         display: block;
         width: 0;
         z-index: 0;
-        left: -9px;
-        top: 7px;        
+        top: 5px;
+        left: -12px;     
     }
 
     .activity-content {     
@@ -617,7 +617,7 @@ export default {
         margin-bottom: 30px;
         height: 35px;
         border: 1px solid #ddd;
-        background-color: #d1d3d6;
+        background-color: #e0e9f5;
     }
 
     .div-review {
