@@ -72,14 +72,11 @@ const actions = {
       });      
     },
 
-    addReview({ rootState, commit }, {coinName, review}) {
+    addReview({ rootState, commit }, {coinName, symbolName, review}) {
       if(!rootState.user.user || !rootState.user.user.uid || !review.rating || review.rating < 0 || review.rating > 5) {
         commit(types.SET_REVIEW_SUBMISSION_STATE, { coinName, submissionState: {id: 'INVALID'} });
         return;
       }
-
-      console.log('adding review', rootState.user.user.uid, coinName, review);
-
 
       review = {...review, name: rootState.user.user.name, photoURL: rootState.user.user.photoURL, time: {".sv": "timestamp"}};
 
@@ -90,7 +87,9 @@ const actions = {
         .then(() => {
            const data = {
               review: review,
-              coinName: coinName
+              coinName: coinName,
+              symbolName: symbolName,
+              post_time: new Date().getTime()
            };
 
            this.$firebase.database().ref(`userCoinReviews/${rootState.user.user.uid}/${coinName}`).set(data);

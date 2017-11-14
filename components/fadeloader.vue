@@ -37,7 +37,9 @@ export default {
   data () {
     return {
       spinnerStyle: {
+
         margin: "auto",
+      
         height: this.size,
         width: this.size,
         borderRadius: this.radius

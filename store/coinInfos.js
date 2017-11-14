@@ -50,6 +50,7 @@ const actions = {
         let mapped = response.data.filter(coinInfo => coinInfo.name in image_map).map(coinInfo => ({...coinInfo, image_url: image_map[coinInfo.name]}))
 
         commit(types.SET_COIN_INFOS, mapped);
+      
       });
 
 

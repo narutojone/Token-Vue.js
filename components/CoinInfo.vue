@@ -447,14 +447,14 @@ export default {
 	},
 	methods: {
 		submitReview() {
-			console.log('reviews', this.reviews);
+			console.log('reviews', this.info.symbol);
 
 			let review = {
 				rating: this.formStarRating,
 				comments: this.formComments
 			}
 
-			this.$store.dispatch('coinReviews/addReview', {coinName: this.name, review});
+			this.$store.dispatch('coinReviews/addReview', {coinName: this.name, symbolName: this.info.symbol, review});
 		},
 		replyReview(reviewId, replyBody) {
 			this.$store.dispatch('coinReviews/replyReview', { coinName: this.name, reviewId, replyBody })
