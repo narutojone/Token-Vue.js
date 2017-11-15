@@ -64,7 +64,7 @@
 
                     <div class="profile-comment">
                         <span style="padding-left:20px;">Token Recap Profile Page</span>
-                    </div>                                     
+                    </div>
                 </div>
                 <div class="card">
                     <b-tabs ref="tabs" card>
