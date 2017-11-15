@@ -7,7 +7,7 @@
             </profile-avatar>
 
             <div class="profile-actions">
-                 <div class="mobile-name"><h1>Sergey</h1></div>
+                 <div class="mobile-name"><h1>{{(mappedUserData.uid.substring(0,10)).toUpperCase()}}</h1></div>
                  <button class="follow-button"> <span class="fa fa-plus"></span> <strong>&nbsp;Follow</strong> </button>  
             </div>
 
@@ -60,7 +60,7 @@
         <div class="right-sidebar">
             <div class="main">
                 <div class="user-info">
-                    <div class="desktop-name"><h1>{{mappedUserData.uid}}</h1></div>
+                    <div class="desktop-name"><h1>{{(mappedUserData.uid.substring(0,10)).toUpperCase()}}</h1></div>
 
                     <div class="profile-comment">
                         <span style="padding-left:20px;">Token Recap Profile Page</span>
@@ -148,7 +148,7 @@
                                                 :max-rows="3" class="mt-3">
                                             </b-form-textarea>
                                         </div>
-                                        <div style="float:right;position:relative;top:-36px;">                                             
+                                        <div style="float:right;position:relative;top:-36px;">
                                              <!-- <b-button variant="primary" @click="replyReview(data.coinName, mappedUserData.uid, replyBody[mappedUserData.uid])">Submit</b-button> -->
 
                                              <b-button variant="primary" @click="$modal.show('warn-modal')">Submit</b-button>
