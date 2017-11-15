@@ -142,15 +142,18 @@
                                     <div class="write-reply" v-if="visibleReplies[data.coinName]">
                                         <div>
                                             <b-form-textarea id="textarea2"
+                                                v-model="replyBody[mappedUserData.uid]"
                                                 :placeholder="'Write your reply'"
                                                 :rows="3"
                                                 :max-rows="3" class="mt-3">
                                             </b-form-textarea>
                                         </div>
-                                        <div style="float:right;position:relative;top:-36px;">
-                                             <b-button variant="primary" class="submit-reply-btn mt-1">Submit</b-button>
-                                        </div>                                       
-                                    </div>
+                                        <div style="float:right;position:relative;top:-36px;">                                             
+                                             <!-- <b-button variant="primary" @click="replyReview(data.coinName, mappedUserData.uid, replyBody[mappedUserData.uid])">Submit</b-button> -->
+
+                                             <b-button variant="primary" @click="$modal.show('warn-modal')">Submit</b-button>
+                                        </div>
+                                    </div>                                    
                                </div>
                                
                              </div>                                                   
@@ -200,6 +203,26 @@
                 </div>
             </div>
         </div>
+
+        <!-- Modals -->
+        <modal name="warn-modal" :adaptive="true" height="auto" width="600px">
+            <div class="modal-header">
+                <h3>This comment appears to be blank...</h3>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <span class="fa fa-warning"></span>
+                </div>
+                <div style="margin-left:40px;">
+                    <span>                
+                        It seems that you are trying to add an empty reply. Please write something and try to add the reply again.
+                    </span>
+                </div>       
+            </div>
+            <div class="modal-footer">              
+                <button class="btn btn-info" @click="$modal.hide('warn-modal')"><i class="fa fa-times"></i> Close</button>
+            </div>
+        </modal>
 	</div>
 </template>
 
@@ -211,6 +234,7 @@ import { mapGetters } from 'vuex'
 import StarRating from '~/components/StarReview.vue'
 import ProfileAvatar from '~/components/ProfileAvatar.vue'
 import FadeLoader from '~/components/fadeloader.vue'
+import WarnDialog from '~/components/dialog/WarnDialog.vue'
 import VueTimeago from 'vue-timeago'
 
 const Avatar = require('vue-avatar');
@@ -229,14 +253,16 @@ export default {
 	components: {
         FadeLoader,
         StarRating,
-        ProfileAvatar        
+        ProfileAvatar,
+        WarnDialog
     },
 
     data: function() {
         return {
             loading: true,
             reviewData: {},
-            visibleReplies: {}
+            visibleReplies: {},
+            replyBody: {}
         }
     },
     
@@ -252,7 +278,7 @@ export default {
        onImageReady(scale){
           alert("clicked");
           this.$refs.vueavatarscale.setScale(scale);
-       },
+       },     
 
        getUserReviews(uid) {
             // this.loading = true;      
@@ -271,8 +297,8 @@ export default {
             this.reply = !this.reply;
         },
         
-        replyReview(reviewId, replyBody) {
-			this.$store.dispatch('coinReviews/replyReview', { coinName: this.name, reviewId, replyBody })
+        replyReview(coinName, reviewId, replyBody) {
+			this.$store.dispatch('coinReviews/replyReview', { coinName, reviewId, replyBody })
 		},
 		toggleReplyVisibility(reviewId) {
 			Vue.set(this.visibleReplies, reviewId, !this.visibleReplies[reviewId]);
@@ -323,6 +349,45 @@ export default {
 </script>
 
 <style>
+
+    .modal-header {
+        background: #ffaa00;
+        color: #fff;
+        padding: 15px;
+        border-bottom: 1px solid #c0830a;
+        border-radius: 4px 4px 0 0;
+    }
+
+    .modal-body {
+        display: flex;
+    }
+
+    .modal-header h3 {
+        color: #fff;
+        text-shadow: 1px 2px 3px rgba(0,0,0,.2);
+    }
+
+    .modal-footer {
+        /* background: #f5f5f5; */
+    }
+
+    .modal-body .fa {
+       
+        background: #ED402A;
+        color: #fff;
+        display: block;
+        margin: 0 auto;
+        border-radius: 50%;
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        display: flex
+    }
+
+    .modal-body .fa::before {
+        margin-left: 10px;
+    }
 
     .follow-button {
         margin-top: 15px;

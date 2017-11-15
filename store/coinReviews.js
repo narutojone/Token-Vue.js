@@ -103,9 +103,10 @@ const actions = {
       
     },
 
-    replyReview({ rootState, commit }, { coinName, reviewId, replyBody }) {
+    replyReview({ rootState, commit }, { coinName, reviewId, replyBody }) {      
+      
       if(!rootState.user.user || !rootState.user.user.uid) return;
-
+      console.log("===== Test ======", reviewId, replyBody, coinName);
       const { uid, name, photoURL } = rootState.user.user;
 
       const reply = {
