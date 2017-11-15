@@ -16,8 +16,7 @@ import { mapGetters } from 'vuex'
 
 export default {
     name: 'profile-avatar',
-    props: {
-        image: String
+    props: {     
     },
     data() {
         return {

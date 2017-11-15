@@ -29,6 +29,12 @@ module.exports = {
   build: {
   },
 
+  generate: {
+    minify: {
+      collapseWhitespace: false
+    }
+  },
+
   plugins: ['~plugins/vue-js-modal', { src: '~plugins/highstock', ssr: false }, { src: '~plugins/ga.js', ssr: false }],
 
   modules: [
