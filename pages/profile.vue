@@ -7,7 +7,7 @@
             </profile-avatar>
 
             <div class="profile-actions">
-                 <div class="mobile-name"><h1>{{(mappedUserData.uid.substring(0,10)).toUpperCase()}}</h1></div>
+                 <div class="mobile-name"><h1>{{mappedUserData.uid}}</h1></div>
                  <button class="follow-button"> <span class="fa fa-plus"></span> <strong>&nbsp;Follow</strong> </button>  
             </div>
 
@@ -60,7 +60,7 @@
         <div class="right-sidebar">
             <div class="main">
                 <div class="user-info">
-                    <div class="desktop-name"><h1>{{(mappedUserData.uid.substring(0,10)).toUpperCase()}}</h1></div>
+                    <div class="desktop-name"><h1>{{convertName(mappedUserData.uid)}}</h1></div>
 
                     <div class="profile-comment">
                         <span style="padding-left:20px;">Token Recap Profile Page</span>
@@ -270,6 +270,12 @@ export default {
 		
 	},
 	methods: {
+
+       convertName(name) {
+            // return "a" + name.toString();
+            return name;
+       },
+
        getImageUrl(sym) {
 
            return "http://cryptosumup.com/images/" + sym.toLowerCase() + ".png";
