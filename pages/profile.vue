@@ -147,11 +147,13 @@
                                     <div class="reply-body">
                                 
                                     <div class="write-reply" v-if="visibleReplies[data.coinName]">
+                                        <div v-if="getReplyData[data.coinName][mappedUserData.uid].replies">
                                         <div class="user-replies" v-for="id in Object.keys(getReplyData[data.coinName][mappedUserData.uid].replies)">
                                             <div class="reply-data">                                               
                                                 {{getReplyData[data.coinName][mappedUserData.uid].replies[id].body}}
                                             </div>
                                             
+                                        </div>
                                         </div>
                                         <div>
                                             <b-form-textarea id="textarea2"
