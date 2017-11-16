@@ -26,7 +26,6 @@ function displayAdvanceChart() {
     });
 }
 
-
 Vue.use(VueHighcharts);
 
 const iqrMultiplier = 5; //original 1.5

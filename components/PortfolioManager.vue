@@ -1,7 +1,37 @@
 <template>
+<div>
+	<div v-if="!loggedIn">
+		<div class="port-header">
+			<h1 style="padding-left:20px;line-height:55px;">MY PORTFOLIOS</h1>
+		</div>
+		<div class="container-emptyportfolio">
+			<div class="emptyportfolio">
+				<div class="emptyportfolio-body">
+					<div class="emptyportfolio-image">
+					<img src="https://i.imgur.com/7dSMmti.png">
+					</div>
+					<div class="emptyportfolio-text">Your Personal Profit / Loss Portfolio Monitor and Real Time Tracker for all Digital Coins</div>
+					<div class="emptyportfolio-small">
+						<p style="text-align:center;">The #1 tool you need for tracking and sharing your cryptocurrency investments.</p>
+						<div class="empties">
+							<div class="empty-item"><span class="emptyitem-number">1</span> Token Recap is completely free of charge.</div>
+							<div class="empty-item"><span class="emptyitem-number">2</span> Follow real time charters and receive notifications on new investments.</div>
+							<div class="empty-item"><span class="emptyitem-number">3</span> Token Recap supports importing from all exchanges to maximize efficiency.</div>
+						</div>
+				</div>
+			</div>
+			<div class="emptyporfolio-footer">
+				<button class="md-raised md-primary btn-first-portfolio md-button md-ink-ripple" type="button" @click="$modal.show('login-modal')">
+				<i class="fa fa-cogs"></i> <b class="ng-scope">&nbsp;&nbsp;Login</b><span class="ng-scope"> or </span><b class="ng-scope">Register</b>
+				<div class="md-ripple-container" style=""></div></button>
+					<p class="portfolio-caution">Disclaimer - Never invest in cryptos more than you can afford to lose and always try to keep them in your own wallet!</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div v-if="loggedIn">
+	
 	<div class="portfolio-manager">
-  		  
-
 		  <div class="portfolio-stats">
 		  	<div class="stat-container">
 		  		<h5>Total Investment</h5>
@@ -116,16 +146,7 @@
 										<template slot="removeTrade" scope="row"><b-btn variant="link" @click="removeTrade(row.value)"><i class="fa fa-times text-danger" aria-hidden="true"></i></b-btn></template>
 								  </b-table>
 								  
-		  </div>
-
-
-
-
-
-
-
-
-
+			  </div>
 		  <modal name="add-coin-mdl" class="add-coin-modal" :adaptive="true" height="auto" width="400px">
 		  	   <div class="mdl-title text-light">
 		  	   		<h4>Add Trade</h4>
@@ -217,6 +238,12 @@
 	        </modal>
 
 		</div>
+	</div>
+
+
+</div>
+
+
 </template>
 
 <script>
@@ -317,6 +344,7 @@ export default {
 	},
 	computed: {
 		...mapGetters({
+			loggedIn: 'user/hasCurrentUser',
 			user: 'user/getUser', coinInfos: 'coinInfos/getCoinInfos', coinInfosBySymbol: 'coinInfos/getCoinInfosBySymbol', portfolio: 'portfolio/getPortfolio', getCoinExchangesForCoin: 'exchanges/getCoinExchangesForCoin'
 		}),
 		coinOptions() {
@@ -750,6 +778,14 @@ export default {
   .stat-container {
     width: 20%;
   }
+
+  .container-emptyportfolio {
+	border-top: 1px solid #ddd;
+	width: 900px;
+	margin: 0 auto;
+	padding: 15px;
+	text-align: center;
+	}
 }
 
 /*###Tablet(medium)###*/
@@ -757,6 +793,14 @@ export default {
   .stat-container {
     width: 45%;
   }
+
+   .container-emptyportfolio {
+	border-top: 1px solid #ddd;
+	width: 600px;
+	margin: 0 auto;
+	padding: 15px;
+	text-align: center;
+	}
 }
 
 /*### Smartphones (portrait and landscape)(small)### */
@@ -764,6 +808,14 @@ export default {
   .stat-container {
     width: 100%;
   }
+
+  .container-emptyportfolio {
+	border-top: 1px solid #ddd;
+	width: 90%;
+	margin: 0 auto;
+	padding: 15px;
+	text-align: center;
+}
 }
 
 .selected-coin-img {
@@ -915,4 +967,131 @@ export default {
 }
 
 
+
+.emptyportfolio {
+	font-size: 22px;
+}
+
+.emptyportfolio-body {
+	
+}
+
+.emptyportfolio-body {
+	margin-bottom: 15px;
+}
+
+.emptyportfolio-image img {
+	width: 100%;
+}
+
+.emptyportfolio-text {
+	margin-top: 20px;
+	line-height: 50px;
+	color: #2c75a2;
+}
+
+.emptyportfolio-small {
+	font-size: 16px;
+	line-height: 25px;
+	margin-bottom: 8px;
+	text-align: left;
+}
+
+.emptyportfolio-small p {
+	margin: 0 0 10px;
+}
+
+.empties {
+	background: #f5f5f5;
+	padding: 10px;
+	border-radius: 4px;
+	margin-bottom: 10px;
+}
+
+.empty-item {
+	font-size: 14px;
+	font-weight: bold;
+	color: #666;
+	line-height: 40px;
+	padding-left: 10px;
+	border-bottom: 1px solid #EEE;
+	background: #fff;
+}
+
+.emptyitem-number {
+	display: inline-block;
+	border-bottom: 1px solid #2c75a2;
+	color: #2c75a2;
+	width: 15px;
+	height: 20px;
+	line-height: 20px;
+	margin-right: 5px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.be-brave {
+	font-size: 18px;
+	line-height: 50px;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.btn-first-portfolio {
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+.md-button{
+	outline: none;
+	display: inline-block;
+	cursor: pointer;
+	min-height: 36px;
+	min-width: 88px;
+	line-height: 36px;
+	vertical-align: middle;
+	-webkit-box-align: center;
+	align-items: center;
+	text-align: center;
+	border-radius: 3px;
+	box-sizing: border-box;
+	user-select: none;
+	border: 0;
+
+	margin: 6px 8px;
+	background: transparent;
+	color: currentColor;
+	white-space: nowrap;
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 14px;
+	font-style: inherit;
+	font-variant: inherit;
+	font-family: inherit;
+	text-decoration: none;
+	overflow: hidden;
+}
+
+.md-raised {
+	color: rgba(255,255,255,0.87);
+	background: #255573;
+	/* background-color: rgb(255,142,19); */
+}
+
+.portfolio-caution {
+	padding: 10px;
+	font-size: 14px;
+	color: #666;
+	font-style: italic;
+	text-align: center;
+	margin: 0 0 10px;
+}
+
+.port-header {
+	border-bottom: 2px solid #ddd;
+	height: 60px;
+	font-weight: 40px;
+}
 </style>
