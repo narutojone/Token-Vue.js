@@ -449,15 +449,19 @@ export default {
 
 			this.$store.dispatch('coinReviews/addReview', {coinName: this.name, symbolName: this.info.symbol, review});
 		},
+
 		replyReview(reviewId, replyBody) {
 			this.$store.dispatch('coinReviews/replyReview', { coinName: this.name, reviewId, replyBody })
 		},
+
 		toggleReplyVisibility(reviewId) {
 			Vue.set(this.visibleReplies, reviewId, !this.visibleReplies[reviewId]);
 		},
+
 		likeReview(reviewId) {
 			this.$store.dispatch('coinReviews/rateReview', { coinName: this.name, reviewId, like: true })
 		},
+		
 		dislikeReview(reviewId) {
 			this.$store.dispatch('coinReviews/rateReview', { coinName: this.name, reviewId, like: false })
 		}

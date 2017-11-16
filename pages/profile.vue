@@ -70,7 +70,8 @@
                     <b-tabs ref="tabs" card>
                         <b-tab title="Activity" active>
                            <div class="div-tab">
-                                {{ getUserReviews(mappedUserData.uid) }}  
+                                {{ getUserReviews(mappedUserData.uid) }}
+                                {{ getReply() }}
                                 <fade-loader v-show="loading" class="spinner"></fade-loader>
                                 <div style="padding-bottom:20px;" v-show="!loading" v-for="data in reviewData">
                                 <div class="div-activity">
@@ -118,20 +119,26 @@
                                     <div class="reply" style="flex:1">
                                         <a class="btn btn-replies" @click="toggleReplyVisibility(data.coinName, 'blah blah blah blah')">
                                             <i class="fa fa-reply"></i>
-                                            You didn't reply anything.
+                                            <span style="margin-left:5px;">
+                                                {{getReplyData[data.coinName][mappedUserData.uid].replies ? Object.keys(getReplyData[data.coinName][mappedUserData.uid].replies).length + ' Replies' : 'You did not reply yet'}}                                                
+                                            </span>
                                         </a>
                                     </div>
 
-                                     <div class="reply" style="justify-content:flex-end">
-                                        <a class="btn btn-replies">
+                                     <div class="reply" style="display:flex;justify-content:flex-end">
+                                        <a class="btn btn-replies" @click="likeReview(data.coinName, mappedUserData.uid)">
                                             <span class="btn-agree"><i class="fa fa-thumbs-o-up"></i></span>
-                                            <span class="action-text">Agree</span>
+                                            <span class="action-text">Agree</span>                                           
                                         </a>
+                                        <a class="action-counter counter-agree">{{numLikes(getReplyData[data.coinName][mappedUserData.uid])}}</a>
                                     </div>
 
-                                    <div class="reply btn-disagree" style="justify-content:flex-end">
-                                        <a class="btn btn-replies">
-                                            <i class="fa fa-thumbs-o-down"></i>                                            
+                                    <div class="reply btn-disagree" style="display:flex;justify-content:flex-end">
+                                        <a class="btn btn-replies" @click="dislikeReview(data.coinName, mappedUserData.uid)">
+                                            <i class="fa fa-thumbs-o-down"></i>                                          
+                                        </a>
+                                        <a class="action-counter counter-disagree">
+                                            {{numDislikes(getReplyData[data.coinName][mappedUserData.uid])}}
                                         </a>
                                     </div>
 
@@ -140,18 +147,23 @@
                                     <div class="reply-body">
                                 
                                     <div class="write-reply" v-if="visibleReplies[data.coinName]">
+                                        <div class="user-replies" v-for="id in Object.keys(getReplyData[data.coinName][mappedUserData.uid].replies)">
+                                            <div class="reply-data">                                               
+                                                {{getReplyData[data.coinName][mappedUserData.uid].replies[id].body}}
+                                            </div>
+                                            
+                                        </div>
                                         <div>
                                             <b-form-textarea id="textarea2"
                                                 v-model="replyBody[mappedUserData.uid]"
-                                                :placeholder="'Write your reply'"
+                                                :placeholder="'Write Reply'"
                                                 :rows="3"
                                                 :max-rows="3" class="mt-3">
                                             </b-form-textarea>
                                         </div>
                                         <div style="float:right;position:relative;top:-36px;">
-                                             <!-- <b-button variant="primary" @click="replyReview(data.coinName, mappedUserData.uid, replyBody[mappedUserData.uid])">Submit</b-button> -->
-
-                                             <b-button variant="primary" @click="$modal.show('warn-modal')">Submit</b-button>
+                                             <b-button variant="primary" @click="replyReview(data.coinName, mappedUserData.uid, replyBody[mappedUserData.uid])">Submit</b-button>
+                                             <!-- <b-button variant="primary" @click="$modal.show('warn-modal')">Submit</b-button> -->
                                         </div>
                                     </div>                                    
                                </div>
@@ -205,7 +217,7 @@
         </div>
 
         <!-- Modals -->
-        <modal name="warn-modal" :adaptive="true" height="auto" width="600px">
+        <modal name="warn-modal" ref="warnModal" height="auto" width="600px">
             <div class="modal-header">
                 <h3>This comment appears to be blank...</h3>
             </div>
@@ -220,7 +232,7 @@
                 </div>       
             </div>
             <div class="modal-footer">              
-                <button class="btn btn-info" @click="$modal.hide('warn-modal')"><i class="fa fa-times"></i> Close</button>
+                <button class="btn btn-info" @click="closeModal()"><i class="fa fa-times"></i> Close</button>
             </div>
         </modal>
 	</div>
@@ -262,7 +274,8 @@ export default {
             loading: true,
             reviewData: {},
             visibleReplies: {},
-            replyBody: {}
+            replyBody: {},
+            getReplyData: {}
         }
     },
     
@@ -279,6 +292,10 @@ export default {
        getImageUrl(sym) {
 
            return "http://cryptosumup.com/images/" + sym.toLowerCase() + ".png";
+       },
+
+       getReplyCount(data) {
+
        },
        
        onImageReady(scale){
@@ -302,18 +319,36 @@ export default {
         checkReply() {
             this.reply = !this.reply;
         },
+
+        closeModal() {
+            this.$refs.warnModal.visible = false;
+        },
         
         replyReview(coinName, reviewId, replyBody) {
-			this.$store.dispatch('coinReviews/replyReview', { coinName, reviewId, replyBody })
-		},
+
+            if(!replyBody)
+                this.$refs.warnModal.visible = true;
+            else            
+			    this.$store.dispatch('coinReviews/replyReview', { coinName, reviewId, replyBody })
+        },
+
+        getReply () {          
+            this.$firebase.database().ref(`coinReviews`).once('value')
+            .then(snap => {                         
+                    this.getReplyData = snap.val();
+                })
+                .catch(err => {
+            });   
+        },
+
 		toggleReplyVisibility(reviewId) {
 			Vue.set(this.visibleReplies, reviewId, !this.visibleReplies[reviewId]);
 		},
-		likeReview(reviewId) {
-			this.$store.dispatch('coinReviews/rateReview', { coinName: this.name, reviewId, like: true })
+		likeReview(coinName, reviewId) {
+			this.$store.dispatch('coinReviews/rateReview', { coinName: coinName, reviewId, like: true })
 		},
-		dislikeReview(reviewId) {
-			this.$store.dispatch('coinReviews/rateReview', { coinName: this.name, reviewId, like: false })
+		dislikeReview(coinName, reviewId) {
+			this.$store.dispatch('coinReviews/rateReview', { coinName: coinName, reviewId, like: false })
 		}
     },
     
@@ -324,6 +359,23 @@ export default {
     },
 
 	computed: {
+
+        numLikes() {
+			return (review) => {
+				if(!review || !review.likes) return 0;
+
+				return Object.keys(review.likes).length;
+			}
+        },
+
+        numDislikes() {
+			return (review) => {
+				if(!review || !review.dislikes) return 0;
+
+				return Object.keys(review.dislikes).length;
+			}
+		},
+        
         mappedUserData() {
             return this.getUser;
         },
@@ -341,13 +393,17 @@ export default {
             return this.getCoinInfo;
         },
 
+        mappedGetUserCoinReplies (coinName, reviewId) {
+            return this.getUserCoinReplies;
+        },
+
         ...mapGetters(
 			{				
                 getUser: 'user/getUser',
                 getUserEmail: 'user/getUserEmail',
                 getUserPassword: 'user/getUserPassword',
-                getUserReview: 'coinReview/getUserReview',
-                getCoinInfo: 'coinInfos/getCoinInfosByName'
+                getCoinInfo: 'coinInfos/getCoinInfosByName',
+                getUserCoinReplies: 'coinReviews/getCoinReviews'
 			}
 		)
     }
@@ -393,6 +449,31 @@ export default {
 
     .modal-body .fa::before {
         margin-left: 10px;
+    }
+
+    .action-counter {
+        background: #fff;
+        font-size: 10px;
+        position: relative;
+        padding-left: 3px;
+        padding-right: 6px;
+        border-radius: 0 4px 4px 0;
+        border: 1px solid #ddd;
+        border-left: 0;
+        min-width: 25px;
+        display: block;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .counter-agree {
+        background: #e5fdd5 !important;
+        color: #3d9400;
+    }
+
+    .counter-disagree {
+        background: #ffe6e3;
+        color: #ED402A;
     }
 
     .follow-button {
@@ -484,6 +565,12 @@ export default {
         outline: 0;
         -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
         box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+    }
+
+    .reply-data {
+        background: #57A957;
+        border: 1px solid #ddd;
+        height: 30px;
     }
 
     .btn {
@@ -592,6 +679,8 @@ export default {
 
     /*### Smartphones (portrait and landscape)(small)### */
     @media screen and (min-width : 0px) and (max-width : 767px){
+        
+
         .left-sidebar {
             width: 100%;
             float: left;

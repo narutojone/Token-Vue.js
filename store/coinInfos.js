@@ -48,10 +48,8 @@ const actions = {
       // });
       axios.get('https://api.coinmarketcap.com/v1/ticker/?convert=ETH&limit=10000')
       .then(response => {
-        console.log("====== Response ======", response);
-        console.log("====== Image Map ======", image_map);
+     
         let mapped = response.data.filter(coinInfo => coinInfo.name).map(coinInfo => ({...coinInfo, image_url: image_map[coinInfo.name]}))
-        console.log("====== Mappend123 =======", mapped);
         commit(types.SET_COIN_INFOS, mapped);
       
       });
