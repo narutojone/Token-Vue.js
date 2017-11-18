@@ -5,7 +5,9 @@ import Vue from 'vue';
 const types = {
   SET_COIN_REVIEWS: 'SET_COIN_REVIEWS',
   SET_REVIEW_SUBMISSION_STATE: 'SET_REVIEW_SUBMISSION_STATE',
-  SET_CURRENT_BOUND_COIN: 'SET_CURRENT_BOUND_COIN'
+  SET_CURRENT_BOUND_COIN: 'SET_CURRENT_BOUND_COIN',
+  SET_USER_REVIEWS: 'SET_USER_REVIEWS',
+  SET_USER_COIN_REPLIES: 'SET_USER_COIN_REPLIES'
 }
 
 
@@ -13,7 +15,9 @@ const state = () => ({
     coinReviews: {},
     reviewSubmissionStates: {},
     boundCoinReviews: [],
-    currentBoundCoin: null
+    currentBoundCoin: null,
+    userCoinReviews: {},
+    getUserCoinReplies: {}
 });
 
 // getters
@@ -23,7 +27,6 @@ const getters = {
       if(state.currentBoundCoin == coinName) {
         return state.boundCoinReviews;
       }
-
       return state.coinReviews[coinName];
     }
   },
@@ -32,61 +35,77 @@ const getters = {
   },
   getBoundCoinReviews(state) {
     return coinName => state.boundCoinReviews || {};
-  }
+  },
+  getUserReview: state => state.userCoinReviews,
+  getUserCoinReplies: state => state.getUserCoinReplies
 }
 
 // actions
 const actions = {
   
-  bindCoinReviews: firebaseAction(({ state, commit, bindFirebaseRef }, { fb, coinName }) => {
-      console.log('binding coin reviews', coinName);
-      if(state.currentBoundCoin != coinName) {
-        console.log('Bind')
-        commit(types.SET_CURRENT_BOUND_COIN, coinName);
-        bindFirebaseRef('boundCoinReviews', fb.database().ref(`coinReviews/${coinName}`));
-      }
-  }),
+    bindCoinReviews: firebaseAction(({ state, commit, bindFirebaseRef }, { fb, coinName }) => {
+       
+        if(state.currentBoundCoin != coinName) {
+        
+          commit(types.SET_CURRENT_BOUND_COIN, coinName);
+          bindFirebaseRef('boundCoinReviews', fb.database().ref(`coinReviews/${coinName}`));
+        }
+    }),
 
-   loadCoinReviews({ store, commit }, coinName) {
-      console.log('loading coin reviews', coinName);
+   loadCoinReviews({ store, commit }, coinName) {    
 
       this.$firebase.database().ref('coinReviews/' + coinName).once('value')
       .then(snap => {
-        console.log('Got coin reviews:', snap.val());
+     
         commit(types.SET_COIN_REVIEWS, { coinName, reviews: snap.val() });
       })
       .catch(err => {
       });
     },
 
-    addReview({ rootState, commit }, {coinName, review}) {
+    loadUserCoinReview({ store, commit}) { 
+
+      this.$firebase.database().ref('userCoinReviews').once('value')
+      .then(snap => {        
+          commit(types.SET_USER_REVIEWS, { uid, data: snap.val() });
+      })
+      .catch(err => {
+      });      
+    },
+
+    addReview({ rootState, commit }, {coinName, symbolName, review}) {
       if(!rootState.user.user || !rootState.user.user.uid || !review.rating || review.rating < 0 || review.rating > 5) {
         commit(types.SET_REVIEW_SUBMISSION_STATE, { coinName, submissionState: {id: 'INVALID'} });
         return;
       }
 
-      console.log('adding review', rootState.user.user.uid, coinName, review);
-
-
       review = {...review, name: rootState.user.user.name, photoURL: rootState.user.user.photoURL, time: {".sv": "timestamp"}};
 
-        console.log('Writing to db...');
+      
 
         commit(types.SET_REVIEW_SUBMISSION_STATE, { coinName, submissionState: {id: 'PENDING'} })
         this.$firebase.database().ref('coinReviews/' + coinName + '/' + rootState.user.user.uid).set(review)
         .then(() => {
-          commit(types.SET_REVIEW_SUBMISSION_STATE, { coinName, submissionState: {id: 'SUCCESS'} });
+           const data = {
+              review: review,
+              coinName: coinName,
+              symbolName: symbolName,
+              post_time: new Date().getTime()
+           };
+
+           this.$firebase.database().ref(`userCoinReviews/${rootState.user.user.uid}/${coinName}`).set(data);
+
+           commit(types.SET_REVIEW_SUBMISSION_STATE, { coinName, submissionState: {id: 'SUCCESS'} });
         })
         .catch(err => {
           commit(types.SET_REVIEW_SUBMISSION_STATE, { coinName, submissionState: {id: 'ERROR', err} })
-        });
-
-      
+        });      
     },
 
-    replyReview({ rootState, commit }, { coinName, reviewId, replyBody }) {
+    replyReview({ rootState, commit }, { coinName, reviewId, replyBody }) {      
+      
       if(!rootState.user.user || !rootState.user.user.uid) return;
-
+      console.log("===== Test ======", reviewId, replyBody, coinName);
       const { uid, name, photoURL } = rootState.user.user;
 
       const reply = {
@@ -100,6 +119,18 @@ const actions = {
       this.$firebase.database().ref(`coinReviews/${coinName}/${reviewId}/replies`).push(reply);
     },
 
+    getReplyReview ({rootState, commit}, {coinName, reviewId}) {
+      if(!rootState.user.user || !rootState.user.user.uid) return;
+      this.$firebase.database().ref(`coinReviews/${coinName}/${reviewId}/replies`).once('value')
+      .then(snap => {
+           console.log("===== Reply Data", snap.val());
+          //  commit(types.SET_USER_COIN_REPLIES, { coinName, reviewId, replies: snap.val() });
+          return snap.val();
+         })
+         .catch(err => {
+      });
+    },
+
     rateReview({ rootState, commit }, { coinName, reviewId, like }) {
       if(!rootState.user.user || !rootState.user.user.uid) return;
 
@@ -111,8 +142,8 @@ const actions = {
         [uid]: { ".sv": "timestamp" }
       });
     },
-   
 
+    
 }
 
 // mutations
@@ -120,11 +151,21 @@ const mutations = {
   [types.SET_COIN_REVIEWS](state, { coinName, reviews }) {
     Vue.set(state.coinReviews, coinName, reviews);
   },
+
+  [types.SET_USER_REVIEWS](state, { uid, data }) {
+    Vue.set(state.userCoinReviews, uid, data);
+  },
+
   [types.SET_REVIEW_SUBMISSION_STATE](state, { coinName, submissionState }) {
     Vue.set(state.reviewSubmissionStates, coinName, submissionState);
   },
+
   [types.SET_CURRENT_BOUND_COIN](state, coinName) {
     state.currentBoundCoin = coinName;
+  },
+
+  [types.SET_USER_COIN_REPLIES] (state, {coinName, reviewId, replies}) {
+    Vue.set(state.getUserCoinReplies, coinName, reviewId, replies);
   }
 }
 

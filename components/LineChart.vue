@@ -11,6 +11,7 @@ import VueHighcharts from 'vue-highcharts';
 
 Vue.use(VueHighcharts);
 
+ 
 const DEFAULT_OPTIONS = {
             chart: {
                 type: 'line'
@@ -18,22 +19,24 @@ const DEFAULT_OPTIONS = {
             title: {
                 text: ''
             },
-            credits: {
-                enabled: false
-            },
             xAxis: {
-                type: 'datetime',
-                labels: {
-                    enabled: false
-                }
+                // min: new Date().getDate() - 1000, //previous day  at 16.00
+                max: new Date().getTime() //get actual time
             },
-            yAxis: {
-            },
+            rangeSelector: {                
+                selected: 1
+            },            
             plotOptions: {
                 series: {
-                    animation: true,
+                    animation: true,                    
+                    tooltip: {
+                        valueDecimals: 2
+                    }
                 }
-            }
+            },
+			xAxis: {
+                max: new Date().getTime()
+			}
         }
 
 const iqrMultiplier = 5; //original 1.5
@@ -45,9 +48,9 @@ function filterOutliers(someArray, valueFunction) {
 
   let values, q1, q3, iqr, maxValue, minValue;
 
-  values = someArray.slice().sort( (a, b) => valueFunction(a) - valueFunction(b));//copy array fast and sort
+  values = someArray.slice().sort( (a, b) => valueFunction(a) - valueFunction(b)); //copy array fast and sort
 
-  if((values.length / 4) % 1 === 0){//find quartiles
+   if((values.length / 4) % 1 === 0){//find quartiles
     q1 = 1/2 * (valueFunction(values[(values.length / 4)]) + valueFunction(values[(values.length / 4) + 1]));
     q3 = 1/2 * (valueFunction(values[(values.length * (3 / 4))]) + valueFunction(values[(values.length * (3 / 4)) + 1]));
   } else {
@@ -59,10 +62,9 @@ function filterOutliers(someArray, valueFunction) {
   maxValue = q3 + iqr * iqrMultiplier;
   minValue = q1 - iqr * iqrMultiplier;
 
-  console.log(`iqr ${iqr}, max ${maxValue}, min ${minValue}`)
-
   let result = values.filter((x) => (valueFunction(x) >= minValue) && (valueFunction(x) <= maxValue));
 
+  
   return result;
 }
 
@@ -81,13 +83,14 @@ export default {
 	},
 	computed: {
 		options() {
-			let opts = {...DEFAULT_OPTIONS, plotOptions: {...DEFAULT_OPTIONS.plotOptions, area: {...DEFAULT_OPTIONS.area}}};
+			let opts = {...DEFAULT_OPTIONS, plotOptions: {...DEFAULT_OPTIONS.plotOptions}};
 
-            let filteredData = filterOutliers(this.data.filter(point => point && point[1]), (point) => point[1]);
+            let filteredData = filterOutliers(this.data.filter(point => point && point[0]), (point) => point[0]);
 
             filteredData.sort((a, b) => a[0] - b[0]);
 
-			opts.series = [{name: this.sym, data: filteredData}];
+            opts.series = [{name: this.sym, data: filteredData}];          
+            
 
 			return opts;
 		}

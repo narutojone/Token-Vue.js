@@ -23,12 +23,12 @@ const actions = {
         commit(types.SET_REVIEW_SUBMISSION_STATE, { exchangeName, submissionState: {id: 'INVALID'} });
         return;
       }
-      console.log('adding review', rootState.user.user.uid, exchangeName, review);
+     
 
 
       review = {...review, name: rootState.user.user.name, photoURL: rootState.user.user.photoURL, time: {".sv": "timestamp"}};
 
-        console.log('Writing to db...');
+     
 
         commit(types.SET_REVIEW_SUBMISSION_STATE, { exchangeName, submissionState: {id: 'PENDING'} })
         this.$firebase.database().ref('exchangeReviews/' + exchangeName + '/' + rootState.user.user.uid).set(review)

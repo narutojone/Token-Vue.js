@@ -40,7 +40,8 @@
 							<em><img class="profile-img" :src="user.photoURL"></img></em>
 							<em>{{user.name}}</em>
 						</template>
-						<b-dropdown-item href="#">Profile</b-dropdown-item>
+						<b-dropdown-item href="/profile">View Profile</b-dropdown-item>
+						<b-dropdown-item href="#">Edit Profile</b-dropdown-item>
 						<b-dropdown-item href="#" @click="logOut">Signout</b-dropdown-item>
 					</b-nav-item-dropdown>
 				</div>
@@ -167,8 +168,7 @@ import { mapGetters } from 'vuex'
 		        // {
 		        //   to: '/guides',
 		        //   title: 'Guides'
-		        // },
-		        
+		        // },		        
 		      ],
 		      loginForm: {
 		      	email: '',
@@ -198,7 +198,6 @@ import { mapGetters } from 'vuex'
 		  		searchOptions = searchOptions.concat(this.coinInfos ? this.coinInfos.map(coinInfo => ({...coinInfo, text: coinInfo.name + '(' + coinInfo.symbol + ')'})) : []);
 		  		searchOptions = searchOptions.concat(this.exchanges ? this.exchanges.map(exchange => ({...exchange, text: exchange.name})) : []);
 		  		searchOptions = searchOptions.concat(this.wallets ? this.wallets.map(wallet => ({...wallet, text: wallet.name})) : []);
-
 
 		  		return searchOptions;
 		  	},

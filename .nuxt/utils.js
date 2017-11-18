@@ -74,7 +74,7 @@ export function getContext (context, app) {
     isServer: !!context.isServer,
     isClient: !!context.isClient,
     isStatic: process.static,
-    isDev: false,
+    isDev: true,
     isHMR: context.isHMR || false,
     app: app,
     store: context.store,
@@ -109,7 +109,7 @@ export function getContext (context, app) {
     ctx.beforeNuxtRender = (fn) => context.beforeRenderFns.push(fn)
   }
   if (ctx.isClient && window.__NUXT__) {
-    ctx.serverState = window.__NUXT__
+    ctx.nuxtState = window.__NUXT__
   }
   return ctx
 }

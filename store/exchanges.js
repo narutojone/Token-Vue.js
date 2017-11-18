@@ -80,7 +80,7 @@ const mutations = {
 		if(!state.exchangePairsData[fsym][tsym]) Vue.set(state.exchangePairsData[fsym], tsym, data);
 	},
 	[types.SET_EXCHANGE_PAIRS](state, { exchangePairs }) {
-		console.log('setting exchange pairs', exchangePairs)
+		
 		state.exchangePairs = exchangePairs;
 
 
@@ -116,8 +116,7 @@ const mutations = {
 
 			});
 		});
-
-		console.log('SETTING COIN EXCHANGES', coinExchanges);
+		
 
 		state.coinExchanges = coinExchanges;
 	},

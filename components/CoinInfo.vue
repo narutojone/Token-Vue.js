@@ -5,7 +5,6 @@
 			
 			<img class="coin-img" :src="info.image_url" />
 		
-
 			<h2 class="coin-name">{{name}} ({{info.symbol}})</h2>
 			<h4>
 				${{info.price_usd}} <span :class="change24hour >= 0 ? 'positive' : 'negative'">({{change24hour.toFixed(2)}}%)</span>
@@ -17,8 +16,6 @@
 			<div class="col-sm-12 col-md-9 main-col">
 				<b-card no-body class="main-card">
 				    <b-tabs ref="tabs" card>
-
-
 				    	<b-tab title="Charts" active>
 				            <line-chart :data="mappedChartData" :sym="info.symbol ? info.symbol : ''" />
 				            <candle-volume-chart :data="volumeChartData" :title="name + ' vs USD'" :sym="info.symbol ? info.symbol : ''" />
@@ -136,7 +133,8 @@
 							</div>
 				        </b-tab>
 
-				        <b-tab title="Social">
+				        <b-tab title="Advance">							
+							<advance-chart :data="mappedChartData" :sym="info.symbol ? info.symbol : ''" />							
 				        </b-tab>
 				        
 				    </b-tabs>
@@ -215,6 +213,7 @@ import axios from 'axios';
 import StarRating from '~/components/StarRating.vue'
 
 import LineChart from '~/components/LineChart.vue'
+import AdvanceChart from '~/components/AdvanceChart.vue'
 import CandleVolumeChart from '~/components/CandleVolumeChart.vue'
 
 import VueTimeago from 'vue-timeago'
@@ -244,6 +243,7 @@ export default {
 	components: {
 		StarRating,
 		LineChart,
+		AdvanceChart,
 		CandleVolumeChart
 	},
 	data() {
@@ -295,7 +295,7 @@ export default {
 			return {...foundInfo, image_url: imageUrl, rating: this.getCoinRatingForCoin(this.name)};
 		},
 		mappedReviews() {
-			console.log('reviws', this.reviews);
+			
 			return this.reviews ? this.reviews.map(review => ({...review, id: review['.key'], date: dateFormat(new Date(review.time), "mmm dS, yyyy h:MM:ss TT")})) : [];
 		},
 		reviews() {
@@ -303,7 +303,7 @@ export default {
 		},
 		exchangePairs() {
 			let exchangePairs = this.getCoinExchangesForCoin(this.info.symbol);
-			console.log('exchangepairs', exchangePairs);
+			
 
 			return exchangePairs;
 		},
@@ -351,10 +351,11 @@ export default {
 			return this.info && this.info.percent_change_24h ? parseFloat(this.info.percent_change_24h) : 0.0;
 		},
 		mappedChartData() {
-			let chart = this.getChart(this.info.symbol, 'USD', 'hour');
-			
+			let chart = this.getChart(this.info.symbol, 'USD', 'hour');			
+
 			if(!chart) return [];
 
+			// return chart.map(candle => ({...candle, time: candle.time*1000}));
 			return chart.map(candle => [candle.time*1000, candle.close]);
 		},
 		volumeChartData() {
@@ -410,9 +411,7 @@ export default {
 	},
 	watch: {
 		pairSymbols(val) {
-			if(!this.pairSymbols || !this.pairSymbols.length) return;
-
-			console.log('Pair symbols before loading exchanges', this.pairSymbols);
+			if(!this.pairSymbols || !this.pairSymbols.length) return;	
 
 			let i = 0;
 			let bigCoins = ['USD', 'EUR', 'JPY', 'KRW', 'GBP', 'AUD', 'BTC', 'ETH', 'LTC', 'BCH', 'NEO', 'WTC', 'BCC'].reduce((o, c) => ({...o, [c]: true}), {});
@@ -443,41 +442,40 @@ export default {
 	},
 	methods: {
 		submitReview() {
-			console.log('reviews', this.reviews);
-
 			let review = {
 				rating: this.formStarRating,
 				comments: this.formComments
 			}
 
-			this.$store.dispatch('coinReviews/addReview', {coinName: this.name, review});
+			this.$store.dispatch('coinReviews/addReview', {coinName: this.name, symbolName: this.info.symbol, review});
 		},
+
 		replyReview(reviewId, replyBody) {
 			this.$store.dispatch('coinReviews/replyReview', { coinName: this.name, reviewId, replyBody })
 		},
+
 		toggleReplyVisibility(reviewId) {
 			Vue.set(this.visibleReplies, reviewId, !this.visibleReplies[reviewId]);
 		},
+
 		likeReview(reviewId) {
 			this.$store.dispatch('coinReviews/rateReview', { coinName: this.name, reviewId, like: true })
 		},
+		
 		dislikeReview(reviewId) {
 			this.$store.dispatch('coinReviews/rateReview', { coinName: this.name, reviewId, like: false })
 		}
 	},
 	mounted() {
-		console.log('MOUNTED!!!')
+	
 		this.$store.dispatch('coinReviews/bindCoinReviews', { coinName: this.name, fb: this.$firebase });
 		this.$store.dispatch('exchanges/loadExchangePairs')
 		if(this.info && this.info.symbol) {
 				this.$store.dispatch('charts/loadChart', { fsym: this.info.symbol, tsym: 'USD', interval: 'hour' })
-			}
-
+		}
 
 		if(!this.pairSymbols || !this.pairSymbols.length) return;
-
-			console.log('Pair symbols before loading exchanges', this.pairSymbols);
-
+		
 			let i = 0;
 			let bigCoins = ['USD', 'EUR', 'JPY', 'KRW', 'GBP', 'AUD', 'BTC', 'ETH', 'LTC', 'BCH', 'NEO', 'WTC', 'BCC'].reduce((o, c) => ({...o, [c]: true}), {});
 			let bigCoin = this.info.symbol == 'BTC' || this.info.symbol == 'ETH';

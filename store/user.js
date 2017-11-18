@@ -22,6 +22,8 @@ const state = () => ({
   user: {},
   signInError: null,
   registerError: null,
+  email: String,
+  password: String,
 
   serverTimeOffset: 0,
 });
@@ -33,7 +35,9 @@ const getters = {
   getSignInError: state => state.signInError,
   getRegisterError: state => state.registerError,
   hasCurrentUser: state => Object.keys(state.user).length !== 0,
-  getServerTimeOffset: state => state.serverTimeOffset
+  getServerTimeOffset: state => state.serverTimeOffset,
+  getUserEmail: state => state.email,
+  getUserPassword: state => state.password
 }
 // actions
 const actions = {
@@ -49,10 +53,10 @@ const actions = {
     });
 
    this.$firebase.auth().onAuthStateChanged((user) => {
-    console.log('Auth state changed', user);
+    
 
     if(user) {
-      commit(types.SIGNED_IN_USER, {uid: user.uid, name: user.displayName, photoURL: user.photoURL});
+      commit(types.SIGNED_IN_USER, {uid: user.uid, name: user.displayName, photoURL: user.photoURL, email: user.email, password: state.password});
     }
     else {
       commit(types.SIGNED_OUT);
@@ -70,13 +74,22 @@ const actions = {
   },
 
   register({ commit, state, dispatch }, registerDetails) {
+    state.email = registerDetails.email;
+    state.password = registerDetails.password;
+
     this.$firebase.auth().createUserWithEmailAndPassword(registerDetails.email, registerDetails.password)
     .catch(err => {
       commit(types.REGISTER_FAIL, err);
     });
   },
 
-  logIn ({ commit, state, dispatch }, loginDetails) {
+  logIn ({ commit, state, dispatch }, loginDetails) {     
+
+    state.email = loginDetails.email;
+    state.password = loginDetails.password;
+
+   
+
     if(loginDetails.method === 'email') {
       this.$firebase.auth().signInWithEmailAndPassword(loginDetails.email, loginDetails.password)
       .catch(err => {
@@ -99,7 +112,7 @@ const actions = {
         throw new Error('You did not provide a provider for custom login');
        }
 
-       console.log('Logging in with provider', provider);
+     
               this.$firebase.auth().signInWithPopup(provider).then(result => {
                   var token = result.credential.accessToken;
                   var user = result.user;
@@ -121,29 +134,29 @@ const actions = {
    },
 
   setupNotifications({ commit, rootState, state }, uid) {
-    console.log('Setting up notifications...');
+    
     const messaging = this.$firebase.messaging();
     messaging.requestPermission()
     .then(() => {
-      console.log('Got messaging permission!');
+    
       return messaging.getToken();
     })
     .then(token => {
-      console.log('Token', token);
+   
     })
     .catch(err => {
-      console.log('Couldn\'t get messaging permissions with error', err);
+   
     });
 
     messaging.onMessage(payload => {
-      console.log('RECEIVED MESSAGE: ' + payload);
+    
     });
     
   },   
 
    syncTime({commit, dispatch}) {
     this.$firebase.database().ref('.info/serverTimeOffset').on("value", function(snap) {
-      console.log('SERVER TIME OFFSET: ' + snap.val());
+  
       commit(types.SET_SERVER_TIME_OFFSET, snap.val());
     });
    }

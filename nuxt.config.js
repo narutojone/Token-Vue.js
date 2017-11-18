@@ -13,7 +13,10 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ],
     script: [
-      { src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js' }
+      { src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js' },
+      { type: 'text/javascript', src: 'https://d33t3vvu2t2yu5.cloudfront.net/tv.js' , defer: 'defer'},
+      { type: 'text/javascript', src: 'https://cdn.emailjs.com/dist/email.min.js'}
+
     ]
   },
   /*
@@ -24,6 +27,12 @@ module.exports = {
   ** Build configuration
   */
   build: {
+  },
+
+  generate: {
+    minify: {
+      collapseWhitespace: false
+    }
   },
 
   plugins: ['~plugins/vue-js-modal', { src: '~plugins/highstock', ssr: false }, { src: '~plugins/ga.js', ssr: false }],
